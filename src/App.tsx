@@ -46,12 +46,12 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(`${import.meta.env.BASE_URL}/data/json/index.json`);
+        const res = await fetch(`/deadlock-patches/data/json/index.json`);
         const files = await res.json();
 
         const allData = await Promise.all(
           files.map((file: string) =>
-            fetch(`${import.meta.env.BASE_URL}/data/json/${file}`).then(res => res.json())
+            fetch(`/deadlock-patches/data/json/${file}`).then(res => res.json())
           )
         );
 
