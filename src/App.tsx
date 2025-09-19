@@ -46,12 +46,12 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('/data/json/index.json');
+        const res = await fetch('${import.meta.env.BASE_URL}/data/json/index.json');
         const files = await res.json();
 
         const allData = await Promise.all(
           files.map((file: string) =>
-            fetch(`/data/json/${file}`).then(res => res.json())
+            fetch(`${import.meta.env.BASE_URL}/data/json/${file}`).then(res => res.json())
           )
         );
 
