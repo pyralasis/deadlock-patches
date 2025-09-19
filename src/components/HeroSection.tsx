@@ -17,49 +17,6 @@ interface SectionProps {
 
 
 export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
-
-    const leftPanelRef = useRef<HTMLDivElement>(null);
-    const rightPanelRef = useRef<HTMLDivElement>(null);
-    const sectionRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        const right = rightPanelRef.current;
-        const left = leftPanelRef.current;
-        if (!right || !left) return;
-        const onWheel = (e: WheelEvent) => {
-            if (left.scrollHeight > left.clientHeight) {
-                const atTop = left.scrollTop === 0;
-                const atBottom = Math.abs(left.scrollTop + left.clientHeight - left.scrollHeight) < 1;
-                if ((e.deltaY < 0 && !atTop) || (e.deltaY > 0 && !atBottom)) {
-                    e.preventDefault();
-                    left.scrollBy({ top: e.deltaY * 3, behavior: 'smooth' });
-                }
-            }
-        };
-        right.addEventListener('wheel', onWheel, { passive: false });
-        return () => right.removeEventListener('wheel', onWheel);
-    }, []);
-
-    // Focus left panel when section is snapped into view
-    useEffect(() => {
-        const section = sectionRef.current;
-        const left = leftPanelRef.current;
-        if (!section || !left) return;
-        const observer = new window.IntersectionObserver(
-            (entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-                        left.focus();
-                    }
-                });
-            },
-            { threshold: [0.5] }
-        );
-        observer.observe(section);
-        return () => observer.disconnect();
-    }, []);
-
-
     let nameElement;
     if (type === "hero") {
         nameElement = (
@@ -75,7 +32,6 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
             component="section"
             className="section hero-section-snap"
             id={id}
-            ref={sectionRef}
             sx={{
                 display: 'flex',
                 flexDirection: 'row',
@@ -86,11 +42,10 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
         >
             <Box
                 className="hero-section-left"
-                ref={leftPanelRef}
                 tabIndex={-1}
                 sx={{
                     width: '50%',
-                    height: 'auto',
+                    height: '100%',
                     maxHeight: '100vh',
                     overflowY: 'auto',
                     marginTop: 'auto',
@@ -103,19 +58,19 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
                     '&::-webkit-scrollbar': {
                         display: 'none',
                     },
+                    backgroundColor: '#12121233',
                 }}
             >
                 <List>
                     {heroData.map((item: any, index: number) => (
                         <ListItem key={index}>
-                            <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px' } } }} primary={item} />
+                            <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item} />
                         </ListItem>
                     ))}
                 </List>
             </Box>
             <Box
                 className="hero-section-right"
-                ref={rightPanelRef}
                 sx={{
                     width: '50%',
                     position: 'sticky',
