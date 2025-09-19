@@ -1,7 +1,6 @@
 import { Box, Step, StepButton, Stepper } from "@mui/material";
 import { SectionStepIcon } from "./SectionStepIcon";
 import { useRef, useEffect } from "react";
-import { SectionDefinition } from "../SectionDefinitions";
 import { SectionData } from "../SectionTypes";
 
 interface SectionStepperProps {

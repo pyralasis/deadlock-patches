@@ -1,7 +1,7 @@
 
 
 
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import { List, ListItem, ListItemText, Typography } from '@mui/material';
 import { SectionDefinition } from '../SectionDefinitions';

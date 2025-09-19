@@ -1,10 +1,9 @@
 import './App.css'
-import Box from '@mui/material/Box';
-import { Section } from './components/HeroSection';
+
 import { useEffect, useRef, useState } from 'react';
 import { PatchData } from './PatchData';
 import { Grid } from '@mui/material';
-import { GENERAL_DEFINITIONS, HERO_DEFINITIONS, SectionDefinition, ITEM_DEFINITIONS } from './SectionDefinitions';
+import { GENERAL_DEFINITIONS, HERO_DEFINITIONS, ITEM_DEFINITIONS } from './SectionDefinitions';
 import { SectionStepper } from './components/SectionStepper';
 import { SectionScroller } from './components/SectionScroller';
 import { SectionData } from './SectionTypes';

@@ -1,7 +1,5 @@
-import { Box, unstable_createBreakpoints } from "@mui/material";
-import { SectionDefinition } from "../SectionDefinitions";
+import { Box } from "@mui/material";
 import { Section } from "./HeroSection";
-import { useEffect } from "react";
 import { SectionData } from "../SectionTypes";
 
 
