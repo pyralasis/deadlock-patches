@@ -45,7 +45,7 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
                     marginTop: 'auto',
                     marginBottom: 'auto',
                     paddingLeft: '2em',
-                    paddingRight: '10em',
+                    paddingRight: '2em',
                     boxSizing: 'border-box',
                     outline: 'none',
                     scrollbarWidth: 'none',
