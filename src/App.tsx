@@ -46,7 +46,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('${import.meta.env.BASE_URL}/data/json/index.json');
+        const res = await fetch(`${import.meta.env.BASE_URL}/data/json/index.json`);
         const files = await res.json();
 
         const allData = await Promise.all(
