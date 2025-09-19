@@ -1,3 +1,37 @@
+/* Scroll snapping for hero sections */
+.hero-section-container {
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.hero-section-snap {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+}
+
+.hero-section-right {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.hero-section-left {
+  height: 100vh;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  padding-left: 2em;
+  padding-right: 10em;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  box-sizing: border-box;
+}
+
 #root {
   margin: 0 auto;
   text-align: center;
@@ -35,6 +69,13 @@
 @font-face {
   font-family: "RetailDemo";
   src: url('/fonts/retaildemo-regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DecoturalCG";
+  src: url('/fonts/DecoturaICG.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

@@ -1,11 +1,14 @@
 import './App.css'
 import Box from '@mui/material/Box';
-import { HeroSection } from './components/HeroSection';
+import { Section } from './components/HeroSection';
 import { useEffect, useRef, useState } from 'react';
 import { PatchData } from './PatchData';
-import { Grid, Step, StepButton, StepLabel, Stepper, StepperContext } from '@mui/material';
-import { GENERAL_DEFINITIONS, HERO_DEFINITIONS, HeroDefinition, ITEM_DEFINITIONS } from './HeroDefinitions';
-import { HeroStepIcon } from './components/HeroStepIcon';
+import { Grid } from '@mui/material';
+import { GENERAL_DEFINITIONS, HERO_DEFINITIONS, SectionDefinition, ITEM_DEFINITIONS } from './SectionDefinitions';
+import { SectionStepper } from './components/SectionStepper';
+import { SectionScroller } from './components/SectionScroller';
+import { SectionData } from './SectionTypes';
+// import { GeneralSectionData, HeroSectionData, ItemSectionData, SectionDataUnion } from './SectionTypes';
 
 function getHeroPatches(hero: string, jsonData: PatchData[]): Record<string, string[]> {
   let heroPatches: Record<string, string[]> = {};
@@ -32,15 +35,14 @@ function getItemPatches(category: string, jsonData: PatchData[]): Record<string,
 }
 
 function App() {
-  const [sectionData, setSectionData] = useState<{ id: string, hero: HeroDefinition, patches: Record<string, string[]> }[]>([]);
+  // const [heroSectionData, setHeroSectionData] = useState<HeroSectionData[]>([]);
+  // const [generalSectionData, setGeneralSectionData] = useState<GeneralSectionData[]>([]);
+  // const [itemSectionData, setItemSectionData] = useState<ItemSectionData[]>([]);
+
+  const [sectionData, setSectionData] = useState<SectionData[]>([]);
 
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const [activeSection, setActiveSection] = useState("");
-
-  const stepRefs = useRef<Record<string, HTMLDivElement | null>>({});
-  const stepperContainerRef = useRef<HTMLDivElement | null>(null);
-
-  const [activePatch, setActivePatch] = useState("");
+  const [activeSectionId, setActiveSectionId] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -54,28 +56,44 @@ function App() {
           )
         );
 
-        // Now that jsonData is available, build sectionData
-        const sectionsDatas: { id: string, hero: HeroDefinition, patches: Record<string, string[]> }[] = [];
+        const tempSectionData: SectionData[] = [];
 
+        Object.keys(GENERAL_DEFINITIONS).forEach(key => {
+          tempSectionData.push({
+            id: key,
+            type: "general",
+            definition: GENERAL_DEFINITIONS[key],
+            patches: getGeneralPatches(key, allData)
+          });
+        });
 
         Object.keys(HERO_DEFINITIONS).forEach(key => {
-          sectionsDatas.push({
+          tempSectionData.push({
             id: key,
-            hero: HERO_DEFINITIONS[key],
+            type: "hero",
+            definition: HERO_DEFINITIONS[key],
             patches: getHeroPatches(key, allData)
           });
         });
 
-        setSectionData(sectionsDatas);
-        if (sectionsDatas.length > 0) {
-          setActiveSection(sectionsDatas[0].id);
+        Object.keys(ITEM_DEFINITIONS).forEach(key => {
+          tempSectionData.push({
+            id: key,
+            type: "item",
+            definition: ITEM_DEFINITIONS[key],
+            patches: getItemPatches(key, allData)
+          });
+        });
+        setSectionData(tempSectionData);
+
+        if (tempSectionData.length > 0) {
+          setActiveSectionId(tempSectionData[0].id);
         }
 
-        // Set up observer AFTER the DOM elements will exist
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              setActiveSection(entry.target.id);
+              setActiveSectionId(entry.target.id);
             }
           });
         }, {
@@ -83,11 +101,10 @@ function App() {
           threshold: 0.5,
         });
 
-        // Wait for DOM to paint
         setTimeout(() => {
           const sections = containerRef.current?.querySelectorAll('section') ?? [];
           sections.forEach((section) => observer.observe(section));
-        }, 0); // Delay ensures elements are in DOM
+        }, 0);
 
         return () => observer.disconnect();
 
@@ -97,101 +114,31 @@ function App() {
     };
 
     fetchData();
-    console.log(sectionData);
   }, []);
 
-  useEffect(() => {
-    const container = stepperContainerRef.current;
-    const target = stepRefs.current[activeSection];
-
-    if (container && target) {
-      const containerHeight = container.getBoundingClientRect().height;
-      const targetTop = target.offsetTop;
-      const targetHeight = target.getBoundingClientRect().height;
-
-      const scrollTo = targetTop - (containerHeight / 2) + (targetHeight / 2);
-
-      container.scrollTo({
-        top: scrollTo,
-        behavior: 'smooth'
-      });
-    }
-  }, [activeSection]);
-
-  const activeSectionData = sectionData.find((section) => section.id === activeSection);
 
   return (
     <Grid container>
       <Grid size={11.5} height={"100vh"}>
-        <Box className="container" ref={containerRef}
-          sx={{
-            backgroundImage: activeSectionData?.hero.background,
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            // transition: 'background-image 0.5s ease-in-out'
-          }} >
-          {
-            sectionData.map((section) => {
-              if (section.patches["2025-09-04"].length != 0)
-                return (
-                  <HeroSection key={section.id} id={section.id} heroDefinition={section.hero} heroData={section.patches["2025-09-04"] ?? []} />
-                );
-            })
-          }
-        </ Box>
+        <SectionScroller sectionData={sectionData} containerRef={containerRef} activeSection={activeSectionId} />
       </Grid>
       <Grid size={0.5}
-        ref={stepperContainerRef}
         sx={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           height: '100vh',
-          overflowY: 'auto',
           paddingTop: 2,
           paddingBottom: 2,
-          scrollbarWidth: 'none',
-          '&::-webkit-scrollbar': {
-            display: 'none',
-          },
+
         }}
       >
-        <Stepper
-          orientation="vertical"
-          nonLinear
-          activeStep={sectionData.findIndex(section => section.id === activeSection)}
-          connector={null}
-        >
-          {sectionData.map((section, index) => {
-            if (section.patches["2025-09-04"].length != 0)
-              return (
-                <Step key={section.id}>
-                  <div ref={(el) => stepRefs.current[section.id] = el}>
-                    <StepButton
-                      icon={
-                        <HeroStepIcon
-                          name={section.hero.name}
-                          iconUrl={section.hero.icon}
-                          active={index === sectionData.findIndex(s => s.id === activeSection)}
-                          completed={false} // or your logic here
-                          icon={undefined}
-                        />
-                      }
-                      onClick={() => {
-                        document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth' });
-                      }}
-                      sx={{ padding: 0, minWidth: 'auto' }} // Remove extra padding to keep buttons tight
-                    />
-                  </div>
-
-                </Step>
-              );
-          })}
-        </Stepper>
+        <SectionStepper
+          sectionData={sectionData}
+          activeSection={activeSectionId}
+        />
       </Grid>
     </Grid>
-
-
   )
 }
 
