@@ -79,6 +79,7 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
             sx={{
                 display: 'flex',
                 flexDirection: 'row',
+                alignItems: 'center',
                 minHeight: '100vh',
                 scrollSnapAlign: 'start',
             }}
@@ -89,12 +90,13 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
                 tabIndex={-1}
                 sx={{
                     width: '50%',
-                    height: '100vh',
+                    height: 'auto',
+                    maxHeight: '100vh',
                     overflowY: 'auto',
+                    marginTop: 'auto',
+                    marginBottom: 'auto',
                     paddingLeft: '2em',
                     paddingRight: '10em',
-                    paddingTop: '5vh',
-                    paddingBottom: '5vh',
                     boxSizing: 'border-box',
                     outline: 'none',
                     scrollbarWidth: 'none',
