@@ -1,7 +1,3 @@
-
-
-
-import { useRef, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import { List, ListItem, ListItemText, Typography } from '@mui/material';
 import { SectionDefinition } from '../SectionDefinitions';
@@ -13,8 +9,6 @@ interface SectionProps {
     heroDefinition: SectionDefinition;
     heroData: any[];
 }
-
-
 
 export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
     let nameElement;
