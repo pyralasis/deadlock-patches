@@ -18,7 +18,7 @@ export function Home() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch(`/deadlock-patches/data/json/index.json`);
+                const res = await fetch(`/data/json/index.json`);
                 const files: string[] = await res.json();
                 console.log(files);
                 files.reverse();
@@ -38,7 +38,7 @@ export function Home() {
             width={"100%"}
             height={"100%"}
             sx={{
-                backgroundImage: 'url("/deadlock-patches//backgrounds/city.png")',
+                backgroundImage: 'url("//backgrounds/city.png")',
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
                 maskImage: `${isMobile ? "" : "linear-gradient(to right, transparent, black 20%, black 80%, transparent);"}`,

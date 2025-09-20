@@ -39,12 +39,12 @@ export function DesktopLayout({ date }: { date: string }) {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch(`/deadlock-patches/data/json/index.json`);
+                const res = await fetch(`/data/json/index.json`);
                 const files = await res.json();
 
                 const allData = await Promise.all(
                     files.map((file: string) =>
-                        fetch(`/deadlock-patches/data/json/${file}`).then(res => res.json())
+                        fetch(`/data/json/${file}`).then(res => res.json())
                     )
                 );
 
