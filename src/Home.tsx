@@ -38,7 +38,7 @@ export function Home() {
             width={"100%"}
             height={"100%"}
             sx={{
-                backgroundImage: 'url("//backgrounds/city.png")',
+                backgroundImage: 'url("/backgrounds/city.png")',
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
                 maskImage: `${isMobile ? "" : "linear-gradient(to right, transparent, black 20%, black 80%, transparent);"}`,
