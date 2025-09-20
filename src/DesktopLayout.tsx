@@ -110,7 +110,7 @@ export function DesktopLayout() {
     return (
         <Grid container>
             <Grid size={11.5} height={"100vh"}>
-                <SectionScroller sectionData={sectionData} containerRef={containerRef} activeSection={activeSectionId} />
+                <SectionScroller sectionData={sectionData} containerRef={containerRef} activeSection={activeSectionId} setActiveSectionId={setActiveSectionId} />
             </Grid>
             <Grid size={0.5}
                 sx={{

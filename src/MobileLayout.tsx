@@ -43,6 +43,10 @@ export function MobileLayout() {
     const handleChangeSection = (sectionId: string) => {
         setActiveSectionId(sectionId);
         handleClose();
+        const section = containerRef.current?.querySelector(`section#${sectionId}`);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     };
 
     const [sectionData, setSectionData] = useState<SectionData[]>([]);
@@ -174,8 +178,9 @@ export function MobileLayout() {
             <Box id="bottom"
                 height={"calc(100vh - 100px)"}
                 width={"100%"}
+                sx={{ overflow: 'hidden' }}
             >
-                <SectionScroller sectionData={sectionData} containerRef={containerRef} activeSection={activeSectionId} />
+                <SectionScroller sectionData={sectionData} containerRef={containerRef} activeSection={activeSectionId} setActiveSectionId={setActiveSectionId} />
             </Box>
         </Box>
     );

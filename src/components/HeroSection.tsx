@@ -85,32 +85,28 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
             </Box>
         );
     else {
-        // Ref for the scrollable patch notes box
         const patchNotesRef = React.useRef<HTMLDivElement>(null);
-
-
         return (
             <Box
                 component="section"
-                className="section hero-section-snap"
+                className="hero-section-snap"
                 id={id}
                 sx={{
                     display: 'flex',
                     flexDirection: 'row',
                     alignItems: 'center',
-                    minHeight: '100vh',
+                    height: '100%',
                     scrollSnapAlign: 'start',
                 }}
             >
                 <Box
-                    className="hero-section-left"
+                    // className="hero-section-left"
                     tabIndex={-1}
                     ref={patchNotesRef}
                     sx={{
                         width: '100%',
                         height: '100%',
-                        maxHeight: '100vh',
-                        overflowY: 'hidden',
+                        overflowY: "scroll",
                         marginTop: 'auto',
                         marginBottom: 'auto',
                         paddingLeft: '1em',
