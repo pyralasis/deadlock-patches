@@ -156,12 +156,7 @@ export function MobileLayout() {
             <Box id="bottom"
                 height={"calc(100vh - 100px)"}
                 width={"100%"}
-                sx={{
-                    backgroundImage: 'url("/deadlock-patches/backgrounds/viscous.png")',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundSize: '200% 100%',
-                    backgroundPosition: 'right'
-                }}>
+            >
                 <SectionScroller sectionData={sectionData} containerRef={containerRef} activeSection={activeSectionId} />
             </Box>
         </Box>

@@ -128,8 +128,8 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
                     if (parent) {
                         // Scroll parent by the same delta
                         parent.scrollBy({
-                            top: deltaY * 10,
-                            behavior: 'auto',
+                            top: deltaY,
+                            behavior: 'smooth',
                         });
                     }
                     // Prevent the patch notes from scrolling further
