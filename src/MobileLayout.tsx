@@ -158,13 +158,14 @@ export function MobileLayout() {
 
                 >
                     <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between", flexWrap: "wrap" }}>
-                        {sectionData.map((section, _index) => {
-                            return (
+                        {sectionData.map((section, _index) => (
+
+                            section.patches["2025-09-04"] && section.patches["2025-09-04"].length !== 0 ? (
                                 <Button onClick={() => handleChangeSection(section.id)}>
                                     <Box component={"img"} src={section.definition.icon} height={"80px"}></Box>
                                 </Button>
-                            );
-                        })}
+                            ) : null
+                        ))}
                     </Box>
                 </Popover>
                 {nameElement}

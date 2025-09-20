@@ -49,7 +49,7 @@ export const HERO_DEFINITIONS: Record<string, SectionDefinition> = {
 
 
 export const GENERAL_DEFINITIONS: Record<string, SectionDefinition> = {
-    "Map": new SectionDefinition("Map", 'url("/deadlock-patches/backgrounds/generic.png")', "", "//deadlock-patcheshero_icons/deadlock_logo.png"),
+    "Map": new SectionDefinition("Map", 'url("/deadlock-patches/backgrounds/generic.png")', "", "/deadlock-patcheshero_icons/deadlock_logo.png"),
     "Gameplay": new SectionDefinition("Gameplay", 'url("/deadlock-patches/backgrounds/generic.png")', "", "/deadlock-patches/hero_icons/deadlock_logo.png"),
     "Bugfixes": new SectionDefinition("Bugfixes", 'url("/deadlock-patches/backgrounds/generic.png")', "", "/deadlock-patches/hero_icons/deadlock_logo.png")
 }
