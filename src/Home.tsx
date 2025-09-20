@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 export function Home() {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
-    const numCols = isMobile ? 2 : 4;
 
     const navigate = useNavigate();
     const handleClick = (date: string) => {
@@ -38,16 +37,17 @@ export function Home() {
             justifyContent={"center"}
             width={"100%"}
             height={"100%"}
-            overflow={"scroll"}
             sx={{
                 backgroundImage: 'url("/deadlock-patches//backgrounds/city.png")',
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
                 maskImage: `${isMobile ? "" : "linear-gradient(to right, transparent, black 20%, black 80%, transparent);"}`,
-                maskRepeat: "no-repeat"
+                maskRepeat: "no-repeat",
+                overflowX: "hidden",
+                overflowY: "scroll"
             }}>
             <Box
-                width={"80vh"}
+                width={`${isMobile ? "100%" : "80vh"}`}
                 display={"flex"}
                 flexDirection={"column"}
                 alignItems={"center"}
@@ -63,7 +63,7 @@ export function Home() {
                 </Typography>
 
                 <Masonry
-                    columns={numCols}
+                    columns={`${isMobile ? 2 : 4}`}
                     spacing={2}
                     defaultHeight={450}
                     defaultColumns={4}
