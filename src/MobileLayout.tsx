@@ -120,11 +120,14 @@ export function MobileLayout() {
 
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;
+    const activeSectionIcon = sectionData.find((section) => section.id === activeSectionId)?.definition.icon;
+    const activeSectionNameplate = sectionData.find((section) => section.id === activeSectionId)?.definition.nameplate;
+
     return (
         <Box display={'flex'} flexDirection={'column'}>
             <Box id="top" display={"flex"} flexDirection={"row"} sx={{ height: "100px" }}>
-                <Button sx={{ width: "200px" }} onClick={handleClick} >
-                    <Box component={"img"} src="/deadlock-patches/hero_icons/abrams.png" height={"100%"}></Box>
+                <Button sx={{ width: "100px" }} onClick={handleClick} >
+                    <Box component={"img"} src={activeSectionIcon} height={"100%"}></Box>
                 </Button>
                 <Popover
                     id={id}
@@ -147,7 +150,7 @@ export function MobileLayout() {
                         })}
                     </Box>
                 </Popover>
-                <Box component={"img"} src="/deadlock-patches/nameplates/abrams.svg" height={"90%"}></Box>
+                <Box component={"img"} src={activeSectionNameplate} height={"90%"} width={"calc(100% - 100px)"}></Box>
 
             </Box>
             <Box id="bottom"
