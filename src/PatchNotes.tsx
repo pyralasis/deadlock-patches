@@ -3,7 +3,7 @@ import './App.css'
 import { DesktopLayout } from './DesktopLayout';
 import { MobileLayout } from './MobileLayout';
 import { GENERAL_DEFINITIONS, HERO_DEFINITIONS, ITEM_DEFINITIONS, SectionDefinition } from './SectionDefinitions';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const preloadHeroImages = (definitions: SectionDefinition[]) => {
     definitions.forEach((definition: SectionDefinition) => {

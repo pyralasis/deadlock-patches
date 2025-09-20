@@ -2,7 +2,7 @@ import Masonry from "@mui/lab/Masonry";
 import { Box, Button, Card, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { HERO_DEFINITIONS, SectionDefinition } from "./SectionDefinitions";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function Home() {
 
