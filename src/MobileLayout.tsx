@@ -141,7 +141,7 @@ export function MobileLayout() {
 
                 >
                     <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between", flexWrap: "wrap" }}>
-                        {sectionData.map((section, index) => {
+                        {sectionData.map((section, _index) => {
                             return (
                                 <Button>
                                     <Box component={"img"} src={section.definition.icon} height={"80px"}></Box>
