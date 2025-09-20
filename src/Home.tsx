@@ -1,10 +1,13 @@
 import Masonry from "@mui/lab/Masonry";
-import { Box, Button, Card, Typography } from "@mui/material";
+import { Box, Button, Card, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useEffect, useState } from "react";
 import { HERO_DEFINITIONS, SectionDefinition } from "./SectionDefinitions";
 import { useNavigate } from "react-router-dom";
 
 export function Home() {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+    const numCols = isMobile ? 2 : 4;
 
     const navigate = useNavigate();
     const handleClick = (date: string) => {
@@ -44,6 +47,9 @@ export function Home() {
             }}>
             <Box
                 width={"80vh"}
+                display={"flex"}
+                flexDirection={"column"}
+                alignItems={"center"}
             >
                 <Typography
                     fontFamily={"DecoturaICG"}
@@ -56,7 +62,7 @@ export function Home() {
                 </Typography>
 
                 <Masonry
-                    columns={4}
+                    columns={numCols}
                     spacing={2}
                     defaultHeight={450}
                     defaultColumns={4}
