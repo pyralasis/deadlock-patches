@@ -29,7 +29,7 @@ function getItemPatches(category: string, jsonData: PatchData[]): Record<string,
     return itemPatches;
 }
 
-export function MobileLayout() {
+export function MobileLayout({ date }: { date: string }) {
     const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
 
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -161,7 +161,7 @@ export function MobileLayout() {
                     <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between", flexWrap: "wrap" }}>
                         {sectionData.map((section, _index) => (
 
-                            section.patches["2025-09-04"] && section.patches["2025-09-04"].length !== 0 ? (
+                            section.patches[date] && section.patches[date].length !== 0 ? (
                                 <Button onClick={() => handleChangeSection(section.id)}>
                                     <Box component={"img"} src={section.definition.icon} height={"80px"}></Box>
                                 </Button>
@@ -177,7 +177,7 @@ export function MobileLayout() {
                 width={"100%"}
                 sx={{ overflow: 'hidden' }}
             >
-                <SectionScroller sectionData={sectionData} containerRef={containerRef} activeSection={activeSectionId} setActiveSectionId={setActiveSectionId} />
+                <SectionScroller sectionData={sectionData} containerRef={containerRef} activeSection={activeSectionId} setActiveSectionId={setActiveSectionId} date={date} />
             </Box>
         </Box>
     );

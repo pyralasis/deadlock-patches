@@ -1,12 +1,32 @@
 {
-    "date": "2025-08-18",
+    "date": "2025-07-29",
     "characters": {
         "Abrams": [],
-        "Bebop": [],
-        "Billy": [],
+        "Bebop": [
+            "Weapon Range growth per boon increased from 1.2 to 1.5",
+            "Bullet damage growth per boon increased from 0.13 to 0.14",
+            "Exploding Uppercut cooldown reduced from 21s to 19s",
+            "Exploding Uppercut T1 increased from -10.5s to -11s",
+            "Hyperbeam cooldown reduced from 120s to 105s"
+        ],
+        "Billy": [
+            "Base health from 730 to 740",
+            "Rising Ram cooldown decreased from 33s to 30s"
+        ],
         "Calico": [],
-        "Doorman": [],
-        "Drifter": [],
+        "Doorman": [
+            "Call Bell explosion damage reduced from 70 to 60",
+            "Call Bell explosion damage spirit scaling increased from 1.4 to 1.5",
+            "Hotel Guest now teleports the target back to the beginning of the hotel if they fall into the void."
+        ],
+        "Drifter": [
+            "Health gain per boon reduced from 41 to 39",
+            "Weapon falloff start distance reduced from 24m to 22m",
+            "Weapon falloff start distance reduced from 24m to 22m",
+            "Weapon damage gain per boon reduced from 0.55 to 0.52",
+            "Bloodscent T3 Bonus amp damage reduced from +11% to +10%",
+            "Rend now causes you to briefly float in the air during the cast time"
+        ],
         "Dynamo": [],
         "Grey Talon": [
             "Bullet damage growth based on Spirit Power increased from 0.07 to 0.08",

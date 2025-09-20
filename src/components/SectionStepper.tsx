@@ -6,9 +6,10 @@ import { SectionData } from "../SectionTypes";
 interface SectionStepperProps {
     sectionData: SectionData[];
     activeSection: string;
+    date: string
 }
 
-export function SectionStepper({ sectionData, activeSection }: SectionStepperProps) {
+export function SectionStepper({ sectionData, activeSection, date }: SectionStepperProps) {
     const stepRefs = useRef<Record<string, HTMLDivElement | null>>({});
     const stepperContainerRef = useRef<HTMLDivElement | null>(null);
 
@@ -44,7 +45,7 @@ export function SectionStepper({ sectionData, activeSection }: SectionStepperPro
                 connector={null}
             >
                 {sectionData.map((section, index) => {
-                    if (section.patches["2025-09-04"] && section.patches["2025-09-04"].length !== 0)
+                    if (section.patches[date] && section.patches[date].length !== 0)
                         if (section.type == "hero")
                             return (
                                 <Step key={section.id}>

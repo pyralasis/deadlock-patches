@@ -30,7 +30,7 @@ function getItemPatches(category: string, jsonData: PatchData[]): Record<string,
     return itemPatches;
 }
 
-export function DesktopLayout() {
+export function DesktopLayout({ date }: { date: string }) {
     const [sectionData, setSectionData] = useState<SectionData[]>([]);
 
     const containerRef = useRef<HTMLDivElement | null>(null);
@@ -110,7 +110,7 @@ export function DesktopLayout() {
     return (
         <Grid container>
             <Grid size={11.5} height={"100vh"}>
-                <SectionScroller sectionData={sectionData} containerRef={containerRef} activeSection={activeSectionId} setActiveSectionId={setActiveSectionId} />
+                <SectionScroller sectionData={sectionData} containerRef={containerRef} activeSection={activeSectionId} setActiveSectionId={setActiveSectionId} date={date} />
             </Grid>
             <Grid size={0.5}
                 sx={{
@@ -126,6 +126,7 @@ export function DesktopLayout() {
                 <SectionStepper
                     sectionData={sectionData}
                     activeSection={activeSectionId}
+                    date={date}
                 />
             </Grid>
         </Grid>

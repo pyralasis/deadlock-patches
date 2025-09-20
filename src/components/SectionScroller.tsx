@@ -8,9 +8,10 @@ interface SectionScrollerProps {
     containerRef: React.RefObject<HTMLDivElement | null>;
     activeSection: string;
     setActiveSectionId: React.Dispatch<React.SetStateAction<string>>;
+    date: string
 }
 
-export function SectionScroller({ sectionData, containerRef, activeSection, setActiveSectionId }: SectionScrollerProps) {
+export function SectionScroller({ sectionData, containerRef, activeSection, setActiveSectionId, date }: SectionScrollerProps) {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
@@ -36,13 +37,13 @@ export function SectionScroller({ sectionData, containerRef, activeSection, setA
                 }}
             >
                 {sectionData.map((section) => (
-                    section.patches["2025-09-04"] && section.patches["2025-09-04"].length !== 0 ? (
+                    section.patches[date] && section.patches[date].length !== 0 ? (
                         <Section
                             key={section.id}
                             id={section.id}
                             type={section.type}
                             heroDefinition={section.definition}
-                            heroData={section.patches["2025-09-04"] ?? []}
+                            heroData={section.patches[date] ?? []}
                         />
                     ) : null
                 ))}
@@ -65,13 +66,13 @@ export function SectionScroller({ sectionData, containerRef, activeSection, setA
                     }}
                 >
                     {sectionData.map((section) => (
-                        section.patches["2025-09-04"] && section.patches["2025-09-04"].length !== 0 ? (
+                        section.patches[date] && section.patches[date].length !== 0 ? (
                             <Section
                                 key={section.id}
                                 id={section.id}
                                 type={section.type}
                                 heroDefinition={section.definition}
-                                heroData={section.patches["2025-09-04"] ?? []}
+                                heroData={section.patches[date] ?? []}
                             />
                         ) : null
                     ))}
@@ -84,7 +85,7 @@ export function SectionScroller({ sectionData, containerRef, activeSection, setA
                             while (prevIdx >= 0) {
                                 const s = sectionData[prevIdx];
 
-                                if (s.patches["2025-09-04"] && s.patches["2025-09-04"].length !== 0) {
+                                if (s.patches[date] && s.patches[date].length !== 0) {
 
                                     return (
                                         <Button
@@ -111,7 +112,7 @@ export function SectionScroller({ sectionData, containerRef, activeSection, setA
                             let nextIdx = currentIdx + 1;
                             while (nextIdx < sectionData.length) {
                                 const s = sectionData[nextIdx];
-                                if (s.patches["2025-09-04"] && s.patches["2025-09-04"].length !== 0) {
+                                if (s.patches[date] && s.patches[date].length !== 0) {
                                     return (
                                         <Button
                                             key={s.id}
