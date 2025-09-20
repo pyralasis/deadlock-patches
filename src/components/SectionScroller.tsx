@@ -1,7 +1,6 @@
 import { Box, Button, useMediaQuery, useTheme } from "@mui/material";
 import { Section } from "./HeroSection";
 import { SectionData } from "../SectionTypes";
-import { useEffect } from "react";
 
 
 interface SectionScrollerProps {
