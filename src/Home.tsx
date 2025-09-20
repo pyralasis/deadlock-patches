@@ -38,11 +38,12 @@ export function Home() {
             justifyContent={"center"}
             width={"100%"}
             height={"100%"}
+            overflow={"scroll"}
             sx={{
                 backgroundImage: 'url("/deadlock-patches//backgrounds/city.png")',
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
-                maskImage: "linear-gradient(to right, transparent, black 20%, black 80%, transparent);",
+                maskImage: `${isMobile ? "" : "linear-gradient(to right, transparent, black 20%, black 80%, transparent);"}`,
                 maskRepeat: "no-repeat"
             }}>
             <Box
