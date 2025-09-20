@@ -60,7 +60,7 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
                         backgroundColor: '#12121233',
                     }}
                 >
-                    <List>
+                    <List >
                         {heroData.map((item: any, index: number) => (
                             <ListItem key={index}>
                                 <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item} />
@@ -88,70 +88,6 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
         // Ref for the scrollable patch notes box
         const patchNotesRef = React.useRef<HTMLDivElement>(null);
 
-        // Wheel and touch event handler to allow parent scroll when at top/bottom
-        React.useEffect(() => {
-            const el = patchNotesRef.current;
-            if (!el) return;
-
-            // Wheel event (desktop)
-            const onWheel = (e: WheelEvent) => {
-                const { scrollTop, scrollHeight, clientHeight } = el;
-                const atTop = scrollTop === 0;
-                const atBottom = Math.abs(scrollTop + clientHeight - scrollHeight) < 1;
-                if ((atTop && e.deltaY < 0) || (atBottom && e.deltaY > 0)) {
-                    // Let event bubble to parent for section snap
-                    return;
-                } else {
-                    // Prevent parent scroll, keep inside patch notes
-                    e.stopPropagation();
-                }
-            };
-
-            // Touch event (mobile)
-            let lastY = 0;
-            const onTouchStart = (e: TouchEvent) => {
-                if (e.touches.length === 1) {
-                    lastY = e.touches[0].clientY;
-                }
-            };
-            const onTouchMove = (e: TouchEvent) => {
-                if (e.touches.length !== 1) return;
-                const currentY = e.touches[0].clientY;
-                const deltaY = lastY - currentY;
-                const { scrollTop, scrollHeight, clientHeight } = el;
-                const atTop = scrollTop === 0;
-                const atBottom = Math.abs(scrollTop + clientHeight - scrollHeight) < 1;
-                // Find the parent scroll container
-                const parent = el.closest('.hero-section-container');
-                if ((atTop && deltaY < 0) || (atBottom && deltaY > 0)) {
-                    // Programmatically scroll the parent container
-                    if (parent) {
-                        // Scroll parent by the same delta
-                        parent.scrollBy({
-                            top: deltaY,
-                            behavior: 'smooth',
-                        });
-                    }
-                    // Prevent the patch notes from scrolling further
-                    e.preventDefault();
-                    e.stopPropagation();
-                } else {
-                    // Prevent parent scroll, keep inside patch notes
-                    e.preventDefault();
-                    e.stopPropagation();
-                }
-                lastY = currentY;
-            };
-
-            el.addEventListener('wheel', onWheel, { passive: false });
-            el.addEventListener('touchstart', onTouchStart, { passive: true });
-            el.addEventListener('touchmove', onTouchMove, { passive: false });
-            return () => {
-                el.removeEventListener('wheel', onWheel);
-                el.removeEventListener('touchstart', onTouchStart);
-                el.removeEventListener('touchmove', onTouchMove);
-            };
-        }, []);
 
         return (
             <Box
@@ -174,7 +110,7 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
                         width: '100%',
                         height: '100%',
                         maxHeight: '100vh',
-                        overflowY: 'auto',
+                        overflowY: 'hidden',
                         marginTop: 'auto',
                         marginBottom: 'auto',
                         paddingLeft: '1em',

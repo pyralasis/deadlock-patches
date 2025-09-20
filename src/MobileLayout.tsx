@@ -1,4 +1,4 @@
-import { Box, Button, Popover } from "@mui/material";
+import { Box, Button, Popover, Typography } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
 import { SectionData } from "./SectionTypes";
 import { GENERAL_DEFINITIONS, HERO_DEFINITIONS, ITEM_DEFINITIONS } from "./SectionDefinitions";
@@ -38,6 +38,11 @@ export function MobileLayout() {
 
     const handleClose = () => {
         setAnchorEl(null);
+    };
+
+    const handleChangeSection = (sectionId: string) => {
+        setActiveSectionId(sectionId);
+        handleClose();
     };
 
     const [sectionData, setSectionData] = useState<SectionData[]>([]);
@@ -122,7 +127,19 @@ export function MobileLayout() {
     const id = open ? 'simple-popover' : undefined;
     const activeSectionIcon = sectionData.find((section) => section.id === activeSectionId)?.definition.icon;
     const activeSectionNameplate = sectionData.find((section) => section.id === activeSectionId)?.definition.nameplate;
+    const activeSectionType = sectionData.find((section) => section.id === activeSectionId)?.type;
+    const activeSectionName = sectionData.find((section) => section.id === activeSectionId)?.definition.name;
 
+    let nameElement;
+    if (activeSectionType === "hero") {
+        nameElement = (
+            <Box component={"img"} src={activeSectionNameplate} height={"90%"} width={"calc(100% - 100px)"}></Box>
+        );
+    } else {
+        nameElement = (
+            <Typography fontFamily={"DecoturalCG"} fontSize={64}>{activeSectionName} </Typography>
+        );
+    }
     return (
         <Box display={'flex'} flexDirection={'column'}>
             <Box id="top" display={"flex"} flexDirection={"row"} sx={{ height: "100px" }}>
@@ -143,14 +160,14 @@ export function MobileLayout() {
                     <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between", flexWrap: "wrap" }}>
                         {sectionData.map((section, _index) => {
                             return (
-                                <Button>
+                                <Button onClick={() => handleChangeSection(section.id)}>
                                     <Box component={"img"} src={section.definition.icon} height={"80px"}></Box>
                                 </Button>
                             );
                         })}
                     </Box>
                 </Popover>
-                <Box component={"img"} src={activeSectionNameplate} height={"90%"} width={"calc(100% - 100px)"}></Box>
+                {nameElement}
 
             </Box>
             <Box id="bottom"
