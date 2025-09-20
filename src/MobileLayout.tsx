@@ -1,0 +1,166 @@
+import { Box, Button, Popover } from "@mui/material";
+import React, { useEffect, useRef, useState } from "react";
+import { SectionData } from "./SectionTypes";
+import { GENERAL_DEFINITIONS, HERO_DEFINITIONS, ITEM_DEFINITIONS } from "./SectionDefinitions";
+import { PatchData } from "./PatchData";
+import { SectionScroller } from "./components/SectionScroller";
+
+function getHeroPatches(hero: string, jsonData: PatchData[]): Record<string, string[]> {
+    let heroPatches: Record<string, string[]> = {};
+    jsonData.forEach(patch => {
+        heroPatches[patch.date] = patch.characters[hero];
+    });
+    return heroPatches;
+}
+
+function getGeneralPatches(category: string, jsonData: PatchData[]): Record<string, string[]> {
+    let categoryPatches: Record<string, string[]> = {};
+    jsonData.forEach(patch => {
+        categoryPatches[patch.date] = patch.general[category];
+    });
+    return categoryPatches;
+}
+
+function getItemPatches(category: string, jsonData: PatchData[]): Record<string, string[]> {
+    let itemPatches: Record<string, string[]> = {};
+    jsonData.forEach(patch => {
+        itemPatches[patch.date] = patch.items[category];
+    });
+    return itemPatches;
+}
+
+export function MobileLayout() {
+    const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(null);
+
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    const [sectionData, setSectionData] = useState<SectionData[]>([]);
+
+    const containerRef = useRef<HTMLDivElement | null>(null);
+    const [activeSectionId, setActiveSectionId] = useState("");
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const res = await fetch(`/deadlock-patches/data/json/index.json`);
+                const files = await res.json();
+
+                const allData = await Promise.all(
+                    files.map((file: string) =>
+                        fetch(`/deadlock-patches/data/json/${file}`).then(res => res.json())
+                    )
+                );
+
+                const tempSectionData: SectionData[] = [];
+
+                Object.keys(GENERAL_DEFINITIONS).forEach(key => {
+                    tempSectionData.push({
+                        id: key,
+                        type: "general",
+                        definition: GENERAL_DEFINITIONS[key],
+                        patches: getGeneralPatches(key, allData)
+                    });
+                });
+
+                Object.keys(HERO_DEFINITIONS).forEach(key => {
+                    tempSectionData.push({
+                        id: key,
+                        type: "hero",
+                        definition: HERO_DEFINITIONS[key],
+                        patches: getHeroPatches(key, allData)
+                    });
+                });
+
+                Object.keys(ITEM_DEFINITIONS).forEach(key => {
+                    tempSectionData.push({
+                        id: key,
+                        type: "item",
+                        definition: ITEM_DEFINITIONS[key],
+                        patches: getItemPatches(key, allData)
+                    });
+                });
+                setSectionData(tempSectionData);
+
+                if (tempSectionData.length > 0) {
+                    setActiveSectionId(tempSectionData[0].id);
+                }
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            setActiveSectionId(entry.target.id);
+                        }
+                    });
+                    console.log(sectionData);
+                }, {
+                    root: containerRef.current,
+                    threshold: 0.5,
+                });
+
+                setTimeout(() => {
+                    const sections = containerRef.current?.querySelectorAll('section') ?? [];
+                    sections.forEach((section) => observer.observe(section));
+                }, 0);
+
+                return () => observer.disconnect();
+
+            } catch (error) {
+                console.error('Failed to fetch JSON data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+    const open = Boolean(anchorEl);
+    const id = open ? 'simple-popover' : undefined;
+    return (
+        <Box display={'flex'} flexDirection={'column'}>
+            <Box id="top" display={"flex"} flexDirection={"row"} sx={{ height: "100px" }}>
+                <Button sx={{ width: "200px" }} onClick={handleClick} >
+                    <Box component={"img"} src="/deadlock-patches/hero_icons/abrams.png" height={"100%"}></Box>
+                </Button>
+                <Popover
+                    id={id}
+                    open={open}
+                    anchorEl={anchorEl}
+                    onClose={handleClose}
+                    anchorOrigin={{
+                        vertical: 'bottom',
+                        horizontal: 'center',
+                    }}
+
+                >
+                    <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between", flexWrap: "wrap" }}>
+                        {sectionData.map((section, index) => {
+                            return (
+                                <Button>
+                                    <Box component={"img"} src={section.definition.icon} height={"80px"}></Box>
+                                </Button>
+                            );
+                        })}
+                    </Box>
+                </Popover>
+                <Box component={"img"} src="/deadlock-patches/nameplates/abrams.svg" height={"90%"}></Box>
+
+            </Box>
+            <Box id="bottom"
+                height={"calc(100vh - 100px)"}
+                width={"100%"}
+                sx={{
+                    backgroundImage: 'url("/deadlock-patches/backgrounds/viscous.png")',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: '200% 100%',
+                    backgroundPosition: 'right'
+                }}>
+                <SectionScroller sectionData={sectionData} containerRef={containerRef} activeSection={activeSectionId} />
+            </Box>
+        </Box>
+    );
+}
