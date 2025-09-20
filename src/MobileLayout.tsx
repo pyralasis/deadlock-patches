@@ -43,10 +43,7 @@ export function MobileLayout() {
     const handleChangeSection = (sectionId: string) => {
         setActiveSectionId(sectionId);
         handleClose();
-        const section = containerRef.current?.querySelector(`section#${sectionId}`);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     };
 
     const [sectionData, setSectionData] = useState<SectionData[]>([]);

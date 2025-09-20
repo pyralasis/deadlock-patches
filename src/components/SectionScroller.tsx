@@ -1,6 +1,7 @@
 import { Box, Button, useMediaQuery, useTheme } from "@mui/material";
 import { Section } from "./HeroSection";
 import { SectionData } from "../SectionTypes";
+import { useEffect } from "react";
 
 
 interface SectionScrollerProps {
@@ -18,10 +19,7 @@ export function SectionScroller({ sectionData, containerRef, activeSection, setA
 
     const handleChangeSection = (sectionId: string) => {
         setActiveSectionId(sectionId);
-        const section = containerRef.current?.querySelector(`section#${sectionId}`);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     };
 
     if (!isMobile)
@@ -81,32 +79,59 @@ export function SectionScroller({ sectionData, containerRef, activeSection, setA
                 </Box>
                 <Box width={"100%"} height={"50px"} display={"flex"} flexDirection={"row"}>
                     {
-                        sectionData.findIndex(section => (section.id === activeSection)) - 1 > 0 ?
-                            <Button
-                                onClick={() => handleChangeSection(sectionData[sectionData.findIndex(section => (section.id === activeSection)) - 1].id)}
-                                sx={{ width: "100%" }}
-                            >
-                                <Box
-                                    component={"img"}
-                                    src={sectionData[sectionData.findIndex(section => (section.id === activeSection)) - 1].definition.icon}
-                                    height={"50px"}
-                                />
-                            </Button> : null
+                        (() => {
+                            const currentIdx = sectionData.findIndex(section => section.id === activeSection);
+                            let prevIdx = currentIdx - 1;
+                            while (prevIdx >= 0) {
+                                const s = sectionData[prevIdx];
+
+                                if (s.patches["2025-09-04"] && s.patches["2025-09-04"].length !== 0) {
+
+                                    return (
+                                        <Button
+                                            key={s.id}
+                                            onClick={() => handleChangeSection(s.id)}
+                                            sx={{ width: "100%" }}
+                                        >
+                                            <Box
+                                                component={"img"}
+                                                src={s.definition.icon}
+                                                height={"50px"}
+                                            />
+                                        </Button>
+                                    );
+                                }
+                                prevIdx--;
+                            }
+                            return null;
+                        })()
                     }
                     {
-                        sectionData.findIndex(section => (section.id === activeSection)) + 1 < sectionData.length ?
-                            <Button
-                                onClick={() => handleChangeSection(sectionData[sectionData.findIndex(section => (section.id === activeSection)) + 1].id)}
-                                sx={{ width: "100%" }}
-                            >
-                                <Box
-                                    component={"img"}
-                                    src={sectionData[sectionData.findIndex(section => (section.id === activeSection)) + 1].definition.icon}
-                                    height={"50px"}
-                                />
-                            </Button> : null
+                        (() => {
+                            const currentIdx = sectionData.findIndex(section => section.id === activeSection);
+                            let nextIdx = currentIdx + 1;
+                            while (nextIdx < sectionData.length) {
+                                const s = sectionData[nextIdx];
+                                if (s.patches["2025-09-04"] && s.patches["2025-09-04"].length !== 0) {
+                                    return (
+                                        <Button
+                                            key={s.id}
+                                            onClick={() => handleChangeSection(s.id)}
+                                            sx={{ width: "100%" }}
+                                        >
+                                            <Box
+                                                component={"img"}
+                                                src={s.definition.icon}
+                                                height={"50px"}
+                                            />
+                                        </Button>
+                                    );
+                                }
+                                nextIdx++;
+                            }
+                            return null;
+                        })()
                     }
-
                 </Box>
             </Box >
         );
