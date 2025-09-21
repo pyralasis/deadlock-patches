@@ -418,10 +418,257 @@
         "Yamato": []
     },
     "items": {
-        "weapon": {},
-        "vitality": {},
-        "spirit": {}
+        "Weapon": [
+            {
+                "description": "Weakening Headshot: Bullet resistance reduction increased from -12% to -13%",
+                "change": "buff"
+            },
+            {
+                "description": "Weakening Headshot: Debuff duration increased from 10s to 12s",
+                "change": "buff"
+            },
+            {
+                "description": "Backstabber: Cooldown increased from 4s to 5s",
+                "change": "nerf"
+            },
+            {
+                "description": "Backstabber: Damage per second reduced from 20 to 17",
+                "change": "nerf"
+            },
+            {
+                "description": "Long Range: Now grants +4% Fall Off Range",
+                "change": "buff"
+            },
+            {
+                "description": "Sharpshooter: Sprint increased from 1 to 1.5",
+                "change": "buff"
+            },
+            {
+                "description": "Blood Tribute: Spirit Resistance increased from 8% to 10%",
+                "change": "buff"
+            },
+            {
+                "description": "Blood Tribute: Active move speed increased from 2 to 2.25",
+                "change": "buff"
+            },
+            {
+                "description": "Headhunter: Bonus Damage boon scaling increased from 3 to 4",
+                "change": "buff"
+            },
+            {
+                "description": "Shadow Weave: Invis Sprint speed increased from +2 to +5",
+                "change": "buff"
+            },
+            {
+                "description": "Capacitor: Now grants +8% Fire Rate",
+                "change": "buff"
+            },
+            {
+                "description": "Capacitor: Projectile speed increased by 20%",
+                "change": "buff"
+            },
+            {
+                "description": "Crippling Headshot: Debuff duration increased from 8s to 12s",
+                "change": "buff"
+            },
+            {
+                "description": "Ricochet: No longer targets zipline targets",
+                "change": "neutral"
+            },
+            {
+                "description": "Spellslinger: Buff duration increased from 14 to 18",
+                "change": "buff"
+            }
+        ],
+        "Vitality": [
+            {
+                "description": "Rebuttal: No longer grants +50% Melee Damage on successful parry",
+                "change": "nerf"
+            },
+            {
+                "description": "Rebuttal: Now grants +30% Bonus Damage on successful parry (affects all damage, similar to the base parry amplification)",
+                "change": "buff"
+            },
+            {
+                "description": "Weapon Shielding: Damage requirement reduced from 200 to 175",
+                "change": "buff"
+            },
+            {
+                "description": "Return Fire: Bullet Resistance increased from 6% to 8%",
+                "change": "buff"
+            },
+            {
+                "description": "Restorative Locket: No longer scales with Spirit Power (0.17)",
+                "change": "nerf"
+            },
+            {
+                "description": "Restorative Locket: Now scales with Boons (0.3)",
+                "change": "buff"
+            },
+            {
+                "description": "Guardian Ward: Cast range increased from 35m to 40m",
+                "change": "buff"
+            },
+            {
+                "description": "Divine Barrier: Cast range increased from 35m to 40m",
+                "change": "buff"
+            },
+            {
+                "description": "Veil Walker: Heal per boon increased from 3 to 4",
+                "change": "buff"
+            },
+            {
+                "description": "Veil Walker: Duration increased from 6s to 7s",
+                "change": "buff"
+            },
+            {
+                "description": "Healing Nova: Heal per boon increased from 4.4 to 6",
+                "change": "buff"
+            },
+            {
+                "description": "Healing Nova: Now grants +6% Ability Range",
+                "change": "buff"
+            },
+            {
+                "description": "Metal Skin: Duration increased from 4s to 5s",
+                "change": "buff"
+            },
+            {
+                "description": "Counterspell: Duration reduced from 1 to 0.9",
+                "change": "nerf"
+            },
+            {
+                "description": "Trophy Collector: Out of Combat regen increased from 3.5 to 4",
+                "change": "buff"
+            },
+            {
+                "description": "Trophy Collector: Souls Per Minute increased from 23 to 25",
+                "change": "buff"
+            },
+            {
+                "description": "Cheat Death: Cooldown reduced from 100s to 90s",
+                "change": "buff"
+            },
+            {
+                "description": "Witchmail: Spirit Power bonus increased from 10 to 14",
+                "change": "buff"
+            },
+            {
+                "description": "Siphon Bullets: Max HP Steal reduced from 55 to 35",
+                "change": "nerf"
+            },
+            {
+                "description": "Siphon Bullets: Max HP Steal now scales per Boon (0.8)",
+                "change": "buff"
+            },
+            {
+                "description": "Siphon Bullets: Duration reduced from 20s to 17s",
+                "change": "nerf"
+            },
+            {
+                "description": "Inhibitor: Healing Reduction increased from -30% to -35%",
+                "change": "buff"
+            },
+            {
+                "description": "Inhibitor: Debuff duration increased from 4s to 5s",
+                "change": "buff"
+            }
+        ],
+        "Spirit": [
+            {
+                "description": "Rusted Barrel: Cast range increased from 23m to 28m",
+                "change": "buff"
+            },
+            {
+                "description": "Rusted Barrel: Bullet Resistance reduction increased from -5% to -6%",
+                "change": "buff"
+            },
+            {
+                "description": "Bullet Resist Shredder: No longer grants +20% Melee Resistance",
+                "change": "nerf"
+            },
+            {
+                "description": "Bullet Resist Shredder: Now grants +7% Bullet Resistance",
+                "change": "buff"
+            },
+            {
+                "description": "Cold Front: Damage reduced from 125 to 100",
+                "change": "nerf"
+            },
+            {
+                "description": "Quicksilver Reload: Bonus damage reduced from 60 to 55",
+                "change": "nerf"
+            },
+            {
+                "description": "Spirit Sap: Spirit Power Reduction increased from -18 to -24",
+                "change": "nerf"
+            },
+            {
+                "description": "Silence Wave: Spirit Power Reduction increased from -18 to -24",
+                "change": "nerf"
+            },
+            {
+                "description": "Silence Wave: Silence duration reduced from 3.75 to 3.25",
+                "change": "nerf"
+            },
+            {
+                "description": "Silence Wave: Width increased by 10%",
+                "change": "buff"
+            },
+            {
+                "description": "Torment Pulse: Cooldown reduced from 1.5 to 1.4",
+                "change": "buff"
+            },
+            {
+                "description": "Decay: Cooldown reduced from 36 to 32",
+                "change": "buff"
+            },
+            {
+                "description": "Decay: Bleed Damage spirit scaling increased from 0.0038 to 0.0055",
+                "change": "buff"
+            },
+            {
+                "description": "Magic Carpet: Spirit Power increased from +10 to +14",
+                "change": "buff"
+            },
+            {
+                "description": "Magic Carpet: Speed increased from 6 to 7",
+                "change": "buff"
+            },
+            {
+                "description": "Focus Lens: Now deals damage whenever the debuff is removed rather than only on expire",
+                "change": "buff"
+            },
+            {
+                "description": "Escalating Exposure: Spirit Resistance reduced from 20% to 17%",
+                "change": "nerf"
+            },
+            {
+                "description": "Spirit Burn: Ability Range reduced from 10% to 8%",
+                "change": "nerf"
+            },
+            {
+                "description": "Spirit Burn: Proc damage reduced from 120 to 110",
+                "change": "nerf"
+            }
+        ]
     },
-    "general": {},
-    "bugfixes": {}
+    "general": {
+        "Map": [],
+        "Gameplay": [
+            {
+                "description": "Rejuv only heals the person hitting the crystal",
+                "change": "neutral"
+            },
+            {
+                "description": "Dying to a non-player (when there is no bounty/assists) now increases the respawn time for that death by 10 seconds",
+                "change": "neutral"
+            },
+            {
+                "description": "Patron 1st death time is now a constant 12s instead of being variable between 8 and 15 seconds",
+                "change": "neutral"
+            }
+        ],
+        "Bugfixes": []
+    }
 }

@@ -11,7 +11,6 @@ function getHeroPatches(hero: string, jsonData: PatchData[]): Record<string, pat
     jsonData.forEach(patch => {
         heroPatches[patch.date] = patch.characters[hero];
     });
-    console.log(heroPatches);
     return heroPatches;
 }
 

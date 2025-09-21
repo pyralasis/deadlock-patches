@@ -5,6 +5,7 @@ import { SectionDefinition } from '../SectionDefinitions';
 import { patch } from '../PatchData';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import CircleIcon from '@mui/icons-material/Circle';
 
 
 interface SectionProps {
@@ -68,7 +69,9 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
                             <ListItem key={index}>
                                 <ListItemIcon>
                                     {
-                                        item.change === "buff" ? <AddIcon sx={{ color: "green" }} /> : <RemoveIcon sx={{ color: "red" }} />
+                                        item.change === "buff" ?
+                                            <AddIcon sx={{ color: "green" }} /> : item.change === "nerf" ?
+                                                <RemoveIcon sx={{ color: "red" }} /> : <CircleIcon />
                                     }
                                 </ListItemIcon>
                                 <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item.description} />
@@ -134,8 +137,9 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
                                 <ListItemIcon >
                                     {
                                         item.change === "buff" ?
-                                            <AddIcon sx={{ color: "green", width: "50px", height: "50px" }} /> :
-                                            <RemoveIcon sx={{ color: "red", width: "50px", height: "50px" }} />
+                                            <AddIcon sx={{ color: "green", width: "50px", height: "50px" }} /> : item.change === "nerf" ?
+                                                <RemoveIcon sx={{ color: "red", width: "50px", height: "50px" }} /> :
+                                                <CircleIcon sx={{ width: "50px", height: "25px" }} />
                                     }
                                 </ListItemIcon>
                                 <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item.description} />

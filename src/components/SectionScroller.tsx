@@ -16,6 +16,7 @@ export function SectionScroller({ sectionData, containerRef, activeSection, setA
     const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
     const activeSectionBackground = sectionData.find((section) => section.id === activeSection)?.definition.background;
+    console.log(sectionData)
 
     const handleChangeSection = (sectionId: string) => {
         setActiveSectionId(sectionId);

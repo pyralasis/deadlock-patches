@@ -8,5 +8,5 @@ export interface PatchData {
 
 export interface patch {
     description: string,
-    change: "buff" | "nerf" | "change"
+    change: "buff" | "nerf" | "neutral"
 }

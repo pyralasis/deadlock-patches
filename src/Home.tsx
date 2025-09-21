@@ -20,7 +20,6 @@ export function Home() {
             try {
                 const res = await fetch(`/data/json/index.json`);
                 const files: string[] = await res.json();
-                console.log(files);
                 files.reverse();
                 setFileList(files);
             } catch (error) {

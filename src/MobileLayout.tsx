@@ -103,7 +103,6 @@ export function MobileLayout({ date }: { date: string }) {
                             setActiveSectionId(entry.target.id);
                         }
                     });
-                    console.log(sectionData);
                 }, {
                     root: containerRef.current,
                     threshold: 0.5,
