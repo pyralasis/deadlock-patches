@@ -1,7 +1,10 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import { List, ListItem, ListItemText, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { ListItemIcon, List, ListItem, ListItemText, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { SectionDefinition } from '../SectionDefinitions';
+import { patch } from '../PatchData';
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
 
 
 interface SectionProps {
@@ -61,9 +64,14 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
                     }}
                 >
                     <List >
-                        {heroData.map((item: any, index: number) => (
+                        {heroData.map((item: patch, index: number) => (
                             <ListItem key={index}>
-                                <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item} />
+                                <ListItemIcon>
+                                    {
+                                        item.change === "buff" ? <AddIcon sx={{ color: "green" }} /> : <RemoveIcon sx={{ color: "red" }} />
+                                    }
+                                </ListItemIcon>
+                                <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item.description} />
                             </ListItem>
                         ))}
                     </List>
@@ -117,13 +125,20 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
                         // '&::-webkit-scrollbar': {
                         //     display: 'none',
                         // },
-                        backgroundColor: '#12121233',
+                        backgroundColor: '#12121277',
                     }}
                 >
                     <List>
                         {heroData.map((item: any, index: number) => (
                             <ListItem key={index}>
-                                <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item} />
+                                <ListItemIcon >
+                                    {
+                                        item.change === "buff" ?
+                                            <AddIcon sx={{ color: "green", width: "50px", height: "50px" }} /> :
+                                            <RemoveIcon sx={{ color: "red", width: "50px", height: "50px" }} />
+                                    }
+                                </ListItemIcon>
+                                <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item.description} />
                             </ListItem>
                         ))}
                     </List>

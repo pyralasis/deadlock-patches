@@ -1,3 +1,4 @@
+import { patch } from "./PatchData";
 import { SectionDefinition } from "./SectionDefinitions";
 
 // export type HeroSectionData = { id: string, definition: SectionDefinition, patches: Record<string, string[]> };
@@ -6,4 +7,9 @@ import { SectionDefinition } from "./SectionDefinitions";
 
 // export type SectionDataUnion = HeroSectionData | GeneralSectionData | ItemSectionData;
 
-export type SectionData = { id: string, type: string, definition: SectionDefinition, patches: Record<string, string[]> };
+export type SectionData = {
+    id: string,
+    type: string,
+    definition: SectionDefinition,
+    patches: Record<string, patch[]>
+};

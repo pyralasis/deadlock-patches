@@ -2,11 +2,11 @@ import { Box, Button, Popover, Typography } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
 import { SectionData } from "./SectionTypes";
 import { GENERAL_DEFINITIONS, HERO_DEFINITIONS, ITEM_DEFINITIONS } from "./SectionDefinitions";
-import { PatchData } from "./PatchData";
+import { patch, PatchData } from "./PatchData";
 import { SectionScroller } from "./components/SectionScroller";
 
-function getHeroPatches(hero: string, jsonData: PatchData[]): Record<string, string[]> {
-    let heroPatches: Record<string, string[]> = {};
+function getHeroPatches(hero: string, jsonData: PatchData[]): Record<string, patch[]> {
+    let heroPatches: Record<string, patch[]> = {};
     jsonData.forEach(patch => {
         heroPatches[patch.date] = patch.characters[hero];
     });
@@ -65,14 +65,14 @@ export function MobileLayout({ date }: { date: string }) {
 
                 const tempSectionData: SectionData[] = [];
 
-                Object.keys(GENERAL_DEFINITIONS).forEach(key => {
-                    tempSectionData.push({
-                        id: key,
-                        type: "general",
-                        definition: GENERAL_DEFINITIONS[key],
-                        patches: getGeneralPatches(key, allData)
-                    });
-                });
+                // Object.keys(GENERAL_DEFINITIONS).forEach(key => {
+                //     tempSectionData.push({
+                //         id: key,
+                //         type: "general",
+                //         definition: GENERAL_DEFINITIONS[key],
+                //         patches: getGeneralPatches(key, allData)
+                //     });
+                // });
 
                 Object.keys(HERO_DEFINITIONS).forEach(key => {
                     tempSectionData.push({
@@ -83,14 +83,14 @@ export function MobileLayout({ date }: { date: string }) {
                     });
                 });
 
-                Object.keys(ITEM_DEFINITIONS).forEach(key => {
-                    tempSectionData.push({
-                        id: key,
-                        type: "item",
-                        definition: ITEM_DEFINITIONS[key],
-                        patches: getItemPatches(key, allData)
-                    });
-                });
+                // Object.keys(ITEM_DEFINITIONS).forEach(key => {
+                //     tempSectionData.push({
+                //         id: key,
+                //         type: "item",
+                //         definition: ITEM_DEFINITIONS[key],
+                //         patches: getItemPatches(key, allData)
+                //     });
+                // });
                 setSectionData(tempSectionData);
 
                 if (tempSectionData.length > 0) {
