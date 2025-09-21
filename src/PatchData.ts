@@ -1,9 +1,9 @@
 export interface PatchData {
     date: string;
     characters: Record<string, patch[]>;
-    items: Record<string, string[]>;
-    general: Record<string, string[]>;
-    bugfixes: Record<string, string[]>;
+    items: Record<string, patch[]>;
+    general: Record<string, patch[]>;
+    bugfixes: Record<string, patch[]>;
 }
 
 export interface patch {

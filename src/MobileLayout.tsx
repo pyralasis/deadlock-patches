@@ -13,16 +13,16 @@ function getHeroPatches(hero: string, jsonData: PatchData[]): Record<string, pat
     return heroPatches;
 }
 
-function getGeneralPatches(category: string, jsonData: PatchData[]): Record<string, string[]> {
-    let categoryPatches: Record<string, string[]> = {};
+function getGeneralPatches(category: string, jsonData: PatchData[]): Record<string, patch[]> {
+    let categoryPatches: Record<string, patch[]> = {};
     jsonData.forEach(patch => {
         categoryPatches[patch.date] = patch.general[category];
     });
     return categoryPatches;
 }
 
-function getItemPatches(category: string, jsonData: PatchData[]): Record<string, string[]> {
-    let itemPatches: Record<string, string[]> = {};
+function getItemPatches(category: string, jsonData: PatchData[]): Record<string, patch[]> {
+    let itemPatches: Record<string, patch[]> = {};
     jsonData.forEach(patch => {
         itemPatches[patch.date] = patch.items[category];
     });
@@ -65,14 +65,14 @@ export function MobileLayout({ date }: { date: string }) {
 
                 const tempSectionData: SectionData[] = [];
 
-                // Object.keys(GENERAL_DEFINITIONS).forEach(key => {
-                //     tempSectionData.push({
-                //         id: key,
-                //         type: "general",
-                //         definition: GENERAL_DEFINITIONS[key],
-                //         patches: getGeneralPatches(key, allData)
-                //     });
-                // });
+                Object.keys(GENERAL_DEFINITIONS).forEach(key => {
+                    tempSectionData.push({
+                        id: key,
+                        type: "general",
+                        definition: GENERAL_DEFINITIONS[key],
+                        patches: getGeneralPatches(key, allData)
+                    });
+                });
 
                 Object.keys(HERO_DEFINITIONS).forEach(key => {
                     tempSectionData.push({
@@ -83,14 +83,14 @@ export function MobileLayout({ date }: { date: string }) {
                     });
                 });
 
-                // Object.keys(ITEM_DEFINITIONS).forEach(key => {
-                //     tempSectionData.push({
-                //         id: key,
-                //         type: "item",
-                //         definition: ITEM_DEFINITIONS[key],
-                //         patches: getItemPatches(key, allData)
-                //     });
-                // });
+                Object.keys(ITEM_DEFINITIONS).forEach(key => {
+                    tempSectionData.push({
+                        id: key,
+                        type: "item",
+                        definition: ITEM_DEFINITIONS[key],
+                        patches: getItemPatches(key, allData)
+                    });
+                });
                 setSectionData(tempSectionData);
 
                 if (tempSectionData.length > 0) {
