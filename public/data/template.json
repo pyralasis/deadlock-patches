@@ -5,7 +5,7 @@
         "Bebop": [],
         "Billy": [],
         "Calico": [],
-        "The Doorman": [],
+        "Doorman": [],
         "Drifter": [],
         "Dynamo": [],
         "Grey Talon": [],
@@ -34,7 +34,14 @@
         "Wraith": [],
         "Yamato": []
     },
-    "items": {},
-    "general": {},
-    "bugfixes": {}
+    "items": {
+        "Weapon": [],
+        "Vitality": [],
+        "Spirit": []
+    },
+    "general": {
+        "Map": [],
+        "Gameplay": [],
+        "Bugfixes": []
+    }
 }

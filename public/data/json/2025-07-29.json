@@ -1,0 +1,526 @@
+{
+    "date": "2025-07-29",
+    "characters": {
+        "Abrams": [],
+        "Bebop": [
+            {
+                "description": "No longer has +10% Base Bullet Resistance",
+                "change": "nerf"
+            },
+            {
+                "description": "Now has +0.3% Bullet Resistance per Boon",
+                "change": "buff"
+            },
+            {
+                "description": "Exploding Uppercut T2 reduced from +50% Weapon Damage to +40%",
+                "change": "nerf"
+            },
+            {
+                "description": "Exploding Uppercut T2 duration reduced from 12s to 9s",
+                "change": "nerf"
+            },
+            {
+                "description": "Grapple Arm T1 reduced from +25% Weapon Damage to +20%",
+                "change": "nerf"
+            },
+            {
+                "description": "Grapple Arm T1 duration reduced from 10s to 6s",
+                "change": "nerf"
+            }
+        ],
+        "Billy": [],
+        "Calico": [],
+        "Doorman": [],
+        "Drifter": [],
+        "Dynamo": [
+            {
+                "description": "Kinetic Pulse damage height increased from 0.5m to 0.7m",
+                "change": "buff"
+            }
+        ],
+        "Grey Talon": [
+            {
+                "description": "Spirit Snare Curse duration increased from 1.75s to 2s",
+                "change": "buff"
+            },
+            {
+                "description": "Guided Owl cooldown reduced from 135s to 120s",
+                "change": "buff"
+            }
+        ],
+        "Haze": [],
+        "Holliday": [],
+        "Infernus": [],
+        "Ivy": [],
+        "Kelvin": [
+            {
+                "description": "Arctic Beam T3 no longer bounces off of objectives",
+                "change": "nerf"
+            }
+        ],
+        "Lady Geist": [
+            {
+                "description": "Essence Bomb no longer sticks to units",
+                "change": "nerf"
+            },
+            {
+                "description": "Essence Bomb cooldown increased from 10.5 to 14.5",
+                "change": "nerf"
+            },
+            {
+                "description": "Essence Bomb radius increased from 7m to 9m",
+                "change": "buff"
+            },
+            {
+                "description": "Essence Bomb T1 changed from '+2m Radius' to '-4s Cooldown'",
+                "change": "buff"
+            },
+            {
+                "description": "Essence Bomb projectile speed increased by 25%",
+                "change": "buff"
+            }
+        ],
+        "Lash": [],
+        "McGinnis": [
+            {
+                "description": "Health per boon reduced from 56 to 52",
+                "change": "nerf"
+            },
+            {
+                "description": "Spectral Wall fixed a bug where aiming at long stairs would sometimes cause the preview to go through it",
+                "change": "neutral"
+            },
+            {
+                "description": "Spectral Wall changed the preview particle",
+                "change": "neutral"
+            },
+            {
+                "description": "Spectral Wall now supports Lag Compensation",
+                "change": "neutral"
+            },
+            {
+                "description": "Spectral Wall will now erupt where the preview Particle is displaying when manually triggering the Eruption",
+                "change": "neutral"
+            },
+            {
+                "description": "Turrets health per boon reduced from 12 to 10",
+                "change": "nerf"
+            }
+        ],
+        "Mina": [],
+        "Mirage": [
+            {
+                "description": "Base bullet damage reduced by 10%",
+                "change": "nerf"
+            }
+        ],
+        "Mo & Krill": [],
+        "Paige": [],
+        "Paradox": [
+            {
+                "description": "Bullet damage scaling increased by 10%",
+                "change": "buff"
+            }
+        ],
+        "Pocket": [
+            {
+                "description": "Affliction initial Current HP % damage increased from 10% to 12%",
+                "change": "buff"
+            }
+        ],
+        "Seven": [
+            {
+                "description": "Base movement speed reduced from 7.1 to 6.9",
+                "change": "nerf"
+            },
+            {
+                "description": "Move Speed spirit scaling reduced from 0.023 to 0.02",
+                "change": "nerf"
+            },
+            {
+                "description": "Power Surge T1 and T2 swapped",
+                "change": "buff"
+            },
+            {
+                "description": "Storm Cloud cooldown increased from 170s to 180s",
+                "change": "nerf"
+            },
+            {
+                "description": "Storm Cloud Spirit Power scaling reduced from 0.7 to 0.65",
+                "change": "nerf"
+            },
+            {
+                "description": "Storm Cloud DPS reduced from 95 to 90",
+                "change": "nerf"
+            },
+            {
+                "description": "Storm Cloud T3 reduced from +65 to +60",
+                "change": "nerf"
+            }
+        ],
+        "Shiv": [
+            {
+                "description": "Rage now only builds up from damaging players",
+                "change": "nerf"
+            },
+            {
+                "description": "Rage buildup for all damage types increased by 20% (easier to build up)",
+                "change": "buff"
+            },
+            {
+                "description": "Rage decay duration increased from 9s to 12s",
+                "change": "nerf"
+            },
+            {
+                "description": "Bloodletting duration reduced from 12s to 6s",
+                "change": "nerf"
+            },
+            {
+                "description": "Bloodletting cooldown reduced from 60s to 45s",
+                "change": "buff"
+            },
+            {
+                "description": "Bloodletting damage clear increased from 30% to 40%",
+                "change": "buff"
+            },
+            {
+                "description": "Bloodletting T1 and T2 swapped",
+                "change": "buff"
+            },
+            {
+                "description": "Bloodletting T3 increased from +20% to +35%",
+                "change": "buff"
+            }
+        ],
+        "Sinclair": [],
+        "Victor": [],
+        "Vindicta": [
+            {
+                "description": "Crow T1 bounce no longer bounces off of objectives",
+                "change": "nerf"
+            },
+            {
+                "description": "Stake T3 reduced from +2m to +1m",
+                "change": "nerf"
+            }
+        ],
+        "Viscous": [
+            {
+                "description": "Puddle Punch cooldown reduced from 30s to 24s",
+                "change": "buff"
+            },
+            {
+                "description": "Puddle Punch T3 increased from -11.5s Cooldown to -12s",
+                "change": "buff"
+            }
+        ],
+        "Vyper": [],
+        "Warden": [
+            {
+                "description": "Bullet base damage reduced from 17 to 15",
+                "change": "nerf"
+            },
+            {
+                "description": "Bullet damage growth increased from 0.38 to 0.44",
+                "change": "buff"
+            },
+            {
+                "description": "DPS reduced from 74 to 70",
+                "change": "nerf"
+            },
+            {
+                "description": "Last Stand lifesteal vs non-heroes reduced from 15% to 10%",
+                "change": "nerf"
+            }
+        ],
+        "Wraith": [
+            {
+                "description": "Bullet damage increased from 4.95 to 5.115",
+                "change": "buff"
+            },
+            {
+                "description": "Bullet damage growth reduced from 0.18 to 0.175 (same overall peak damage)",
+                "change": "nerf"
+            }
+        ],
+        "Yamato": [
+            {
+                "description": "Alt Fire base damage reduced from 63.36 to 50",
+                "change": "nerf"
+            },
+            {
+                "description": "Alt Fire base damage now grows per boon (+0.7)",
+                "change": "buff"
+            }
+        ]
+    },
+    "items": {
+        "Weapon": [
+            {
+                "description": "Restorative Shot: Heal from NPC reduced from 20 to 15",
+                "change": "nerf"
+            },
+            {
+                "description": "Restorative Shot: Weapon damage reduced from 8% to 6%",
+                "change": "nerf"
+            },
+            {
+                "description": "Fleetfoot: Bullet Resistance reduced from 10% to 6%",
+                "change": "nerf"
+            },
+            {
+                "description": "Melee Charge: Bullet Resistance reduced from 10% to 6%",
+                "change": "nerf"
+            },
+            {
+                "description": "Spirit Shredder Bullets: Spirit Resist Reduction increased from -7% to -8%",
+                "change": "buff"
+            },
+            {
+                "description": "Slowing Bullets: After buildup is achieved, debuff duration is refreshed rather than starting buildup again",
+                "change": "buff"
+            },
+            {
+                "description": "Swift Striker: Fire Rate increased from 18% to 20%",
+                "change": "buff"
+            },
+            {
+                "description": "Express Shot: Primary weapon damage increased from 165% to 185%",
+                "change": "buff"
+            },
+            {
+                "description": "Toxic Bullets: Damage reduced from 2.5% Max HP to 2.1%",
+                "change": "nerf"
+            },
+            {
+                "description": "Toxic Bullets: Now scales with Spirit Power (0.005%)",
+                "change": "buff"
+            },
+            {
+                "description": "Berserker: Bullet Resistance reduced from 16% to 8%",
+                "change": "nerf"
+            },
+            {
+                "description": "Blood Tribute: Healing Reduction reduced from -50% to -40%",
+                "change": "buff"
+            },
+            {
+                "description": "Blood Tribute: Now grants +4 Out of Combat Regen",
+                "change": "buff"
+            },
+            {
+                "description": "Blood Tribute: Active Move Speed increased from 1.75 to 2",
+                "change": "buff"
+            },
+            {
+                "description": "Weighted Shots: Bullet Velocity reduced from -25% to -30%",
+                "change": "nerf"
+            },
+            {
+                "description": "Weighted Shots: Stamina Recovery reduced from -10% to -20%",
+                "change": "nerf"
+            },
+            {
+                "description": "Hunter's Aura: Now grants +1 Sprint",
+                "change": "buff"
+            },
+            {
+                "description": "Spirit Rend: Spirit Resist Reduction increased from -7% to -8%",
+                "change": "buff"
+            },
+            {
+                "description": "Crushing Fists: Bullet Resistance reduced from 20% to 12%",
+                "change": "nerf"
+            },
+            {
+                "description": "Crushing Fists: Heavy Melee Distance reduced from +70% to +60%",
+                "change": "nerf"
+            },
+            {
+                "description": "Armor Piercing Rounds: Chance reduced from 60% to 50%",
+                "change": "nerf"
+            },
+            {
+                "description": "Shadow Weave: Duration reduced from 25s to 18s",
+                "change": "nerf"
+            },
+            {
+                "description": "Shadow Weave: Cooldown reduced from 40s to 32s",
+                "change": "buff"
+            },
+            {
+                "description": "Shadow Weave: Now grants +25% Melee Damage on Ambush reveal",
+                "change": "buff"
+            },
+            {
+                "description": "Capacitor: Damage increased from 45 to 50",
+                "change": "buff"
+            },
+            {
+                "description": "Spellslinger: Buff duration increased from 10s to 14s",
+                "change": "buff"
+            }
+        ],
+        "Vitality": [
+            {
+                "description": "Guardian Ward: Cooldown reduced from 45s to 40s",
+                "change": "buff"
+            },
+            {
+                "description": "Weapon Shielding: Barrier reduced from 400 to 325",
+                "change": "nerf"
+            },
+            {
+                "description": "Weapon Shielding: Barrier no longer scales with Spirit Power (1.116)",
+                "change": "nerf"
+            },
+            {
+                "description": "Weapon Shielding: Barrier now scales with Boons (+4)",
+                "change": "buff"
+            },
+            {
+                "description": "Spirit Shielding: Barrier reduced from 400 to 325",
+                "change": "nerf"
+            },
+            {
+                "description": "Spirit Shielding: Barrier no longer scales with Spirit Power (1.116)",
+                "change": "nerf"
+            },
+            {
+                "description": "Spirit Shielding: Barrier now scales with Boons (+4)",
+                "change": "buff"
+            },
+            {
+                "description": "Return Fire: Bullet Resistance reduced from 10% to 6%",
+                "change": "nerf"
+            },
+            {
+                "description": "Return Fire: Bullet Damage Returned reduced from 60% to 50%",
+                "change": "nerf"
+            },
+            {
+                "description": "Return Fire: Spirit Damage return from 30% to 25%",
+                "change": "nerf"
+            },
+            {
+                "description": "Veil Walker: Cooldown reduced from 14s to 12s",
+                "change": "buff"
+            },
+            {
+                "description": "Metal Skin: Cooldown reduced from 24s to 20s",
+                "change": "buff"
+            },
+            {
+                "description": "Debuff Remover: Bonus Health reduced from 125 to 100",
+                "change": "nerf"
+            },
+            {
+                "description": "Debuff Remover: Cooldown increased from 45s to 50s",
+                "change": "nerf"
+            },
+            {
+                "description": "Trophy Collector: Out of Combat regen increased from 2 to 3.5",
+                "change": "buff"
+            },
+            {
+                "description": "Spirit Resilience: Spirit Resistance reduced from 30% to 25%",
+                "change": "nerf"
+            },
+            {
+                "description": "Divine Barrier: Cooldown reduced from 45s to 40s",
+                "change": "buff"
+            },
+            {
+                "description": "Cheat Death: Effect no longer gets pierced by kill events like Killing Blow or Guided Owl",
+                "change": "buff"
+            }
+        ],
+        "Spirit": [
+            {
+                "description": "Rusted Barrel: Now reduces Bullet Resistance by 5%",
+                "change": "buff"
+            },
+            {
+                "description": "Rusted Barrel: Cooldown reduced from 25s to 20s",
+                "change": "buff"
+            },
+            {
+                "description": "Suppressor: Fire Rate reduction reduced from -35% to -30%",
+                "change": "nerf"
+            },
+            {
+                "description": "Cold Front: Spirit Resistance reduced from 10% to 6%",
+                "change": "nerf"
+            },
+            {
+                "description": "Slowing Hex: Duration increased from 3s to 3.5s",
+                "change": "buff"
+            },
+            {
+                "description": "Bullet Resist Shredder: Bullet Resistance Reduction increased from -12% to -13%",
+                "change": "buff"
+            },
+            {
+                "description": "Spirit Sap: Spirit Power reduction increased from -15 to -18",
+                "change": "buff"
+            },
+            {
+                "description": "Spirit Sap: Cast Range increased from 30m to 40m",
+                "change": "buff"
+            },
+            {
+                "description": "Spirit Sap: Bonus Health increased from 50 to 75",
+                "change": "buff"
+            },
+            {
+                "description": "Disarming Hex: Cooldown reduced from 25s to 20s",
+                "change": "buff"
+            },
+            {
+                "description": "Surge of Power: Cooldown increased from 8s to 14s",
+                "change": "nerf"
+            },
+            {
+                "description": "Surge of Power: Duration increased from 6s to 8s",
+                "change": "buff"
+            },
+            {
+                "description": "Surge of Power: Fire Rate increased from 20% to 22%",
+                "change": "buff"
+            },
+            {
+                "description": "Surge of Power: Spirit Power increased from 25 to 28",
+                "change": "buff"
+            },
+            {
+                "description": "Tankbuster: Now ignores enemy Spirit Resistance",
+                "change": "buff"
+            },
+            {
+                "description": "Tankbuster: Damage reduced from 6% to 5%",
+                "change": "nerf"
+            },
+            {
+                "description": "Decay: Damage increased from 2.4% to 2.6%",
+                "change": "buff"
+            },
+            {
+                "description": "Scourge: Projectile speed increased from 800 to 1600",
+                "change": "buff"
+            },
+            {
+                "description": "Focus Lens cooldown reduced from 28s to 25s",
+                "change": "buff"
+            },
+            {
+                "description": "Vortex Web: Projectile Speed increased from 1800 to 2400",
+                "change": "buff"
+            }
+        ]
+    },
+    "general": {
+        "Map": [],
+        "Gameplay": [],
+        "Bugfixes": []
+    }
+}
