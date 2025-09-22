@@ -1,13 +1,13 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import { ListItemIcon, List, ListItem, ListItemText, Typography, useMediaQuery, useTheme } from '@mui/material';
-import { SectionDefinition } from '../SectionDefinitions';
+import { SectionDefinition, SPIRIT_ITEM_DEFINITIONS, VITALITY_ITEM_DEFINITIONS, WEAPON_ITEM_DEFINITIONS } from '../SectionDefinitions';
 import { Patchnote } from '../PatchData';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import CircleIcon from '@mui/icons-material/Circle';
 
-export type SortedPatchnotes = {
+export type SortedHeroPatchnotes = {
     general: Patchnote[];
     ability1: Patchnote[];
     ability2: Patchnote[];
@@ -15,8 +15,8 @@ export type SortedPatchnotes = {
     ability4: Patchnote[];
 }
 
-export function sortPatchnotes(patchnotes: Patchnote[]): SortedPatchnotes {
-    const sorted: SortedPatchnotes = {
+export function sortHeroPatchnotes(patchnotes: Patchnote[]): SortedHeroPatchnotes {
+    const sorted: SortedHeroPatchnotes = {
         general: [],
         ability1: [],
         ability2: [],
@@ -28,13 +28,27 @@ export function sortPatchnotes(patchnotes: Patchnote[]): SortedPatchnotes {
         if (patch.type === "general") {
             sorted.general.push(patch);
         } else if (patch.ability != null) {
-            const slotKey = `ability${patch.ability.slot}` as keyof SortedPatchnotes;
+            const slotKey = `ability${patch.ability.slot}` as keyof SortedHeroPatchnotes;
             sorted[slotKey].push(patch);
         }
     }
 
     return sorted;
 }
+
+export function sortItemPatchnotes(patchnotes: Patchnote[]): Record<string, Patchnote[]> {
+    const sorted: Record<string, Patchnote[]> = {};
+    for (const patch of patchnotes) {
+        if (patch.type === "item" && patch.item_name !== undefined) {
+            if (!sorted[patch.item_name]) {
+                sorted[patch.item_name] = [];
+            }
+            sorted[patch.item_name].push(patch);
+        }
+    }
+    return sorted;
+}
+
 
 interface SectionProps {
     id: string;
@@ -47,7 +61,8 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
-    const sortedPatchnotes = sortPatchnotes(heroData);
+    const sortedHeroPatchnotes = sortHeroPatchnotes(heroData);
+    const sortedItemPatchnotes = sortItemPatchnotes(heroData);
 
     let nameElement;
     if (type === "hero") {
@@ -94,21 +109,7 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
                         backgroundColor: '#12121233',
                     }}
                 >
-                    {/* <List >
-                        {heroData.map((item: Patchnote, index: number) => (
-                            <ListItem key={index}>
-                                <ListItemIcon>
-                                    {
-                                        item.change === "buff" ?
-                                            <AddIcon sx={{ color: "green" }} /> : item.change === "nerf" ?
-                                                <RemoveIcon sx={{ color: "red" }} /> : <CircleIcon />
-                                    }
-                                </ListItemIcon>
-                                <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item.description} />
-                            </ListItem>
-                        ))}
-                    </List> */}
-                    {sortedPatchnotes.general.length != 0 &&
+                    {sortedHeroPatchnotes.general.length != 0 &&
                         <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'}>
                             <Box component={"img"} src={heroDefinition.icon} alt="" width={"100px"} />
                             <Typography
@@ -119,10 +120,9 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
                                 {heroDefinition.name}
                             </Typography>
                         </Box>
-
                     }
                     {
-                        sortedPatchnotes.general.map((item: Patchnote, index: number) => (
+                        sortedHeroPatchnotes.general.map((item: Patchnote, index: number) => (
                             <List>
                                 <ListItem key={index}>
                                     <ListItemIcon>
@@ -137,10 +137,47 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
                             </List>
                         ))
                     }
-                    <AbilitySection ability={sortedPatchnotes.ability1} ability_icon={heroDefinition.ability1} />
-                    <AbilitySection ability={sortedPatchnotes.ability2} ability_icon={heroDefinition.ability2} />
-                    <AbilitySection ability={sortedPatchnotes.ability3} ability_icon={heroDefinition.ability3} />
-                    <AbilitySection ability={sortedPatchnotes.ability4} ability_icon={heroDefinition.ability4} />
+                    <AbilitySection ability={sortedHeroPatchnotes.ability1} ability_icon={heroDefinition.ability1} />
+                    <AbilitySection ability={sortedHeroPatchnotes.ability2} ability_icon={heroDefinition.ability2} />
+                    <AbilitySection ability={sortedHeroPatchnotes.ability3} ability_icon={heroDefinition.ability3} />
+                    <AbilitySection ability={sortedHeroPatchnotes.ability4} ability_icon={heroDefinition.ability4} />
+                    {
+                        Object.keys(sortedItemPatchnotes).map((item) => {
+                            console.log(item);
+                            return (
+
+                                <>
+                                    <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'}>
+                                        <Box component={"img"} src={WEAPON_ITEM_DEFINITIONS[item]?.icon || VITALITY_ITEM_DEFINITIONS[item]?.icon || SPIRIT_ITEM_DEFINITIONS[item]?.icon} alt={item} width={"100px"} />
+                                        <Typography
+                                            fontFamily={"DecoturaICG"}
+                                            fontSize={"1em"}
+                                            sx={{ paddingLeft: "1em" }}
+                                        >
+                                            {item}
+                                        </Typography>
+
+                                    </Box>
+                                    {
+                                        sortedItemPatchnotes[item].map((item: Patchnote, index: number) => (
+                                            <List>
+                                                <ListItem key={index}>
+                                                    <ListItemIcon>
+                                                        {
+                                                            item.change === "buff" ?
+                                                                <AddIcon sx={{ color: "green" }} /> : item.change === "nerf" ?
+                                                                    <RemoveIcon sx={{ color: "red" }} /> : <CircleIcon />
+                                                        }
+                                                    </ListItemIcon>
+                                                    <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item.description} />
+                                                </ListItem>
+                                            </List>
+                                        ))
+                                    }
+                                </>
+                            )
+                        })
+                    }
                 </Box>
                 <Box
                     className="hero-section-right"

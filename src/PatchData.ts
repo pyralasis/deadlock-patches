@@ -7,12 +7,12 @@ export interface PatchData {
 }
 
 export interface Patchnote {
-    description: string,
-    change: "buff" | "nerf" | "neutral",
-    type: string,
+    description: string;
+    change: "buff" | "nerf" | "neutral";
+    type: string;
     ability: {
         slot: number,
         name: string
-    }
-
+    };
+    item_name: string;
 }

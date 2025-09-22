@@ -7,7 +7,7 @@ import { HERO_DEFINITIONS } from "./SectionDefinitions";
 import { useEffect, useState } from "react";
 import { PatchData, Patchnote } from "./PatchData";
 import { SectionData } from "./SectionTypes";
-import { AbilitySection, sortPatchnotes } from "./components/HeroSection";
+import { AbilitySection, sortHeroPatchnotes } from "./components/HeroSection";
 import HomeIcon from '@mui/icons-material/Home';
 
 function getHeroPatches(hero: string, jsonData: PatchData[]): Record<string, Patchnote[]> {
@@ -57,7 +57,6 @@ export function PatchHistory({ }: PatchHistoryProps) {
                     });
                 });
 
-                console.log(tempSectionData);
                 setSectionData(tempSectionData);
             } catch (error) {
                 console.error('Failed to fetch JSON data:', error);
@@ -116,7 +115,7 @@ export function PatchHistory({ }: PatchHistoryProps) {
                             sectionData.map((section) => {
                                 if (section.id == hero)
                                     return (Object.keys(section.patches).map((date) => {
-                                        const sortedPatches = sortPatchnotes(section.patches[date])
+                                        const sortedPatches = sortHeroPatchnotes(section.patches[date])
                                         if (section.patches[date].length != 0)
                                             return (
                                                 <>

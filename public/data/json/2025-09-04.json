@@ -802,236 +802,350 @@
     "items": {
         "Weapon": [
             {
-                "description": "Weakening Headshot: Bullet resistance reduction increased from -12% to -13%",
-                "change": "buff"
+                "item_name": "Weakening Headshot",
+                "description": "Bullet resistance reduction increased from -12% to -13%",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Weakening Headshot: Debuff duration increased from 10s to 12s",
-                "change": "buff"
+                "item_name": "Weakening Headshot",
+                "description": "Debuff duration increased from 10s to 12s",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Backstabber: Cooldown increased from 4s to 5s",
-                "change": "nerf"
+                "item_name": "Backstabber",
+                "description": "Cooldown increased from 4s to 5s",
+                "change": "nerf",
+                "type": "item"
             },
             {
-                "description": "Backstabber: Damage per second reduced from 20 to 17",
-                "change": "nerf"
+                "item_name": "Backstabber",
+                "description": "Damage per second reduced from 20 to 17",
+                "change": "nerf",
+                "type": "item"
             },
             {
-                "description": "Long Range: Now grants +4% Fall Off Range",
-                "change": "buff"
+                "item_name": "Long Range",
+                "description": "Now grants +4% Fall Off Range",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Sharpshooter: Sprint increased from 1 to 1.5",
-                "change": "buff"
+                "item_name": "Sharpshooter",
+                "description": "Sprint increased from 1 to 1.5",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Blood Tribute: Spirit Resistance increased from 8% to 10%",
-                "change": "buff"
+                "item_name": "Blood Tribute",
+                "description": "Spirit Resistance increased from 8% to 10%",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Blood Tribute: Active move speed increased from 2 to 2.25",
-                "change": "buff"
+                "item_name": "Blood Tribute",
+                "description": "Active move speed increased from 2 to 2.25",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Headhunter: Bonus Damage boon scaling increased from 3 to 4",
-                "change": "buff"
+                "item_name": "Headhunter",
+                "description": "Bonus Damage boon scaling increased from 3 to 4",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Shadow Weave: Invis Sprint speed increased from +2 to +5",
-                "change": "buff"
+                "item_name": "Shadow Weave",
+                "description": "Invis Sprint speed increased from +2 to +5",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Capacitor: Now grants +8% Fire Rate",
-                "change": "buff"
+                "item_name": "Capacitor",
+                "description": "Now grants +8% Fire Rate",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Capacitor: Projectile speed increased by 20%",
-                "change": "buff"
+                "item_name": "Capacitor",
+                "description": "Projectile speed increased by 20%",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Crippling Headshot: Debuff duration increased from 8s to 12s",
-                "change": "buff"
+                "item_name": "Crippling Headshot",
+                "description": "Debuff duration increased from 8s to 12s",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Ricochet: No longer targets zipline targets",
-                "change": "neutral"
+                "item_name": "Ricochet",
+                "description": "No longer targets zipline targets",
+                "change": "neutral",
+                "type": "item"
             },
             {
-                "description": "Spellslinger: Buff duration increased from 14 to 18",
-                "change": "buff"
+                "item_name": "Spellslinger",
+                "description": "Buff duration increased from 14 to 18",
+                "change": "buff",
+                "type": "item"
             }
         ],
         "Vitality": [
             {
-                "description": "Rebuttal: No longer grants +50% Melee Damage on successful parry",
-                "change": "nerf"
+                "item_name": "Rebuttal",
+                "description": "No longer grants +50% Melee Damage on successful parry",
+                "change": "nerf",
+                "type": "item"
             },
             {
-                "description": "Rebuttal: Now grants +30% Bonus Damage on successful parry (affects all damage, similar to the base parry amplification)",
-                "change": "buff"
+                "item_name": "Rebuttal",
+                "description": "Now grants +30% Bonus Damage on successful parry (affects all damage, similar to the base parry amplification)",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Weapon Shielding: Damage requirement reduced from 200 to 175",
-                "change": "buff"
+                "item_name": "Weapon Shielding",
+                "description": "Damage requirement reduced from 200 to 175",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Return Fire: Bullet Resistance increased from 6% to 8%",
-                "change": "buff"
+                "item_name": "Return Fire",
+                "description": "Bullet Resistance increased from 6% to 8%",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Restorative Locket: No longer scales with Spirit Power (0.17)",
-                "change": "nerf"
+                "item_name": "Restorative Locket",
+                "description": "No longer scales with Spirit Power (0.17)",
+                "change": "nerf",
+                "type": "item"
             },
             {
-                "description": "Restorative Locket: Now scales with Boons (0.3)",
-                "change": "buff"
+                "item_name": "Restorative Locket",
+                "description": "Now scales with Boons (0.3)",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Guardian Ward: Cast range increased from 35m to 40m",
-                "change": "buff"
+                "item_name": "Guardian Ward",
+                "description": "Cast range increased from 35m to 40m",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Divine Barrier: Cast range increased from 35m to 40m",
-                "change": "buff"
+                "item_name": "Divine Barrier",
+                "description": "Cast range increased from 35m to 40m",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Veil Walker: Heal per boon increased from 3 to 4",
-                "change": "buff"
+                "item_name": "Veil Walker",
+                "description": "Heal per boon increased from 3 to 4",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Veil Walker: Duration increased from 6s to 7s",
-                "change": "buff"
+                "item_name": "Veil Walker",
+                "description": "Duration increased from 6s to 7s",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Healing Nova: Heal per boon increased from 4.4 to 6",
-                "change": "buff"
+                "item_name": "Healing Nova",
+                "description": "Heal per boon increased from 4.4 to 6",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Healing Nova: Now grants +6% Ability Range",
-                "change": "buff"
+                "item_name": "Healing Nova",
+                "description": "Now grants +6% Ability Range",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Metal Skin: Duration increased from 4s to 5s",
-                "change": "buff"
+                "item_name": "Metal Skin",
+                "description": "Duration increased from 4s to 5s",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Counterspell: Duration reduced from 1 to 0.9",
-                "change": "nerf"
+                "item_name": "Counterspell",
+                "description": "Duration reduced from 1 to 0.9",
+                "change": "nerf",
+                "type": "item"
             },
             {
-                "description": "Trophy Collector: Out of Combat regen increased from 3.5 to 4",
-                "change": "buff"
+                "item_name": "Trophy Collector",
+                "description": "Out of Combat regen increased from 3.5 to 4",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Trophy Collector: Souls Per Minute increased from 23 to 25",
-                "change": "buff"
+                "item_name": "Trophy Collector",
+                "description": "Souls Per Minute increased from 23 to 25",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Cheat Death: Cooldown reduced from 100s to 90s",
-                "change": "buff"
+                "item_name": "Cheat Death",
+                "description": "Cooldown reduced from 100s to 90s",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Witchmail: Spirit Power bonus increased from 10 to 14",
-                "change": "buff"
+                "item_name": "Witchmail",
+                "description": "Spirit Power bonus increased from 10 to 14",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Siphon Bullets: Max HP Steal reduced from 55 to 35",
-                "change": "nerf"
+                "item_name": "Siphon Bullets",
+                "description": "Max HP Steal reduced from 55 to 35",
+                "change": "nerf",
+                "type": "item"
             },
             {
-                "description": "Siphon Bullets: Max HP Steal now scales per Boon (0.8)",
-                "change": "buff"
+                "item_name": "Siphon Bullets",
+                "description": "Max HP Steal now scales per Boon (0.8)",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Siphon Bullets: Duration reduced from 20s to 17s",
-                "change": "nerf"
+                "item_name": "Siphon Bullets",
+                "description": "Duration reduced from 20s to 17s",
+                "change": "nerf",
+                "type": "item"
             },
             {
-                "description": "Inhibitor: Healing Reduction increased from -30% to -35%",
-                "change": "buff"
+                "item_name": "Inhibitor",
+                "description": "Healing Reduction increased from -30% to -35%",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Inhibitor: Debuff duration increased from 4s to 5s",
-                "change": "buff"
+                "item_name": "Inhibitor",
+                "description": "Debuff duration increased from 4s to 5s",
+                "change": "buff",
+                "type": "item"
             }
         ],
         "Spirit": [
             {
-                "description": "Rusted Barrel: Cast range increased from 23m to 28m",
-                "change": "buff"
+                "item_name": "Rusted Barrel",
+                "description": "Cast range increased from 23m to 28m",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Rusted Barrel: Bullet Resistance reduction increased from -5% to -6%",
-                "change": "buff"
+                "item_name": "Rusted Barrel",
+                "description": "Bullet Resistance reduction increased from -5% to -6%",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Bullet Resist Shredder: No longer grants +20% Melee Resistance",
-                "change": "nerf"
+                "item_name": "Bullet Resist Shredder",
+                "description": "No longer grants +20% Melee Resistance",
+                "change": "nerf",
+                "type": "item"
             },
             {
-                "description": "Bullet Resist Shredder: Now grants +7% Bullet Resistance",
-                "change": "buff"
+                "item_name": "Bullet Resist Shredder",
+                "description": "Now grants +7% Bullet Resistance",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Cold Front: Damage reduced from 125 to 100",
-                "change": "nerf"
+                "item_name": "Cold Front",
+                "description": "Damage reduced from 125 to 100",
+                "change": "nerf",
+                "type": "item"
             },
             {
-                "description": "Quicksilver Reload: Bonus damage reduced from 60 to 55",
-                "change": "nerf"
+                "item_name": "Quicksilver Reload",
+                "description": "Bonus damage reduced from 60 to 55",
+                "change": "nerf",
+                "type": "item"
             },
             {
-                "description": "Spirit Sap: Spirit Power Reduction increased from -18 to -24",
-                "change": "nerf"
+                "item_name": "Spirit Sap",
+                "description": "Spirit Power Reduction increased from -18 to -24",
+                "change": "nerf",
+                "type": "item"
             },
             {
-                "description": "Silence Wave: Spirit Power Reduction increased from -18 to -24",
-                "change": "nerf"
+                "item_name": "Silence Wave",
+                "description": "Spirit Power Reduction increased from -18 to -24",
+                "change": "nerf",
+                "type": "item"
             },
             {
-                "description": "Silence Wave: Silence duration reduced from 3.75 to 3.25",
-                "change": "nerf"
+                "item_name": "Silence Wave",
+                "description": "Silence duration reduced from 3.75 to 3.25",
+                "change": "nerf",
+                "type": "item"
             },
             {
-                "description": "Silence Wave: Width increased by 10%",
-                "change": "buff"
+                "item_name": "Silence Wave",
+                "description": "Width increased by 10%",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Torment Pulse: Cooldown reduced from 1.5 to 1.4",
-                "change": "buff"
+                "item_name": "Torment Pulse",
+                "description": "Cooldown reduced from 1.5 to 1.4",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Decay: Cooldown reduced from 36 to 32",
-                "change": "buff"
+                "item_name": "Decay",
+                "description": "Cooldown reduced from 36 to 32",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Decay: Bleed Damage spirit scaling increased from 0.0038 to 0.0055",
-                "change": "buff"
+                "item_name": "Decay",
+                "description": "Bleed Damage spirit scaling increased from 0.0038 to 0.0055",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Magic Carpet: Spirit Power increased from +10 to +14",
-                "change": "buff"
+                "item_name": "Magic Carpet",
+                "description": "Spirit Power increased from +10 to +14",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Magic Carpet: Speed increased from 6 to 7",
-                "change": "buff"
+                "item_name": "Magic Carpet",
+                "description": "Speed increased from 6 to 7",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Focus Lens: Now deals damage whenever the debuff is removed rather than only on expire",
-                "change": "buff"
+                "item_name": "Focus Lens",
+                "description": "Now deals damage whenever the debuff is removed rather than only on expire",
+                "change": "buff",
+                "type": "item"
             },
             {
-                "description": "Escalating Exposure: Spirit Resistance reduced from 20% to 17%",
-                "change": "nerf"
+                "item_name": "Escalating Exposure",
+                "description": "Spirit Resistance reduced from 20% to 17%",
+                "change": "nerf",
+                "type": "item"
             },
             {
-                "description": "Spirit Burn: Ability Range reduced from 10% to 8%",
-                "change": "nerf"
+                "item_name": "Spirit Burn",
+                "description": "Ability Range reduced from 10% to 8%",
+                "change": "nerf",
+                "type": "item"
             },
             {
-                "description": "Spirit Burn: Proc damage reduced from 120 to 110",
-                "change": "nerf"
+                "item_name": "Spirit Burn",
+                "description": "Proc damage reduced from 120 to 110",
+                "change": "nerf",
+                "type": "item"
             }
         ]
     },
