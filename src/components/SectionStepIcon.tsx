@@ -1,3 +1,4 @@
+import { Box } from '@mui/material';
 import { StepIconProps } from '@mui/material/StepIcon';
 
 interface SectionStepIconProps extends StepIconProps {
@@ -7,17 +8,17 @@ interface SectionStepIconProps extends StepIconProps {
 
 export const SectionStepIcon = ({ name, iconUrl, active, completed }: SectionStepIconProps) => {
     return (
-        <img
-            src={iconUrl}
+        <Box component="img" src={iconUrl}
             alt={name}
-            style={{
-                width: 96,
-                height: 96,
+            sx={{
+                width: "100%",
+                height: "100%",
                 opacity: active || completed ? 1 : 0.4,
                 transition: 'opacity 0.3s ease',
                 cursor: 'pointer',
                 borderRadius: '50%',
             }}
         />
+
     );
 };

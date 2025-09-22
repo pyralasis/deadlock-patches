@@ -7,7 +7,7 @@ import { PatchHistory } from './PatchHistory';
 
 function App() {
   return (
-    <Router>
+    <Router >
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/patch-notes" element={<PatchNotes />} />

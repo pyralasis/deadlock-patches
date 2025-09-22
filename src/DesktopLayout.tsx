@@ -124,9 +124,11 @@ export function DesktopLayout({ date }: { date: string }) {
                     flexDirection: 'column',
                     alignItems: 'center',
                     height: '100vh',
-                    paddingTop: 2,
-                    paddingBottom: 2,
-
+                    scrollbarWidth: 'none',
+                    '&::-webkit-scrollbar': {
+                        display: 'none',
+                    },
+                    overflow: "hidden"
                 }}
             >
                 <SectionStepper
@@ -135,14 +137,15 @@ export function DesktopLayout({ date }: { date: string }) {
                     date={date}
                 />
             </Grid>
-            <Box position={"fixed"} right={"100px"} bottom={"20px"} display={'flex'} flexDirection={'column-reverse'}>
+            <Box position={"fixed"} right={"5%"} bottom={"20px"} display={'flex'} flexDirection={'column-reverse'}>
                 <Tooltip title="Home">
                     <IconButton size="large" onClick={() => { navigate("/") }}>
                         <HomeIcon sx={{ color: "lightblue" }} />
                     </IconButton>
                 </Tooltip>
+
                 <Tooltip title="Patch History">
-                    <IconButton size="large" onClick={() => { navigate("/") }}>
+                    <IconButton sx={{ display: Object.keys(HERO_DEFINITIONS).includes(activeSectionId) ? "flex-inline" : "none" }} size="large" onClick={() => { navigate(`/hero-history?hero=${activeSectionId}`) }}>
                         <HistoryIcon sx={{ color: "lightblue" }} />
                     </IconButton>
                 </Tooltip>

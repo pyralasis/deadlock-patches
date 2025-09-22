@@ -36,6 +36,7 @@ export function SectionStepper({ sectionData, activeSection, date }: SectionStep
             '&::-webkit-scrollbar': {
                 display: 'none',
             },
+            maxHeight: "100vh"
         }}
         >
             <Stepper
@@ -43,13 +44,16 @@ export function SectionStepper({ sectionData, activeSection, date }: SectionStep
                 nonLinear
                 activeStep={sectionData.findIndex((section) => section.id === activeSection)}
                 connector={null}
+                sx={{
+                    maxHeight: "100vh"
+                }}
             >
                 {sectionData.map((section, index) => {
                     if (section.patches[date] && section.patches[date].length !== 0)
                         if (section.type == "hero")
                             return (
-                                <Step key={section.id}>
-                                    <div ref={(el) => { if (stepRefs.current) stepRefs.current[section.id] = el; }}>
+                                <Step key={section.id} >
+                                    <div ref={(el) => { if (stepRefs.current) stepRefs.current[section.id] = el; }} >
                                         <Tooltip title={section.definition.name}>
                                             <StepButton
                                                 icon={
@@ -59,15 +63,24 @@ export function SectionStepper({ sectionData, activeSection, date }: SectionStep
                                                         active={index === sectionData.findIndex(s => s.id === activeSection)}
                                                         completed={false}
                                                         icon={undefined}
+                                                        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+
                                                     />
                                                 }
                                                 onClick={() => {
                                                     document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth' });
                                                 }}
-                                                sx={{ padding: 0, minWidth: 'auto' }}
+                                                sx={{
+
+                                                    '& .MuiStepLabel-iconContainer': {
+                                                        width: "100%",
+                                                    },
+                                                    '& .MuiStepLabel-root': {
+                                                        padding: 0
+                                                    }
+                                                }}
                                             />
                                         </Tooltip>
-
                                     </div>
                                 </Step>
                             );
@@ -84,12 +97,20 @@ export function SectionStepper({ sectionData, activeSection, date }: SectionStep
                                                         active={index === sectionData.findIndex(s => s.id === activeSection)}
                                                         completed={false}
                                                         icon={undefined}
+
                                                     />
                                                 }
                                                 onClick={() => {
                                                     document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth' });
                                                 }}
-                                                sx={{ padding: 0, minWidth: 'auto' }}
+                                                sx={{
+                                                    '& .MuiStepLabel-iconContainer': {
+                                                        width: "100%",
+                                                    },
+                                                    '& .MuiStepLabel-root': {
+                                                        padding: 0
+                                                    }
+                                                }}
                                             />
                                         </Tooltip>
                                     </div>
@@ -99,7 +120,7 @@ export function SectionStepper({ sectionData, activeSection, date }: SectionStep
                     return null;
                 })}
             </Stepper>
-        </Box>
+        </Box >
 
     );
 }

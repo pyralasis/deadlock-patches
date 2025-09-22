@@ -143,7 +143,6 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
                     <AbilitySection ability={sortedHeroPatchnotes.ability4} ability_icon={heroDefinition.ability4} />
                     {
                         Object.keys(sortedItemPatchnotes).map((item) => {
-                            console.log(item);
                             return (
 
                                 <>

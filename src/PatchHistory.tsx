@@ -39,6 +39,7 @@ export function PatchHistory({ }: PatchHistoryProps) {
             try {
                 const res = await fetch(`/data/json/index.json`);
                 const files = await res.json();
+                files.reverse();
 
                 const allData = await Promise.all(
                     files.map((file: string) =>

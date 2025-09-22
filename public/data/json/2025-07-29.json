@@ -15,11 +15,21 @@
             },
             {
                 "description": "Exploding Uppercut T2 reduced from +50% Weapon Damage to +40%",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Exploding Uppercut"
+                }
             },
             {
                 "description": "Exploding Uppercut T2 duration reduced from 12s to 9s",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Exploding Uppercut"
+                }
             },
             {
                 "description": "Grapple Arm T1 reduced from +25% Weapon Damage to +20%",
