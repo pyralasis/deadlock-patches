@@ -108,6 +108,19 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
                             </ListItem>
                         ))}
                     </List> */}
+                    {sortedPatchnotes.general.length != 0 &&
+                        <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'}>
+                            <Box component={"img"} src={heroDefinition.icon} alt="" width={"100px"} />
+                            <Typography
+                                fontFamily={"DecoturaICG"}
+                                fontSize={"1em"}
+                                sx={{ paddingLeft: "1em" }}
+                            >
+                                {heroDefinition.name}
+                            </Typography>
+                        </Box>
+
+                    }
                     {
                         sortedPatchnotes.general.map((item: Patchnote, index: number) => (
                             <List>
@@ -208,7 +221,7 @@ function AbilitySection({ ability, ability_icon }: { ability: Patchnote[], abili
         <Box>
             {ability.length != 0 &&
                 <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'}>
-                    <img src={ability_icon} alt="ability[0].ability.name" />
+                    <Box component={"img"} src={ability_icon} alt={ability[0].ability.name} width={"100px"} />
                     <Typography
                         fontFamily={"DecoturaICG"}
                         fontSize={"1em"}
