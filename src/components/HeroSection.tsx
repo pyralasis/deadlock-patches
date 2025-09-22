@@ -1,23 +1,53 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import { ListItemIcon, List, ListItem, ListItemText, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { ListItemIcon, List, ListItem, ListItemText, Typography, useMediaQuery, useTheme, SvgIcon } from '@mui/material';
 import { SectionDefinition } from '../SectionDefinitions';
-import { patch } from '../PatchData';
+import { Patchnote } from '../PatchData';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import CircleIcon from '@mui/icons-material/Circle';
 
+type SortedPatchnotes = {
+    general: Patchnote[];
+    ability1: Patchnote[];
+    ability2: Patchnote[];
+    ability3: Patchnote[];
+    ability4: Patchnote[];
+}
+
+function sortPatchnotes(patchnotes: Patchnote[]): SortedPatchnotes {
+    const sorted: SortedPatchnotes = {
+        general: [],
+        ability1: [],
+        ability2: [],
+        ability3: [],
+        ability4: [],
+    };
+
+    for (const patch of patchnotes) {
+        if (patch.type === "general") {
+            sorted.general.push(patch);
+        } else if (patch.ability != null) {
+            const slotKey = `ability${patch.ability.slot}` as keyof SortedPatchnotes;
+            sorted[slotKey].push(patch);
+        }
+    }
+
+    return sorted;
+}
 
 interface SectionProps {
     id: string;
     type: string;
     heroDefinition: SectionDefinition;
-    heroData: any[];
+    heroData: Patchnote[];
 }
 
 export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+
+    const sortedPatchnotes = sortPatchnotes(heroData);
 
     let nameElement;
     if (type === "hero") {
@@ -64,8 +94,8 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
                         backgroundColor: '#12121233',
                     }}
                 >
-                    <List >
-                        {heroData.map((item: patch, index: number) => (
+                    {/* <List >
+                        {heroData.map((item: Patchnote, index: number) => (
                             <ListItem key={index}>
                                 <ListItemIcon>
                                     {
@@ -77,7 +107,27 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
                                 <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item.description} />
                             </ListItem>
                         ))}
-                    </List>
+                    </List> */}
+                    {
+                        sortedPatchnotes.general.map((item: Patchnote, index: number) => (
+                            <List>
+                                <ListItem key={index}>
+                                    <ListItemIcon>
+                                        {
+                                            item.change === "buff" ?
+                                                <AddIcon sx={{ color: "green" }} /> : item.change === "nerf" ?
+                                                    <RemoveIcon sx={{ color: "red" }} /> : <CircleIcon />
+                                        }
+                                    </ListItemIcon>
+                                    <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item.description} />
+                                </ListItem>
+                            </List>
+                        ))
+                    }
+                    <AbilitySection ability={sortedPatchnotes.ability1} ability_icon={heroDefinition.ability1} />
+                    <AbilitySection ability={sortedPatchnotes.ability2} ability_icon={heroDefinition.ability2} />
+                    <AbilitySection ability={sortedPatchnotes.ability3} ability_icon={heroDefinition.ability3} />
+                    <AbilitySection ability={sortedPatchnotes.ability4} ability_icon={heroDefinition.ability4} />
                 </Box>
                 <Box
                     className="hero-section-right"
@@ -132,7 +182,7 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
                     }}
                 >
                     <List>
-                        {heroData.map((item: any, index: number) => (
+                        {heroData.map((item: Patchnote, index: number) => (
                             <ListItem key={index}>
                                 <ListItemIcon >
                                     {
@@ -150,4 +200,41 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
             </Box>
         );
     }
+}
+
+
+function AbilitySection({ ability, ability_icon }: { ability: Patchnote[], ability_icon: string }) {
+    return (
+        <Box>
+            {ability.length != 0 &&
+                <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'}>
+                    <img src={ability_icon} alt="ability[0].ability.name" />
+                    <Typography
+                        fontFamily={"DecoturaICG"}
+                        fontSize={"1em"}
+                        sx={{ paddingLeft: "1em" }}
+                    >
+                        {ability[0].ability.name}
+                    </Typography>
+                </Box>
+
+            }
+            {
+                ability.map((item: Patchnote, index: number) => (
+                    <List>
+                        <ListItem key={index}>
+                            <ListItemIcon>
+                                {
+                                    item.change === "buff" ?
+                                        <AddIcon sx={{ color: "green" }} /> : item.change === "nerf" ?
+                                            <RemoveIcon sx={{ color: "red" }} /> : <CircleIcon />
+                                }
+                            </ListItemIcon>
+                            <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item.description} />
+                        </ListItem>
+                    </List>
+                ))
+            }
+        </Box>
+    )
 }

@@ -1,29 +1,33 @@
 import { useEffect, useRef, useState } from 'react';
-import { patch, PatchData } from './PatchData';
-import { Grid } from '@mui/material';
+import { Patchnote, PatchData } from './PatchData';
+import { Box, Grid, IconButton, Tooltip } from '@mui/material';
 import { GENERAL_DEFINITIONS, HERO_DEFINITIONS, ITEM_DEFINITIONS } from './SectionDefinitions';
 import { SectionStepper } from './components/SectionStepper';
 import { SectionScroller } from './components/SectionScroller';
 import { SectionData } from './SectionTypes';
+import HomeIcon from '@mui/icons-material/Home';
+import { useNavigate } from 'react-router-dom';
+import HistoryIcon from '@mui/icons-material/History';
 
-function getHeroPatches(hero: string, jsonData: PatchData[]): Record<string, patch[]> {
-    let heroPatches: Record<string, patch[]> = {};
+
+function getHeroPatches(hero: string, jsonData: PatchData[]): Record<string, Patchnote[]> {
+    let heroPatches: Record<string, Patchnote[]> = {};
     jsonData.forEach(patch => {
         heroPatches[patch.date] = patch.characters[hero];
     });
     return heroPatches;
 }
 
-function getGeneralPatches(category: string, jsonData: PatchData[]): Record<string, patch[]> {
-    let categoryPatches: Record<string, patch[]> = {};
+function getGeneralPatches(category: string, jsonData: PatchData[]): Record<string, Patchnote[]> {
+    let categoryPatches: Record<string, Patchnote[]> = {};
     jsonData.forEach(patch => {
         categoryPatches[patch.date] = patch.general[category];
     });
     return categoryPatches;
 }
 
-function getItemPatches(category: string, jsonData: PatchData[]): Record<string, patch[]> {
-    let itemPatches: Record<string, patch[]> = {};
+function getItemPatches(category: string, jsonData: PatchData[]): Record<string, Patchnote[]> {
+    let itemPatches: Record<string, Patchnote[]> = {};
     jsonData.forEach(patch => {
         itemPatches[patch.date] = patch.items[category];
     });
@@ -31,6 +35,8 @@ function getItemPatches(category: string, jsonData: PatchData[]): Record<string,
 }
 
 export function DesktopLayout({ date }: { date: string }) {
+    const navigate = useNavigate();
+
     const [sectionData, setSectionData] = useState<SectionData[]>([]);
 
     const containerRef = useRef<HTMLDivElement | null>(null);
@@ -129,6 +135,18 @@ export function DesktopLayout({ date }: { date: string }) {
                     date={date}
                 />
             </Grid>
-        </Grid>
+            <Box position={"fixed"} right={"100px"} bottom={"20px"} display={'flex'} flexDirection={'column-reverse'}>
+                <Tooltip title="Home">
+                    <IconButton size="large" onClick={() => { navigate("/") }}>
+                        <HomeIcon sx={{ color: "lightblue" }} />
+                    </IconButton>
+                </Tooltip>
+                <Tooltip title="Patch History">
+                    <IconButton size="large" onClick={() => { navigate("/") }}>
+                        <HistoryIcon sx={{ color: "lightblue" }} />
+                    </IconButton>
+                </Tooltip>
+            </Box>
+        </Grid >
     );
 }

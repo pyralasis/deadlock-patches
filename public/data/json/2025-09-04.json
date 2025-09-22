@@ -4,39 +4,67 @@
         "Abrams": [
             {
                 "description": "Infernal Resilience damage regenerated increased from 12% to 13%",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Infernal Resilience"
+                }
             }
         ],
         "Bebop": [
             {
                 "description": "Weapon Range growth per boon increased from 1.2 to 1.5",
-                "change": "buff"
+                "change": "buff",
+                "type": "general"
             },
             {
                 "description": "Bullet damage growth per boon increased from 0.13 to 0.14",
-                "change": "buff"
+                "change": "buff",
+                "type": "general"
             },
             {
                 "description": "Exploding Uppercut cooldown reduced from 21s to 19s",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Exploding Uppercut"
+                }
             },
             {
                 "description": "Exploding Uppercut T1 increased from -10.5s to -11s",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Exploding Uppercut"
+                }
             },
             {
                 "description": "Hyperbeam cooldown reduced from 120s to 105s",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Hyperbeam"
+                }
             }
         ],
         "Billy": [
             {
                 "description": "Base health from 730 to 740",
-                "change": "buff"
+                "change": "buff",
+                "type": "general"
             },
             {
                 "description": "Rising Ram cooldown decreased from 33s to 30s",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Rising Ram"
+                }
             }
         ],
         "Calico": [
@@ -658,15 +686,18 @@
         "Gameplay": [
             {
                 "description": "Rejuv only heals the person hitting the crystal",
-                "change": "neutral"
+                "change": "neutral",
+                "type": "general"
             },
             {
                 "description": "Dying to a non-player (when there is no bounty/assists) now increases the respawn time for that death by 10 seconds",
-                "change": "neutral"
+                "change": "neutral",
+                "type": "general"
             },
             {
                 "description": "Patron 1st death time is now a constant 12s instead of being variable between 8 and 15 seconds",
-                "change": "neutral"
+                "change": "neutral",
+                "type": "general"
             }
         ],
         "Bugfixes": []

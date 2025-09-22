@@ -2,27 +2,27 @@ import { Box, Button, Popover, Typography } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
 import { SectionData } from "./SectionTypes";
 import { GENERAL_DEFINITIONS, HERO_DEFINITIONS, ITEM_DEFINITIONS } from "./SectionDefinitions";
-import { patch, PatchData } from "./PatchData";
+import { Patchnote, PatchData } from "./PatchData";
 import { SectionScroller } from "./components/SectionScroller";
 
-function getHeroPatches(hero: string, jsonData: PatchData[]): Record<string, patch[]> {
-    let heroPatches: Record<string, patch[]> = {};
+function getHeroPatches(hero: string, jsonData: PatchData[]): Record<string, Patchnote[]> {
+    let heroPatches: Record<string, Patchnote[]> = {};
     jsonData.forEach(patch => {
         heroPatches[patch.date] = patch.characters[hero];
     });
     return heroPatches;
 }
 
-function getGeneralPatches(category: string, jsonData: PatchData[]): Record<string, patch[]> {
-    let categoryPatches: Record<string, patch[]> = {};
+function getGeneralPatches(category: string, jsonData: PatchData[]): Record<string, Patchnote[]> {
+    let categoryPatches: Record<string, Patchnote[]> = {};
     jsonData.forEach(patch => {
         categoryPatches[patch.date] = patch.general[category];
     });
     return categoryPatches;
 }
 
-function getItemPatches(category: string, jsonData: PatchData[]): Record<string, patch[]> {
-    let itemPatches: Record<string, patch[]> = {};
+function getItemPatches(category: string, jsonData: PatchData[]): Record<string, Patchnote[]> {
+    let itemPatches: Record<string, Patchnote[]> = {};
     jsonData.forEach(patch => {
         itemPatches[patch.date] = patch.items[category];
     });

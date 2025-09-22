@@ -1,4 +1,4 @@
-import { Box, Step, StepButton, Stepper } from "@mui/material";
+import { Box, Step, StepButton, Stepper, Tooltip } from "@mui/material";
 import { SectionStepIcon } from "./SectionStepIcon";
 import { useRef, useEffect } from "react";
 import { SectionData } from "../SectionTypes";
@@ -50,21 +50,24 @@ export function SectionStepper({ sectionData, activeSection, date }: SectionStep
                             return (
                                 <Step key={section.id}>
                                     <div ref={(el) => { if (stepRefs.current) stepRefs.current[section.id] = el; }}>
-                                        <StepButton
-                                            icon={
-                                                <SectionStepIcon
-                                                    name={section.definition.name}
-                                                    iconUrl={section.definition.icon}
-                                                    active={index === sectionData.findIndex(s => s.id === activeSection)}
-                                                    completed={false}
-                                                    icon={undefined}
-                                                />
-                                            }
-                                            onClick={() => {
-                                                document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth' });
-                                            }}
-                                            sx={{ padding: 0, minWidth: 'auto' }}
-                                        />
+                                        <Tooltip title={section.definition.name}>
+                                            <StepButton
+                                                icon={
+                                                    <SectionStepIcon
+                                                        name={section.definition.name}
+                                                        iconUrl={section.definition.icon}
+                                                        active={index === sectionData.findIndex(s => s.id === activeSection)}
+                                                        completed={false}
+                                                        icon={undefined}
+                                                    />
+                                                }
+                                                onClick={() => {
+                                                    document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth' });
+                                                }}
+                                                sx={{ padding: 0, minWidth: 'auto' }}
+                                            />
+                                        </Tooltip>
+
                                     </div>
                                 </Step>
                             );
@@ -72,21 +75,23 @@ export function SectionStepper({ sectionData, activeSection, date }: SectionStep
                             return (
                                 <Step key={section.id}>
                                     <div ref={(el) => { if (stepRefs.current) stepRefs.current[section.id] = el; }}>
-                                        <StepButton
-                                            icon={
-                                                <SectionStepIcon
-                                                    name={section.definition.name}
-                                                    iconUrl={section.definition.icon}
-                                                    active={index === sectionData.findIndex(s => s.id === activeSection)}
-                                                    completed={false}
-                                                    icon={undefined}
-                                                />
-                                            }
-                                            onClick={() => {
-                                                document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth' });
-                                            }}
-                                            sx={{ padding: 0, minWidth: 'auto' }}
-                                        />
+                                        <Tooltip title={section.definition.name}>
+                                            <StepButton
+                                                icon={
+                                                    <SectionStepIcon
+                                                        name={section.definition.name}
+                                                        iconUrl={section.definition.icon}
+                                                        active={index === sectionData.findIndex(s => s.id === activeSection)}
+                                                        completed={false}
+                                                        icon={undefined}
+                                                    />
+                                                }
+                                                onClick={() => {
+                                                    document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth' });
+                                                }}
+                                                sx={{ padding: 0, minWidth: 'auto' }}
+                                            />
+                                        </Tooltip>
                                     </div>
                                 </Step>
                             );

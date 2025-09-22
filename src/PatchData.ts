@@ -1,12 +1,18 @@
 export interface PatchData {
     date: string;
-    characters: Record<string, patch[]>;
-    items: Record<string, patch[]>;
-    general: Record<string, patch[]>;
-    bugfixes: Record<string, patch[]>;
+    characters: Record<string, Patchnote[]>;
+    items: Record<string, Patchnote[]>;
+    general: Record<string, Patchnote[]>;
+    bugfixes: Record<string, Patchnote[]>;
 }
 
-export interface patch {
+export interface Patchnote {
     description: string,
-    change: "buff" | "nerf" | "neutral"
+    change: "buff" | "nerf" | "neutral",
+    type: string,
+    ability: {
+        slot: number,
+        name: string
+    }
+
 }

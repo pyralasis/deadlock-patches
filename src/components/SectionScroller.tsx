@@ -3,6 +3,7 @@ import { Section } from "./HeroSection";
 import { SectionData } from "../SectionTypes";
 
 
+
 interface SectionScrollerProps {
     sectionData: SectionData[];
     containerRef: React.RefObject<HTMLDivElement | null>;
@@ -48,7 +49,9 @@ export function SectionScroller({ sectionData, containerRef, activeSection, setA
                         />
                     ) : null
                 ))}
-            </Box>
+
+            </Box >
+
         );
     else {
         return (
