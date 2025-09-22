@@ -70,134 +70,255 @@
         "Calico": [
             {
                 "description": "Gloom Bombs T3 increased from +2 Bombs to +3",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Gloom Bombs"
+                }
             },
             {
                 "description": "Leaping Slash melee damage scaling increased from 1.3 to 1.5",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Leaping Slash"
+                }
             },
             {
                 "description": "Leaping Slash heal spirit scaling increased from 1.2 to 1.4",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Leaping Slash"
+                }
             },
             {
                 "description": "Ava T3 increased from -15s Cooldown to -20s",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Ava"
+                }
             },
             {
                 "description": "Ava T3 increased from +25 Health Regen to +35",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Ava"
+                }
             },
             {
                 "description": "Return to Shadows cooldown reduced from 110s to 100s",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Return to Shadows"
+                }
             }
         ],
         "Doorman": [
             {
                 "description": "Call Bell explosion damage reduced from 70 to 60",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Call Bell"
+                }
             },
             {
                 "description": "Call Bell explosion damage spirit scaling increased from 1.4 to 1.5",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Call Bell"
+                }
             },
             {
                 "description": "Hotel Guest now teleports the target back to the beginning of the hotel if they fall into the void.",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Hotel Guest"
+                }
             }
         ],
         "Drifter": [
             {
                 "description": "Health gain per boon reduced from 41 to 39",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "general"
             },
             {
                 "description": "Weapon falloff start distance reduced from 24m to 22m",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "general"
             },
             {
                 "description": "Weapon damage gain per boon reduced from 0.55 to 0.52",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "general"
             },
             {
                 "description": "Bloodscent T3 Bonus amp damage reduced from +11% to +10%",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Bloodscent"
+                }
             },
             {
                 "description": "Rend now causes you to briefly float in the air during the cast time",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Rend"
+                }
             }
         ],
         "Dynamo": [],
         "Grey Talon": [
             {
                 "description": "Bullet damage growth based on Spirit Power increased from 0.07 to 0.08",
-                "change": "buff"
+                "change": "buff",
+                "type": "general"
             },
             {
                 "description": "Spirit Snare Curse duration increased from 2s to 2.25s",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Spirit Snare"
+                }
             },
             {
                 "description": "Spirit Snare T2 changed from \"+0.75 Curse Duration\" to \"Applies -15% Bullet Resistance for 10s\"",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Spirit Snare"
+                }
             },
             {
                 "description": "Spirit Snare T3 changed from \"Grey Talon deals +30% more Bullet Damage to enemies hit by Spirit Snare for 10s\" to \"+1s Curse Duration and +1.5m Radius\"",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Spirit Snare"
+                }
             }
         ],
         "Haze": [],
         "Holliday": [
             {
                 "description": "Base bullet damage reduced from 26 to 22",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "general"
             },
             {
                 "description": "Bullet damage growth increased from 1.08 to 1.23",
-                "change": "buff"
+                "change": "buff",
+                "type": "general"
             },
             {
                 "description": "Powder Keg displacement duration reduced from 1s to 0.4s",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Powder Keg"
+                }
             },
             {
                 "description": "Powder Keg damage reduced from 90 to 80",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Powder Keg"
+                }
             },
             {
                 "description": "Powder Keg T2 damage reduced from 75 to 65",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Powder Keg"
+                }
             },
             {
                 "description": "Powder Keg spirit scaling increased from 1.4 to 1.6",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Powder Keg"
+                }
             },
             {
                 "description": "Powder Keg T3 charges reduced from +3 to +2",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Powder Keg"
+                }
             },
             {
                 "description": "Powder Keg T3 now also increases displacement duration by 0.4s",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Powder Keg"
+                }
             }
         ],
         "Infernus": [
             {
                 "description": "Flame Dash DPS reduced from 33 to 30",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Flame Dash"
+                }
             },
             {
                 "description": "Flame Dash T2 reduced from +37 DPS to +35",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Flame Dash"
+                }
             }
         ],
         "Ivy": [],
         "Kelvin": [
             {
                 "description": "Frost Grenade cooldown reduced from 22s to 20s",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Frost Grenade"
+                }
             }
         ],
         "Lady Geist": [],
@@ -206,240 +327,473 @@
         "Mina": [
             {
                 "description": "Rake heal spirit scaling increased from 1 to 1.5",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Rake"
+                }
             },
             {
                 "description": "Love Bites buildup now takes 1 less shot",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Love Bites"
+                }
             },
             {
                 "description": "Love Bites on proc damage increased from 45 to 55",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Love Bites"
+                }
             },
             {
                 "description": "Love Bites on proc damage spirit scaling increased from 1.5 to 1.7",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Love Bites"
+                }
             },
             {
                 "description": "Nox Nostra cooldown reduced from 130s to 115s",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Nox Nostra"
+                }
             }
         ],
         "Mirage": [
             {
                 "description": "Fire Scarabs T3 increased from +60 Max Health Steal to +70",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Fire Scarabs"
+                }
             }
         ],
         "Mo & Krill": [
             {
                 "description": "Combo cast range reduced from 5m to 4.75m",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Combo"
+                }
             }
         ],
         "Paige": [
             {
                 "description": "Defend and Fight! barrier spirit power scaling increased from 1.4 to 1.6",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Defend and Fight!"
+                }
             }
         ],
         "Paradox": [
             {
                 "description": "Bullet damage growth reduced from 0.275 to 0.27",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "general"
             }
         ],
         "Pocket": [],
         "Seven": [
             {
                 "description": "Move speed reduced from 6.9 to 6.8",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "general"
             },
             {
                 "description": "Incoming crit resistance reduced from -35% to -25%",
-                "change": "buff"
+                "change": "nerf",
+                "type": "general"
             },
             {
                 "description": "Power Surge T3 spirit power scaling reduced from 0.34 to 0.3",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Power Surge"
+                }
             },
             {
                 "description": "Storm Cloud DPS spirit scaling reduced from 0.65 to 0.6",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Storm Cloud"
+                }
             },
             {
                 "description": "Storm Cloud initial radius reduced from 12m to 10m",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Storm Cloud"
+                }
             }
         ],
         "Shiv": [
             {
                 "description": "Serrated Knives T3 increased from +37 Damage and +6.5 Bleed DPS to +40 Damage and +7 Bleed DPS",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Serrated Knives"
+                }
             },
             {
                 "description": "Slice and Dice T3 Max cd reduction from -6s to -8s",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Slice and Dice"
+                }
             },
             {
                 "description": "Bloodletting cooldown reduced from 25s to 20s",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Bloodletting"
+                }
             },
             {
                 "description": "Bloodletting incoming damage deferred increased from 25% to 30%",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Bloodletting"
+                }
             },
             {
                 "description": "Bloodletting T3 increased from +35% Damage Cleared to +45%",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Bloodletting"
+                }
             }
         ],
         "Sinclair": [
             {
                 "description": "Vexing Bolt radius reduced from 3.5 to 3.25",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Vexing Bolt"
+                }
             },
             {
                 "description": "Spectral Assistant base damage reduced from 18 to 15",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Spectral Assistant"
+                }
             },
             {
                 "description": "Spectral Assistant spirit scaling increased from 0.28 to 0.36",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Spectral Assistant"
+                }
             },
             {
                 "description": "Spectral Assistant T3 increased from +45% Fire Rate to +60%",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Spectral Assistant"
+                }
             },
             {
                 "description": "Rabbit Hex T3 increased from +5% Damage Amp to +7%",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Rabbit Hex"
+                }
             },
             {
                 "description": "Audience Participation cooldown reduced from 100s to 85s",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Audience Participation"
+                }
             },
             {
                 "description": "Audience Participation duration increased from 10s to 12s",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Audience Participation"
+                }
             }
         ],
         "Victor": [
             {
                 "description": "Health per boon reduced from 45 to 41",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "general"
             },
             {
                 "description": "Jumpstart recharge timer increased from 3s to 8s",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Jumpstart"
+                }
             },
             {
                 "description": "Aura of Suffering reduced from 9m to 8m",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Aura of Suffering"
+                }
             },
             {
                 "description": "Aura of Suffering cooldown increased from 1s to 2.5s",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Aura of Suffering"
+                }
             }
         ],
         "Vindicta": [
             {
                 "description": "Stake no longer has a smaller tether range than capture range (6m to 9m, no longer pulls you)",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Stake"
+                }
             },
             {
                 "description": "Stake duration reduced from 2s to 1.75s",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Stake"
+                }
             },
             {
                 "description": "Stake slow increased from 30% to 40%",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Stake"
+                }
             },
             {
                 "description": "Flight duration increased from 12s to 13s",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Flight"
+                }
             },
             {
                 "description": "Flight spirit damage increased from 9 to 10",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Flight"
+                }
             },
             {
                 "description": "Flight T2 increased from +6s to +7s",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Flight"
+                }
             },
             {
                 "description": "Flight T3 increased from +11 Spirit Damage to +14",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Flight"
+                }
             },
             {
                 "description": "Crow Familiar debuff duration reduced from 6s to 4s",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Crow Familiar"
+                }
             },
             {
                 "description": "Crow Familiar debuff duration spirit scaling reduced from 0.022 to 0.013",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Crow Familiar"
+                }
             },
             {
                 "description": "Crow Familiar bleed per second increased from 2.15% to 2.7%",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Crow Familiar"
+                }
             },
             {
                 "description": "Crow Familiar T2 reduced from -16s Cooldown to -12s",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Crow Familiar"
+                }
             }
         ],
         "Viscous": [
             {
                 "description": "Alt Fire base damage reduced from 63 to 48",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "general"
             },
             {
                 "description": "Alt Fire damage growth increased from 0.45 to 1.25",
-                "change": "buff"
+                "change": "buff",
+                "type": "general"
             }
         ],
         "Vyper": [
             {
                 "description": "Falloff min range increased from 13m to 15m",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "general"
             },
             {
                 "description": "Screwjab Dagger spirit scaling increased from 0.74 to 1.0",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Screwjab Dagger"
+                }
             },
             {
                 "description": "Screwjab dagger cooldown reduced from 10s to 9s",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Screwjab Dagger"
+                }
             },
             {
                 "description": "Screwjab Dagger T3 increased from +1s Slow Duration to +2s",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Screwjab Dagger"
+                }
             },
             {
                 "description": "Lethal Venom cooldown reduced from 26s to 20s",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Lethal Venom"
+                }
             },
             {
                 "description": "Petrifying Bola range increased from 6m to 8m",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Petrifying Bola"
+                }
             },
             {
                 "description": "Petrifying Bola cooldown reduced from 110s to 90s",
-                "change": "buff"
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Petrifying Bola"
+                }
             }
         ],
         "Warden": [
             {
                 "description": "Base Sprint speed reduced from 2.5 to 2",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "general"
             },
             {
                 "description": "Alchemical Flask T2 reduced from +45 to +40",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Alchemical Flask"
+                }
             },
             {
                 "description": "Last Stand spirit scaling reduced from 1.6 to 1.45",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Last Stand"
+                }
             }
         ],
         "Wraith": [],
