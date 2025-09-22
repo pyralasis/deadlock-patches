@@ -7,7 +7,7 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import CircleIcon from '@mui/icons-material/Circle';
 
-type SortedPatchnotes = {
+export type SortedPatchnotes = {
     general: Patchnote[];
     ability1: Patchnote[];
     ability2: Patchnote[];
@@ -15,7 +15,7 @@ type SortedPatchnotes = {
     ability4: Patchnote[];
 }
 
-function sortPatchnotes(patchnotes: Patchnote[]): SortedPatchnotes {
+export function sortPatchnotes(patchnotes: Patchnote[]): SortedPatchnotes {
     const sorted: SortedPatchnotes = {
         general: [],
         ability1: [],
@@ -216,7 +216,7 @@ export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
 }
 
 
-function AbilitySection({ ability, ability_icon }: { ability: Patchnote[], ability_icon: string }) {
+export function AbilitySection({ ability, ability_icon }: { ability: Patchnote[], ability_icon: string }) {
     return (
         <Box>
             {ability.length != 0 &&

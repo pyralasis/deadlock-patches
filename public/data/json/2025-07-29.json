@@ -5,11 +5,13 @@
         "Bebop": [
             {
                 "description": "No longer has +10% Base Bullet Resistance",
-                "change": "nerf"
+                "change": "nerf",
+                "type": "general"
             },
             {
                 "description": "Now has +0.3% Bullet Resistance per Boon",
-                "change": "buff"
+                "change": "buff",
+                "type": "general"
             },
             {
                 "description": "Exploding Uppercut T2 reduced from +50% Weapon Damage to +40%",

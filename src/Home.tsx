@@ -53,12 +53,22 @@ export function Home() {
             >
                 <Typography
                     fontFamily={"DecoturaICG"}
+                    fontSize={"5em"}
+                    sx={{
+                        color: "white",
+                        paddingTop: "5.em"
+                    }}>
+                    Deadlock Patches
+                </Typography>
+                <Typography
+                    fontFamily={"DecoturaICG"}
                     fontSize={"3em"}
                     sx={{
                         color: "white",
-                        padding: "2em"
+                        paddingTop: "1em",
+                        paddingBottom: ".5em"
                     }}>
-                    Deadlock Patches
+                    Patch List
                 </Typography>
 
                 <Masonry
@@ -109,7 +119,53 @@ export function Home() {
                         })
                     }
                 </Masonry>
+                <Typography
+                    fontFamily={"DecoturaICG"}
+                    fontSize={"3em"}
+                    sx={{
+                        color: "white",
+                        paddingTop: "1em",
+                        paddingBottom: ".5em"
+                    }}>
+                    Hero History
+                </Typography>
+                <Masonry
+                    columns={`${isMobile ? 2 : 4}`}
+                    spacing={2}
+                    defaultHeight={450}
+                    defaultColumns={4}
+                    defaultSpacing={1}
+                >
+                    {
+                        Object.keys(HERO_DEFINITIONS).map((hero) => {
+                            return (
+                                <Card
+                                    key={hero}
+                                    id={hero}
+                                    sx={{
+                                        width: "10em",
+                                        height: "10em",
+                                        backgroundImage: HERO_DEFINITIONS[hero].background,
+                                        backgroundRepeat: "no-repeat",
+                                        backgroundSize: '250% 100%',
+                                        backgroundPosition: 'right',
+                                    }}
+                                >
+                                    <Button
+                                        onClick={() => navigate(`/hero-history?hero=${hero}`)}
+                                        sx={{ width: "100%", height: "100%", padding: "0" }}>
+                                        <Box display={"flex"} flexDirection={"column"} alignItems={"center"}>
+                                            <Box component={"img"} src={HERO_DEFINITIONS[hero].icon} alt="" width={"75px"} />
+                                            <Box component={"img"} src={HERO_DEFINITIONS[hero].nameplate} alt="" width={"100px"} />
+                                        </Box>
 
+                                    </Button>
+                                </Card>
+
+                            )
+                        })
+                    }
+                </Masonry>
 
             </Box>
 
