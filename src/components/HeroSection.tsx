@@ -1,6 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import { ListItemIcon, List, ListItem, ListItemText, Typography, useMediaQuery, useTheme, SvgIcon } from '@mui/material';
+import { ListItemIcon, List, ListItem, ListItemText, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { SectionDefinition } from '../SectionDefinitions';
 import { Patchnote } from '../PatchData';
 import AddIcon from '@mui/icons-material/Add';
