@@ -27,12 +27,11 @@ export function PatchHistory({ }: PatchHistoryProps) {
 
     const location = useLocation();
     const query = new URLSearchParams(location.search);
-    const hero: string | null = query.get("hero")
+    const hero: string | null = query.get("hero");
 
     const navigate = useNavigate();
 
     const [sectionData, setSectionData] = useState<SectionData[]>([]);
-
 
     useEffect(() => {
         const fetchData = async () => {
@@ -72,7 +71,7 @@ export function PatchHistory({ }: PatchHistoryProps) {
         return (
             <Box
                 sx={{
-                    backgroundImage: HERO_DEFINITIONS[hero ? hero : ""].background,
+                    backgroundImage: HERO_DEFINITIONS[hero ? hero : "Abrams"].background,
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: '100% 100%',
                     height: '100vh',

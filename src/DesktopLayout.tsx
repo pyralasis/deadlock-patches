@@ -145,7 +145,10 @@ export function DesktopLayout({ date }: { date: string }) {
                 </Tooltip>
 
                 <Tooltip title="Patch History">
-                    <IconButton sx={{ display: Object.keys(HERO_DEFINITIONS).includes(activeSectionId) ? "flex-inline" : "none" }} size="large" onClick={() => { navigate(`/hero-history?hero=${activeSectionId}`) }}>
+                    <IconButton sx={{ display: Object.keys(HERO_DEFINITIONS).includes(activeSectionId) ? "flex-inline" : "none" }} size="large"
+                        onClick={() => {
+                            navigate(`/hero-history?hero=${encodeURIComponent(activeSectionId)}`)
+                        }}>
                         <HistoryIcon sx={{ color: "lightblue" }} />
                     </IconButton>
                 </Tooltip>
