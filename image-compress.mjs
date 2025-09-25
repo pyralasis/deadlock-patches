@@ -14,7 +14,7 @@ async function optimizeImages() {
     const filesWebp = await imagemin(['dist/backgrounds/*.png'], {
         destination: 'dist/backgrounds',
         plugins: [
-            webp({ quality: 50 })
+            webp({ quality: 75 })
         ]
     });
 
@@ -29,7 +29,7 @@ async function optimizeImages() {
     const files2Webp = await imagemin(['dist/hero_icons/*.png'], {
         destination: 'dist/hero_icons',
         plugins: [
-            webp({ quality: 50 })
+            webp({ quality: 75 })
         ]
     });
 
@@ -44,7 +44,37 @@ async function optimizeImages() {
     const files3Webp = await imagemin(['dist/nameplates/*.png'], {
         destination: 'dist/nameplates',
         plugins: [
-            webp({ quality: 50 })
+            webp({ quality: 75 })
+        ]
+    });
+
+    const files4 = await imagemin(['dist/ability_icons/*.{jpg,jpeg,png,svg}'], {
+        destination: 'dist/public/ability_icons',
+        plugins: [
+            pngquant({ quality: [0.6, 0.8] }),
+            svgo()
+        ],
+    });
+
+    const files4Webp = await imagemin(['dist/public/ability_icons/*.png'], {
+        destination: 'dist/public/ability_icons',
+        plugins: [
+            webp({ quality: 75 })
+        ]
+    });
+
+    const files5 = await imagemin(['dist/item_icons/weapon/*.{jpg,jpeg,png,svg}'], {
+        destination: 'dist/public/item_icons/weapon/',
+        plugins: [
+            pngquant({ quality: [0.6, 0.8] }),
+            svgo()
+        ],
+    });
+
+    const files5Webp = await imagemin(['dist/public/item_icons/weapon//*.png'], {
+        destination: 'dist/public/item_icons/weapon/',
+        plugins: [
+            webp({ quality: 75 })
         ]
     });
 
@@ -56,6 +86,13 @@ async function optimizeImages() {
 
     console.log(`Optimized ${files3.length} images in nameplates`);
     console.log(`Converted ${files3Webp.length} PNGs to WebP in nameplates`);
+
+    console.log(`Optimized ${files4.length} images in ability_icons`);
+    console.log(`Converted ${files4Webp.length} PNGs to WebP in ability_icons`);
+
+    console.log(`Optimized ${files5.length} images in weapon`);
+    console.log(`Converted ${files5Webp.length} PNGs to WebP in weapon`);
+
 }
 
 optimizeImages();
