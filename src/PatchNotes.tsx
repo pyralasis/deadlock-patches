@@ -25,7 +25,7 @@ const preloadGeneralImages = (definitions: SectionDefinition[]) => {
     });
 };
 
-export function PatchNotes() {
+function PatchNotes() {
     const location = useLocation();
     const query = new URLSearchParams(location.search);
     const date = query.get("date")
@@ -47,3 +47,5 @@ export function PatchNotes() {
             <MobileLayout date={date || ""} />
         );
 }
+
+export default PatchNotes

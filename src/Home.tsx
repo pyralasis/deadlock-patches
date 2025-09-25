@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { HERO_DEFINITIONS, SectionDefinition } from "./SectionDefinitions";
 import { useNavigate } from "react-router-dom";
 
-export function Home() {
+function Home() {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
@@ -172,3 +172,5 @@ export function Home() {
         </Box >
     )
 }
+
+export default Home

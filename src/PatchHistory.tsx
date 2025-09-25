@@ -22,7 +22,7 @@ interface PatchHistoryProps {
 
 }
 
-export function PatchHistory({ }: PatchHistoryProps) {
+function PatchHistory({ }: PatchHistoryProps) {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
@@ -282,3 +282,5 @@ export function PatchHistory({ }: PatchHistoryProps) {
     //     );
     // }
 }
+
+export default PatchHistory
