@@ -37,10 +37,10 @@ export function Home() {
             width={"100%"}
             height={"100%"}
             sx={{
-                backgroundImage: 'url("/backgrounds/city.png")',
+                backgroundImage: 'url("/backgrounds/city.png"), url("/backgrounds/city.webp")',
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
-                maskImage: `${isMobile ? "" : "linear-gradient(to right, transparent, black 20%, black 80%, transparent);"}`,
+                maskImage: `${isMobile ? "none" : "linear-gradient(to right, transparent, black 20%, black 80%, transparent)"}`,
                 maskRepeat: "no-repeat",
                 overflowX: "hidden",
                 overflowY: "scroll"
@@ -87,7 +87,7 @@ export function Home() {
                                     sx={{
                                         width: "10em",
                                         height: "10em",
-                                        backgroundImage: `${a[index % 32].background}`,
+                                        backgroundImage: `url(${a[index % 32].background}.png), url(${a[index % 32].background}.webp)`,
                                         backgroundRepeat: "no-repeat",
                                         backgroundSize: '250% 100%',
                                         backgroundPosition: 'right',
@@ -145,7 +145,7 @@ export function Home() {
                                     sx={{
                                         width: "10em",
                                         height: "10em",
-                                        backgroundImage: HERO_DEFINITIONS[hero].background,
+                                        backgroundImage: `url(${HERO_DEFINITIONS[hero].background}.png), url(${HERO_DEFINITIONS[hero].background}.webp)`,
                                         backgroundRepeat: "no-repeat",
                                         backgroundSize: '250% 100%',
                                         backgroundPosition: 'right',

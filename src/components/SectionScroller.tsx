@@ -21,7 +21,7 @@ export function SectionScroller({ sectionData, containerRef, activeSection, date
                 ref={containerRef}
 
                 sx={{
-                    backgroundImage: activeSectionBackground,
+                    backgroundImage: `url(${activeSectionBackground}.png), url(${activeSectionBackground}.webp)`,
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: '100% 100%',
                     height: "100%",
