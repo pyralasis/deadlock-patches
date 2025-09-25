@@ -155,8 +155,8 @@ export function Home() {
                                         onClick={() => navigate(`/hero-history?hero=${hero}`)}
                                         sx={{ width: "100%", height: "100%", padding: "0" }}>
                                         <Box display={"flex"} flexDirection={"column"} alignItems={"center"}>
-                                            <Box component={"img"} src={HERO_DEFINITIONS[hero].icon} alt="" width={"75px"} />
-                                            <Box component={"img"} src={HERO_DEFINITIONS[hero].nameplate} alt="" width={"100px"} />
+                                            <Box component={"img"} src={HERO_DEFINITIONS[hero].icon} alt="" loading="lazy" width={"75px"} />
+                                            <Box component={"img"} src={HERO_DEFINITIONS[hero].nameplate} alt="" loading="lazy" width={"100px"} />
                                         </Box>
 
                                     </Button>
