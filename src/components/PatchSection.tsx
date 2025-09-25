@@ -37,7 +37,7 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
         );
     } else {
         nameElement = (
-            <Typography fontFamily={"DecoturalCG"} fontSize={196}>{heroDefinition.name}</Typography>
+            <Typography fontFamily={"DecoturaICG"} fontSize={196}>{heroDefinition.name}</Typography>
         );
     }
     if (!isMobile)
@@ -88,7 +88,7 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                             />
                         </Box>
                         <Typography
-                            fontFamily={"DecoturalCG"}
+                            fontFamily={"DecoturaICG"}
                             fontSize={"2em"}
                             sx={{ paddingLeft: "1em" }}
                         >
@@ -129,7 +129,7 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                                             width={"100px"}
                                         />
                                         <Typography
-                                            fontFamily={"DecoturalCG"}
+                                            fontFamily={"DecoturaICG"}
                                             fontSize={"1em"}
                                             sx={{ paddingLeft: "1em" }}
                                         >
@@ -248,7 +248,7 @@ export function AbilitySection({ ability, ability_icon }: { ability: Patchnote[]
                         />
                     </Box>
                     <Typography
-                        fontFamily={"DecoturalCG"}
+                        fontFamily={"DecoturaICG"}
                         fontSize={"1em"}
                         sx={{ paddingLeft: "1em" }}
                     >

@@ -138,7 +138,7 @@ export function MobileLayout({ date }: { date: string }) {
         );
     } else {
         nameElement = (
-            <Typography fontFamily={"DecoturalCG"} fontSize={64}>{activeSectionName} </Typography>
+            <Typography fontFamily={"DecoturaICG"} fontSize={64}>{activeSectionName} </Typography>
         );
     }
 

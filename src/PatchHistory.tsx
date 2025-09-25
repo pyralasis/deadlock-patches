@@ -121,7 +121,7 @@ function PatchHistory({ }: PatchHistoryProps) {
                                             return (
                                                 <>
                                                     <Typography
-                                                        fontFamily={"DecoturalCG"}
+                                                        fontFamily={"DecoturaICG"}
                                                         fontSize={"2em"}
                                                     >
                                                         {date}
@@ -130,7 +130,7 @@ function PatchHistory({ }: PatchHistoryProps) {
                                                         <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'}>
                                                             <Box component={"img"} src={HERO_DEFINITIONS[hero ? hero : ""].icon} alt="" width={"100px"} />
                                                             <Typography
-                                                                fontFamily={"DecoturalCG"}
+                                                                fontFamily={"DecoturaICG"}
                                                                 fontSize={"1em"}
                                                                 sx={{ paddingLeft: "1em" }}
                                                             >

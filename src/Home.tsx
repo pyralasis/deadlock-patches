@@ -52,7 +52,7 @@ function Home() {
                 alignItems={"center"}
             >
                 <Typography
-                    fontFamily={"DecoturalCG"}
+                    fontFamily={"DecoturaICG"}
                     fontSize={"5em"}
                     sx={{
                         color: "white",
@@ -61,7 +61,7 @@ function Home() {
                     Deadlock Patches
                 </Typography>
                 <Typography
-                    fontFamily={"DecoturalCG"}
+                    fontFamily={"DecoturaICG"}
                     fontSize={"3em"}
                     sx={{
                         color: "white",
@@ -120,7 +120,7 @@ function Home() {
                     }
                 </Masonry>
                 <Typography
-                    fontFamily={"DecoturalCG"}
+                    fontFamily={"DecoturaICG"}
                     fontSize={"3em"}
                     sx={{
                         color: "white",
