@@ -77,7 +77,16 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                 >
                     {sortedHeroPatchnotes.general.length != 0 &&
                         <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'}>
-                            <Box component={"img"} src={heroDefinition.icon} alt="" width={"100px"} />
+                            <Box component="picture">
+                                <source srcSet={`${heroDefinition.icon}.webp`} type="image/webp" />
+                                <Box
+                                    component="img"
+                                    src={`${heroDefinition.icon}.png`}
+                                    alt={heroDefinition.name}
+                                    width="100px"
+                                    loading="lazy"
+                                />
+                            </Box>
                             <Typography
                                 fontFamily={"DecoturaICG"}
                                 fontSize={"1em"}
@@ -228,7 +237,16 @@ export function AbilitySection({ ability, ability_icon }: { ability: Patchnote[]
         <Box>
             {ability.length != 0 &&
                 <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'}>
-                    <Box component={"img"} src={ability_icon} alt={ability[0].ability.name} width={"100px"} />
+                    <Box component="picture">
+                        <source srcSet={`${ability_icon}.webp`} type="image/webp" />
+                        <Box
+                            component="img"
+                            src={`${ability_icon}.png`}
+                            alt={ability[0].ability.name}
+                            width="100px"
+                            loading="lazy"
+                        />
+                    </Box>
                     <Typography
                         fontFamily={"DecoturaICG"}
                         fontSize={"1em"}

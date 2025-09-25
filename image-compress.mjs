@@ -49,7 +49,7 @@ async function optimizeImages() {
     });
 
     const files4 = await imagemin(['dist/ability_icons/*.{jpg,jpeg,png,svg}'], {
-        destination: 'dist/public/ability_icons',
+        destination: 'dist/ability_icons',
         plugins: [
             pngquant({ quality: [0.6, 0.8] }),
             svgo()
@@ -57,14 +57,14 @@ async function optimizeImages() {
     });
 
     const files4Webp = await imagemin(['dist/public/ability_icons/*.png'], {
-        destination: 'dist/public/ability_icons',
+        destination: 'dist/ability_icons',
         plugins: [
             webp({ quality: 75 })
         ]
     });
 
     const files5 = await imagemin(['dist/item_icons/weapon/*.{jpg,jpeg,png,svg}'], {
-        destination: 'dist/public/item_icons/weapon/',
+        destination: 'dist/item_icons/weapon/',
         plugins: [
             pngquant({ quality: [0.6, 0.8] }),
             svgo()
@@ -72,7 +72,7 @@ async function optimizeImages() {
     });
 
     const files5Webp = await imagemin(['dist/public/item_icons/weapon//*.png'], {
-        destination: 'dist/public/item_icons/weapon/',
+        destination: 'dist/item_icons/weapon/',
         plugins: [
             webp({ quality: 75 })
         ]
