@@ -13,15 +13,17 @@ export const useAppPreloader = () => {
                 // Wait for fonts
                 await document.fonts.ready;
 
+                await preloadImage(`/backgrounds/city.webp`);
+
                 //get image lists
                 for (const definition of Object.values(HERO_DEFINITIONS)) {
                     await preloadImage(`${definition.background}.webp`);
                     await preloadImage(`${definition.icon}.webp`);
                     await preloadImage(`${definition.nameplate}.svg`);
-                    await preloadImage(`${definition.ability1}.svg`);
-                    await preloadImage(`${definition.ability2}.svg`);
-                    await preloadImage(`${definition.ability3}.svg`);
-                    await preloadImage(`${definition.ability4}.svg`);
+                    await preloadImage(`${definition.ability1}.webp`);
+                    await preloadImage(`${definition.ability2}.webp`);
+                    await preloadImage(`${definition.ability3}.webp`);
+                    await preloadImage(`${definition.ability4}.webp`);
                 }
 
                 setReady(true);
