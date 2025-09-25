@@ -155,7 +155,22 @@ function Home() {
                                         onClick={() => navigate(`/hero-history?hero=${hero}`)}
                                         sx={{ width: "100%", height: "100%", padding: "0" }}>
                                         <Box display={"flex"} flexDirection={"column"} alignItems={"center"}>
-                                            <Box component={"img"} src={HERO_DEFINITIONS[hero].icon} alt="" loading="lazy" width={"75px"} />
+                                            <Box
+                                                component="picture"
+                                                sx={{ width: '75px', }}
+                                            >
+                                                <source srcSet={`${HERO_DEFINITIONS[hero].icon}.webp`} type="image/webp" />
+                                                <source srcSet={`${HERO_DEFINITIONS[hero].icon}.png`} type="image/png" />
+                                                <Box
+                                                    component="img"
+                                                    src={`${HERO_DEFINITIONS[hero].icon}.png`}
+                                                    alt={HERO_DEFINITIONS[hero].name}
+                                                    sx={{
+                                                        width: '100%',
+                                                        height: '100%',
+                                                    }}
+                                                />
+                                            </Box>
                                             <Box component={"img"} src={HERO_DEFINITIONS[hero].nameplate} alt="" loading="lazy" width={"100px"} />
                                         </Box>
 
