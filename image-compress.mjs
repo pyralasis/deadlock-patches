@@ -56,7 +56,7 @@ async function optimizeImages() {
         ],
     });
 
-    const files4Webp = await imagemin(['dist/public/ability_icons/*.png'], {
+    const files4Webp = await imagemin(['dist/ability_icons/*.png'], {
         destination: 'dist/ability_icons',
         plugins: [
             webp({ quality: 75 })
@@ -71,8 +71,38 @@ async function optimizeImages() {
         ],
     });
 
-    const files5Webp = await imagemin(['dist/public/item_icons/weapon//*.png'], {
+    const files5Webp = await imagemin(['dist/item_icons/weapon/*.png'], {
         destination: 'dist/item_icons/weapon/',
+        plugins: [
+            webp({ quality: 75 })
+        ]
+    });
+
+    const files6 = await imagemin(['dist/item_icons/spirit/*.{jpg,jpeg,png,svg}'], {
+        destination: 'dist/item_icons/spirit/',
+        plugins: [
+            pngquant({ quality: [0.6, 0.8] }),
+            svgo()
+        ],
+    });
+
+    const files6Webp = await imagemin(['dist/item_icons/spirit/*.png'], {
+        destination: 'dist/item_icons/spirit/',
+        plugins: [
+            webp({ quality: 75 })
+        ]
+    });
+
+    const files7 = await imagemin(['dist/item_icons/vitality/*.{jpg,jpeg,png,svg}'], {
+        destination: 'dist/item_icons/vitality/',
+        plugins: [
+            pngquant({ quality: [0.6, 0.8] }),
+            svgo()
+        ],
+    });
+
+    const files7Webp = await imagemin(['dist/public/item_icons/vitality/*.png'], {
+        destination: 'dist/item_icons/vitality/',
         plugins: [
             webp({ quality: 75 })
         ]

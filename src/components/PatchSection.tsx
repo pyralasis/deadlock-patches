@@ -122,12 +122,16 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
 
                                 <>
                                     <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'}>
-                                        <Box
-                                            component={"img"}
-                                            src={WEAPON_ITEM_DEFINITIONS[item]?.icon || VITALITY_ITEM_DEFINITIONS[item]?.icon || SPIRIT_ITEM_DEFINITIONS[item]?.icon}
-                                            alt={item}
-                                            width={"100px"}
-                                        />
+                                        <Box component="picture">
+                                            <source srcSet={`${WEAPON_ITEM_DEFINITIONS[item]?.icon}.webp` || `${VITALITY_ITEM_DEFINITIONS[item]?.icon}.webp` || `${SPIRIT_ITEM_DEFINITIONS[item]?.icon}.webp`} type="image/webp" />
+                                            <Box
+                                                component="img"
+                                                src={`${WEAPON_ITEM_DEFINITIONS[item]?.icon}.png` || `${VITALITY_ITEM_DEFINITIONS[item]?.icon}.png` || `${SPIRIT_ITEM_DEFINITIONS[item]?.icon}.png`}
+                                                alt={item}
+                                                width="100px"
+                                                loading="lazy"
+                                            />
+                                        </Box>
                                         <Typography
                                             fontFamily={"DecoturaICG"}
                                             fontSize={"1em"}

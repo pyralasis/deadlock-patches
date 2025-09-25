@@ -57,6 +57,7 @@ export function SectionStepper({ sectionData, activeSection, date, onStepperClic
                                     <div ref={(el) => { if (stepRefs.current) stepRefs.current[section.id] = el; }} >
                                         <Tooltip title={section.definition.name}>
                                             <StepButton
+
                                                 icon={
                                                     <SectionStepIcon
                                                         name={section.definition.name}
@@ -76,7 +77,12 @@ export function SectionStepper({ sectionData, activeSection, date, onStepperClic
                                                     },
                                                     '& .MuiStepLabel-root': {
                                                         padding: 0
-                                                    }
+                                                    },
+                                                    display: "flex",
+                                                    justifyContent: "center",
+                                                    alignItems: "center",
+                                                    width: "100%",
+                                                    height: "100%"
                                                 }}
                                             />
                                         </Tooltip>

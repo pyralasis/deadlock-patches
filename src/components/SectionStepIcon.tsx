@@ -10,7 +10,12 @@ export const SectionStepIcon = ({ name, iconUrl, active, completed }: SectionSte
     return (
         <Box
             component="picture"
-            sx={{ width: '100%', height: '100%', borderRadius: '50%', cursor: 'pointer' }}
+            sx={{
+                width: '100%',
+                height: '100%',
+                borderRadius: '50%',
+                cursor: 'pointer',
+            }}
         >
             <source srcSet={`${iconUrl}.webp`} type="image/webp" />
             <source srcSet={`${iconUrl}.png`} type="image/png" />
@@ -18,6 +23,7 @@ export const SectionStepIcon = ({ name, iconUrl, active, completed }: SectionSte
                 component="img"
                 src={`${iconUrl}.png`}
                 alt={name}
+
                 sx={{
                     width: '100%',
                     height: '100%',

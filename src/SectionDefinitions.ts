@@ -64,9 +64,9 @@ export const GENERAL_DEFINITIONS: Record<string, SectionDefinition> = {
 }
 
 export const ITEM_DEFINITIONS: Record<string, SectionDefinition> = {
-    "Weapon": new SectionDefinition("Weapon", '/backgrounds/weapon', "", "/hero_icons/deadlock_logo", "", "", "", "",),
-    "Vitality": new SectionDefinition("Vitality", '/backgrounds/vitality', "", "/hero_icons/deadlock_logo", "", "", "", "",),
-    "Spirit": new SectionDefinition("Spirit", '/backgrounds/spirit', "", "/hero_icons/deadlock_logo", "", "", "", "",)
+    "Weapon": new SectionDefinition("Weapon", '/backgrounds/weapon', "", "/item_icons/weapon/weapon", "", "", "", "",),
+    "Vitality": new SectionDefinition("Vitality", '/backgrounds/vitality', "", "/item_icons/vitality/vitality", "", "", "", "",),
+    "Spirit": new SectionDefinition("Spirit", '/backgrounds/spirit', "", "/item_icons/spirit/spirit", "", "", "", "",)
 }
 
 export const WEAPON_ITEM_DEFINITIONS: Record<string, SectionDefinition> = {

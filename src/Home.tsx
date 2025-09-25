@@ -154,24 +154,40 @@ function Home() {
                                     <Button
                                         onClick={() => navigate(`/hero-history?hero=${hero}`)}
                                         sx={{ width: "100%", height: "100%", padding: "0" }}>
-                                        <Box display={"flex"} flexDirection={"column"} alignItems={"center"}>
-                                            <Box
-                                                component="picture"
-                                                sx={{ width: '75px', }}
-                                            >
-                                                <source srcSet={`${HERO_DEFINITIONS[hero].icon}.webp`} type="image/webp" />
-                                                <source srcSet={`${HERO_DEFINITIONS[hero].icon}.png`} type="image/png" />
+                                        <Box display={"flex"} flexDirection={"column"} alignItems={"center"} width={"100%"} height={"100%"}>
+                                            <Box height={"60%"} display={"flex"} justifyContent={"center"} alignItems={"center"}>
                                                 <Box
-                                                    component="img"
-                                                    src={`${HERO_DEFINITIONS[hero].icon}.png`}
-                                                    alt={HERO_DEFINITIONS[hero].name}
-                                                    sx={{
-                                                        width: '100%',
-                                                        height: '100%',
-                                                    }}
+                                                    component="picture"
+                                                    paddingTop={"1em"}
+
+                                                    sx={{ width: '75px', }}
+                                                >
+                                                    <source srcSet={`${HERO_DEFINITIONS[hero].icon}.webp`} type="image/webp" />
+                                                    <source srcSet={`${HERO_DEFINITIONS[hero].icon}.png`} type="image/png" />
+                                                    <Box
+                                                        component="img"
+                                                        src={`${HERO_DEFINITIONS[hero].icon}.png`}
+                                                        alt={HERO_DEFINITIONS[hero].name}
+                                                        sx={{
+                                                            width: '100%',
+                                                            height: '100%',
+                                                        }}
+                                                    />
+                                                </Box>
+                                            </Box>
+
+                                            <Box height={"40%"} display={"flex"} justifyContent={"center"} alignItems={"center"}>
+                                                <Box
+                                                    component={"img"}
+                                                    src={HERO_DEFINITIONS[hero].nameplate}
+                                                    alt=""
+                                                    loading="lazy"
+                                                    width={"90%"}
+                                                    height={"90%"}
+                                                    display={"block"}
+                                                    paddingBottom={"1em"}
                                                 />
                                             </Box>
-                                            <Box component={"img"} src={HERO_DEFINITIONS[hero].nameplate} alt="" loading="lazy" width={"100px"} />
                                         </Box>
 
                                     </Button>
