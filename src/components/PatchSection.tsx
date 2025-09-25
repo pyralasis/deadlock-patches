@@ -6,6 +6,7 @@ import { Patchnote } from '../PatchData';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import CircleIcon from '@mui/icons-material/Circle';
+import { sortHeroPatchnotes, sortItemPatchnotes } from '../utils';
 
 export type SortedHeroPatchnotes = {
     general: Patchnote[];
@@ -15,41 +16,6 @@ export type SortedHeroPatchnotes = {
     ability4: Patchnote[];
 }
 
-export function sortHeroPatchnotes(patchnotes: Patchnote[]): SortedHeroPatchnotes {
-    const sorted: SortedHeroPatchnotes = {
-        general: [],
-        ability1: [],
-        ability2: [],
-        ability3: [],
-        ability4: [],
-    };
-
-    for (const patch of patchnotes) {
-        if (patch.type === "general") {
-            sorted.general.push(patch);
-        } else if (patch.ability != null) {
-            const slotKey = `ability${patch.ability.slot}` as keyof SortedHeroPatchnotes;
-            sorted[slotKey].push(patch);
-        }
-    }
-
-    return sorted;
-}
-
-export function sortItemPatchnotes(patchnotes: Patchnote[]): Record<string, Patchnote[]> {
-    const sorted: Record<string, Patchnote[]> = {};
-    for (const patch of patchnotes) {
-        if (patch.type === "item" && patch.item_name !== undefined) {
-            if (!sorted[patch.item_name]) {
-                sorted[patch.item_name] = [];
-            }
-            sorted[patch.item_name].push(patch);
-        }
-    }
-    return sorted;
-}
-
-
 interface SectionProps {
     id: string;
     type: string;
@@ -57,7 +23,7 @@ interface SectionProps {
     heroData: Patchnote[];
 }
 
-export function Section({ id, type, heroDefinition, heroData }: SectionProps) {
+export function PatchSection({ id, type, heroDefinition, heroData }: SectionProps) {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 

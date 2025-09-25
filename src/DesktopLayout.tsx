@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { Patchnote, PatchData } from './PatchData';
 import { Box, Grid, IconButton, Tooltip } from '@mui/material';
 import { GENERAL_DEFINITIONS, HERO_DEFINITIONS, ITEM_DEFINITIONS } from './SectionDefinitions';
 import { SectionStepper } from './components/SectionStepper';
@@ -8,31 +7,7 @@ import { SectionData } from './SectionTypes';
 import HomeIcon from '@mui/icons-material/Home';
 import { useNavigate } from 'react-router-dom';
 import HistoryIcon from '@mui/icons-material/History';
-
-
-function getHeroPatches(hero: string, jsonData: PatchData[]): Record<string, Patchnote[]> {
-    let heroPatches: Record<string, Patchnote[]> = {};
-    jsonData.forEach(patch => {
-        heroPatches[patch.date] = patch.characters[hero];
-    });
-    return heroPatches;
-}
-
-function getGeneralPatches(category: string, jsonData: PatchData[]): Record<string, Patchnote[]> {
-    let categoryPatches: Record<string, Patchnote[]> = {};
-    jsonData.forEach(patch => {
-        categoryPatches[patch.date] = patch.general[category];
-    });
-    return categoryPatches;
-}
-
-function getItemPatches(category: string, jsonData: PatchData[]): Record<string, Patchnote[]> {
-    let itemPatches: Record<string, Patchnote[]> = {};
-    jsonData.forEach(patch => {
-        itemPatches[patch.date] = patch.items[category];
-    });
-    return itemPatches;
-}
+import { getGeneralPatches, getHeroPatches, getItemPatches } from './utils';
 
 export function DesktopLayout({ date }: { date: string }) {
     const navigate = useNavigate();
@@ -116,7 +91,7 @@ export function DesktopLayout({ date }: { date: string }) {
     return (
         <Grid container>
             <Grid size={11.5} height={"100vh"}>
-                <SectionScroller sectionData={sectionData} containerRef={containerRef} activeSection={activeSectionId} setActiveSectionId={setActiveSectionId} date={date} />
+                <SectionScroller sectionData={sectionData} containerRef={containerRef} activeSection={activeSectionId} date={date} />
             </Grid>
             <Grid size={0.5}
                 sx={{
@@ -135,6 +110,9 @@ export function DesktopLayout({ date }: { date: string }) {
                     sectionData={sectionData}
                     activeSection={activeSectionId}
                     date={date}
+                    onStepperClick={(sectionId: string) => {
+                        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+                    }}
                 />
             </Grid>
             <Box position={"fixed"} right={"5%"} bottom={"20px"} display={'flex'} flexDirection={'column-reverse'}>

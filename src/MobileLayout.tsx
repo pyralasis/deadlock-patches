@@ -4,6 +4,7 @@ import { SectionData } from "./SectionTypes";
 import { GENERAL_DEFINITIONS, HERO_DEFINITIONS, ITEM_DEFINITIONS } from "./SectionDefinitions";
 import { Patchnote, PatchData } from "./PatchData";
 import { SectionScroller } from "./components/SectionScroller";
+import { MobilePatchNavigation } from "./components/MobilePatchNavigation";
 
 function getHeroPatches(hero: string, jsonData: PatchData[]): Record<string, Patchnote[]> {
     let heroPatches: Record<string, Patchnote[]> = {};
@@ -140,6 +141,7 @@ export function MobileLayout({ date }: { date: string }) {
             <Typography fontFamily={"DecoturalCG"} fontSize={64}>{activeSectionName} </Typography>
         );
     }
+
     return (
         <Box display={'flex'} flexDirection={'column'}>
             <Box id="top" display={"flex"} flexDirection={"row"} sx={{ height: "100px" }}>
@@ -174,10 +176,15 @@ export function MobileLayout({ date }: { date: string }) {
             <Box id="bottom"
                 height={"calc(100vh - 100px)"}
                 width={"100%"}
+                display={"flex"}
+                flexDirection={"column"}
                 sx={{ overflow: 'hidden' }}
             >
-                <SectionScroller sectionData={sectionData} containerRef={containerRef} activeSection={activeSectionId} setActiveSectionId={setActiveSectionId} date={date} />
+                <SectionScroller sectionData={sectionData} containerRef={containerRef} activeSection={activeSectionId} date={date} />
+                <MobilePatchNavigation sectionData={sectionData} activeSection={activeSectionId} date={date} handleChangeSection={handleChangeSection} />
             </Box>
+
+
         </Box>
     );
 }

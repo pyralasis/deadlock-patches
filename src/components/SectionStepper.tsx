@@ -6,10 +6,11 @@ import { SectionData } from "../SectionTypes";
 interface SectionStepperProps {
     sectionData: SectionData[];
     activeSection: string;
-    date: string
+    date: string;
+    onStepperClick: CallableFunction;
 }
 
-export function SectionStepper({ sectionData, activeSection, date }: SectionStepperProps) {
+export function SectionStepper({ sectionData, activeSection, date, onStepperClick }: SectionStepperProps) {
     const stepRefs = useRef<Record<string, HTMLDivElement | null>>({});
     const stepperContainerRef = useRef<HTMLDivElement | null>(null);
 
@@ -67,9 +68,7 @@ export function SectionStepper({ sectionData, activeSection, date }: SectionStep
 
                                                     />
                                                 }
-                                                onClick={() => {
-                                                    document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth' });
-                                                }}
+                                                onClick={() => onStepperClick(section.id)}
                                                 sx={{
 
                                                     '& .MuiStepLabel-iconContainer': {

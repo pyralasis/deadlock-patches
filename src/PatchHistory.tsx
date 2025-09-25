@@ -7,8 +7,9 @@ import { HERO_DEFINITIONS } from "./SectionDefinitions";
 import { useEffect, useState } from "react";
 import { PatchData, Patchnote } from "./PatchData";
 import { SectionData } from "./SectionTypes";
-import { AbilitySection, sortHeroPatchnotes } from "./components/HeroSection";
+import { AbilitySection } from "./components/PatchSection";
 import HomeIcon from '@mui/icons-material/Home';
+import { sortHeroPatchnotes } from "./utils";
 
 function getHeroPatches(hero: string, jsonData: PatchData[]): Record<string, Patchnote[]> {
     let heroPatches: Record<string, Patchnote[]> = {};
@@ -122,7 +123,6 @@ export function PatchHistory({ }: PatchHistoryProps) {
                                                     <Typography
                                                         fontFamily={"DecoturaICG"}
                                                         fontSize={"2em"}
-                                                    // sx={{ paddingLeft: "1em" }}
                                                     >
                                                         {date}
                                                     </Typography>
