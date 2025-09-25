@@ -14,7 +14,7 @@ async function optimizeImages() {
     const filesWebp = await imagemin(['dist/backgrounds/*.png'], {
         destination: 'dist/backgrounds',
         plugins: [
-            webp({ quality: 75 })
+            webp({ quality: 50 })
         ]
     });
 
@@ -29,7 +29,7 @@ async function optimizeImages() {
     const files2Webp = await imagemin(['dist/hero_icons/*.png'], {
         destination: 'dist/hero_icons',
         plugins: [
-            webp({ quality: 75 })
+            webp({ quality: 50 })
         ]
     });
 
@@ -44,7 +44,7 @@ async function optimizeImages() {
     const files3Webp = await imagemin(['dist/nameplates/*.png'], {
         destination: 'dist/nameplates',
         plugins: [
-            webp({ quality: 75 })
+            webp({ quality: 50 })
         ]
     });
 

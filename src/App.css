@@ -71,6 +71,7 @@
   src: url('/fonts/retaildemo-regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -78,4 +79,5 @@
   src: url('/fonts/DecoturaICG.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
