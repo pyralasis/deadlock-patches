@@ -19,7 +19,7 @@ export const useAppPreloader = () => {
                 for (const definition of Object.values(HERO_DEFINITIONS)) {
                     await preloadImage(`${definition.background}.webp`);
                     await preloadImage(`${definition.icon}.webp`);
-                    await preloadImage(`${definition.nameplate}.svg`);
+                    await preloadImage(`${definition.nameplate}`);
                     await preloadImage(`${definition.ability1}.webp`);
                     await preloadImage(`${definition.ability2}.webp`);
                     await preloadImage(`${definition.ability3}.webp`);
@@ -44,7 +44,7 @@ const preloadImage = (src: string): Promise<void> =>
         const img = new Image();
         img.src = src;
         img.onload = () => resolve();
-        img.onerror = () => reject();
+        img.onerror = () => { console.log(src); reject() };
     });
 
 
