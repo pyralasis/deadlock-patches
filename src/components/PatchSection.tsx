@@ -75,27 +75,27 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                         backgroundColor: '#12121233',
                     }}
                 >
-                    {sortedHeroPatchnotes.general.length != 0 &&
-                        <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'}>
-                            <Box component="picture">
-                                <source srcSet={`${heroDefinition.icon}.webp`} type="image/webp" />
-                                <Box
-                                    component="img"
-                                    src={`${heroDefinition.icon}.png`}
-                                    alt={heroDefinition.name}
-                                    width="100px"
-                                    loading="lazy"
-                                />
-                            </Box>
-                            <Typography
-                                fontFamily={"DecoturaICG"}
-                                fontSize={"1em"}
-                                sx={{ paddingLeft: "1em" }}
-                            >
-                                {heroDefinition.name}
-                            </Typography>
+
+                    <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'}>
+                        <Box component="picture">
+                            <source srcSet={`${heroDefinition.icon}.webp`} type="image/webp" />
+                            <Box
+                                component="img"
+                                src={`${heroDefinition.icon}.png`}
+                                alt={heroDefinition.name}
+                                width="100px"
+                                loading="lazy"
+                            />
                         </Box>
-                    }
+                        <Typography
+                            fontFamily={"DecoturalCG"}
+                            fontSize={"2em"}
+                            sx={{ paddingLeft: "1em" }}
+                        >
+                            {heroDefinition.name}
+                        </Typography>
+                    </Box>
+
                     {
                         sortedHeroPatchnotes.general.map((item: Patchnote, index: number) => (
                             <List>
@@ -129,7 +129,7 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                                             width={"100px"}
                                         />
                                         <Typography
-                                            fontFamily={"DecoturaICG"}
+                                            fontFamily={"DecoturalCG"}
                                             fontSize={"1em"}
                                             sx={{ paddingLeft: "1em" }}
                                         >
@@ -248,7 +248,7 @@ export function AbilitySection({ ability, ability_icon }: { ability: Patchnote[]
                         />
                     </Box>
                     <Typography
-                        fontFamily={"DecoturaICG"}
+                        fontFamily={"DecoturalCG"}
                         fontSize={"1em"}
                         sx={{ paddingLeft: "1em" }}
                     >
