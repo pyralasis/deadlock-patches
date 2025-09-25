@@ -37,7 +37,7 @@ function Home() {
             width={"100%"}
             height={"100%"}
             sx={{
-                backgroundImage: 'url("/backgrounds/city.png"), url("/backgrounds/city.webp")',
+                backgroundImage: 'url("/backgrounds/city.webp")',
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
                 maskImage: `${isMobile ? "none" : "linear-gradient(to right, transparent, black 20%, black 80%, transparent)"}`,
