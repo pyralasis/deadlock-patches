@@ -2,7 +2,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import { Box, CssBaseline } from '@mui/material';
 import './index.css';
-import './app.css';
+import './App.css';
 
 const Home = lazy(() => import('./Home'));
 const PatchNotes = lazy(() => import('./PatchNotes'));
