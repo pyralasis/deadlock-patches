@@ -40,128 +40,128 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
             <Typography fontFamily={"DecoturaICG"} fontSize={196}>{heroDefinition.name}</Typography>
         );
     }
-    if (!isMobile)
-        return (
+    return (
+        <Box
+            component="section"
+            className="section hero-section-snap"
+            id={id}
+            sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                minHeight: '100vh',
+                scrollSnapAlign: 'start',
+            }}
+        >
             <Box
-                component="section"
-                className="section hero-section-snap"
-                id={id}
+                className="hero-section-left"
+                tabIndex={-1}
                 sx={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    minHeight: '100vh',
-                    scrollSnapAlign: 'start',
+                    width: !isMobile ? "50%" : "100%",
+                    height: '100%',
+                    maxHeight: '100vh',
+                    overflowY: 'auto',
+                    marginTop: 'auto',
+                    marginBottom: 'auto',
+                    paddingLeft: '2em',
+                    paddingRight: '2em',
+                    boxSizing: 'border-box',
+                    outline: 'none',
+                    scrollbarWidth: 'none',
+                    '&::-webkit-scrollbar': {
+                        display: 'none',
+                    },
+                    backgroundColor: '#12121233',
                 }}
             >
-                <Box
-                    className="hero-section-left"
-                    tabIndex={-1}
-                    sx={{
-                        width: '50%',
-                        height: '100%',
-                        maxHeight: '100vh',
-                        overflowY: 'auto',
-                        marginTop: 'auto',
-                        marginBottom: 'auto',
-                        paddingLeft: '2em',
-                        paddingRight: '2em',
-                        boxSizing: 'border-box',
-                        outline: 'none',
-                        scrollbarWidth: 'none',
-                        '&::-webkit-scrollbar': {
-                            display: 'none',
-                        },
-                        backgroundColor: '#12121233',
-                    }}
-                >
 
-                    <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'}>
-                        <Box component="picture">
-                            <source srcSet={`${heroDefinition.icon}.webp`} type="image/webp" />
-                            <Box
-                                component="img"
-                                src={`${heroDefinition.icon}.png`}
-                                alt={heroDefinition.name}
-                                width="100px"
-                                loading="lazy"
-                            />
-                        </Box>
-                        <Typography
-                            fontFamily={"DecoturaICG"}
-                            fontSize={"2em"}
-                            sx={{ paddingLeft: "1em" }}
-                        >
-                            {heroDefinition.name}
-                        </Typography>
+                <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'}>
+                    <Box component="picture">
+                        <source srcSet={`${heroDefinition.icon}.webp`} type="image/webp" />
+                        <Box
+                            component="img"
+                            src={`${heroDefinition.icon}.png`}
+                            alt={heroDefinition.name}
+                            width="100px"
+                            loading="lazy"
+                        />
                     </Box>
-
-                    {
-                        sortedHeroPatchnotes.general.map((item: Patchnote, index: number) => (
-                            <List>
-                                <ListItem key={index}>
-                                    <ListItemIcon>
-                                        {
-                                            item.change === "buff" ?
-                                                <AddIcon sx={{ color: "green" }} /> : item.change === "nerf" ?
-                                                    <RemoveIcon sx={{ color: "red" }} /> : <CircleIcon />
-                                        }
-                                    </ListItemIcon>
-                                    <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item.description} />
-                                </ListItem>
-                            </List>
-                        ))
-                    }
-                    <AbilitySection ability={sortedHeroPatchnotes.ability1} ability_icon={heroDefinition.ability1} />
-                    <AbilitySection ability={sortedHeroPatchnotes.ability2} ability_icon={heroDefinition.ability2} />
-                    <AbilitySection ability={sortedHeroPatchnotes.ability3} ability_icon={heroDefinition.ability3} />
-                    <AbilitySection ability={sortedHeroPatchnotes.ability4} ability_icon={heroDefinition.ability4} />
-                    {
-                        Object.keys(sortedItemPatchnotes).map((item) => {
-                            return (
-
-                                <>
-                                    <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'}>
-                                        <Box component="picture">
-                                            <source srcSet={`${WEAPON_ITEM_DEFINITIONS[item]?.icon}.webp` || `${VITALITY_ITEM_DEFINITIONS[item]?.icon}.webp` || `${SPIRIT_ITEM_DEFINITIONS[item]?.icon}.webp`} type="image/webp" />
-                                            <Box
-                                                component="img"
-                                                src={`${WEAPON_ITEM_DEFINITIONS[item]?.icon}.png` || `${VITALITY_ITEM_DEFINITIONS[item]?.icon}.png` || `${SPIRIT_ITEM_DEFINITIONS[item]?.icon}.png`}
-                                                alt={item}
-                                                width="100px"
-                                                loading="lazy"
-                                            />
-                                        </Box>
-                                        <Typography
-                                            fontFamily={"DecoturaICG"}
-                                            fontSize={"1em"}
-                                            sx={{ paddingLeft: "1em" }}
-                                        >
-                                            {item}
-                                        </Typography>
-
-                                    </Box>
-                                    {
-                                        sortedItemPatchnotes[item].map((item: Patchnote, index: number) => (
-                                            <List>
-                                                <ListItem key={index}>
-                                                    <ListItemIcon>
-                                                        {
-                                                            item.change === "buff" ?
-                                                                <AddIcon sx={{ color: "green" }} /> : item.change === "nerf" ?
-                                                                    <RemoveIcon sx={{ color: "red" }} /> : <CircleIcon />
-                                                        }
-                                                    </ListItemIcon>
-                                                    <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item.description} />
-                                                </ListItem>
-                                            </List>
-                                        ))
-                                    }
-                                </>
-                            )
-                        })
-                    }
+                    <Typography
+                        fontFamily={"DecoturaICG"}
+                        fontSize={"2em"}
+                        sx={{ paddingLeft: "1em" }}
+                    >
+                        {heroDefinition.name}
+                    </Typography>
                 </Box>
+
+                {
+                    sortedHeroPatchnotes.general.map((item: Patchnote, index: number) => (
+                        <List key={index}>
+                            <ListItem key={index}>
+                                <ListItemIcon>
+                                    {
+                                        item.change === "buff" ?
+                                            <AddIcon sx={{ color: "green" }} /> : item.change === "nerf" ?
+                                                <RemoveIcon sx={{ color: "red" }} /> : <CircleIcon />
+                                    }
+                                </ListItemIcon>
+                                <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item.description} />
+                            </ListItem>
+                        </List>
+                    ))
+                }
+                <AbilitySection ability={sortedHeroPatchnotes.ability1} ability_icon={heroDefinition.ability1} />
+                <AbilitySection ability={sortedHeroPatchnotes.ability2} ability_icon={heroDefinition.ability2} />
+                <AbilitySection ability={sortedHeroPatchnotes.ability3} ability_icon={heroDefinition.ability3} />
+                <AbilitySection ability={sortedHeroPatchnotes.ability4} ability_icon={heroDefinition.ability4} />
+                {
+                    Object.keys(sortedItemPatchnotes).map((item) => {
+                        return (
+
+                            <>
+                                <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'} key={item}>
+                                    <Box component="picture">
+                                        <source srcSet={`${WEAPON_ITEM_DEFINITIONS[item]?.icon}.webp` || `${VITALITY_ITEM_DEFINITIONS[item]?.icon}.webp` || `${SPIRIT_ITEM_DEFINITIONS[item]?.icon}.webp`} type="image/webp" />
+                                        <Box
+                                            component="img"
+                                            src={`${WEAPON_ITEM_DEFINITIONS[item]?.icon}.png` || `${VITALITY_ITEM_DEFINITIONS[item]?.icon}.png` || `${SPIRIT_ITEM_DEFINITIONS[item]?.icon}.png`}
+                                            alt={item}
+                                            width="100px"
+                                            loading="lazy"
+                                        />
+                                    </Box>
+                                    <Typography
+                                        fontFamily={"DecoturaICG"}
+                                        fontSize={"1em"}
+                                        sx={{ paddingLeft: "1em" }}
+                                    >
+                                        {item}
+                                    </Typography>
+
+                                </Box>
+                                {
+                                    sortedItemPatchnotes[item].map((item: Patchnote, index: number) => (
+                                        <List key={index}>
+                                            <ListItem key={index}>
+                                                <ListItemIcon>
+                                                    {
+                                                        item.change === "buff" ?
+                                                            <AddIcon sx={{ color: "green" }} /> : item.change === "nerf" ?
+                                                                <RemoveIcon sx={{ color: "red" }} /> : <CircleIcon />
+                                                    }
+                                                </ListItemIcon>
+                                                <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item.description} />
+                                            </ListItem>
+                                        </List>
+                                    ))
+                                }
+                            </>
+                        )
+                    })
+                }
+            </Box>
+            {!isMobile &&
                 <Box
                     className="hero-section-right"
                     sx={{
@@ -176,63 +176,10 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                 >
                     {nameElement}
                 </Box>
-            </Box>
-        );
-    else {
-        const patchNotesRef = React.useRef<HTMLDivElement>(null);
-        return (
-            <Box
-                component="section"
-                className="hero-section-snap"
-                id={id}
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    height: '100%',
-                    scrollSnapAlign: 'start',
-                }}
-            >
-                <Box
-                    // className="hero-section-left"
-                    tabIndex={-1}
-                    ref={patchNotesRef}
-                    sx={{
-                        width: '100%',
-                        height: '100%',
-                        overflowY: "scroll",
-                        marginTop: 'auto',
-                        marginBottom: 'auto',
-                        paddingLeft: '1em',
-                        paddingRight: '1em',
-                        boxSizing: 'border-box',
-                        outline: 'none',
-                        // scrollbarWidth: 'none',
-                        // '&::-webkit-scrollbar': {
-                        //     display: 'none',
-                        // },
-                        backgroundColor: '#12121277',
-                    }}
-                >
-                    <List>
-                        {heroData.map((item: Patchnote, index: number) => (
-                            <ListItem key={index}>
-                                <ListItemIcon >
-                                    {
-                                        item.change === "buff" ?
-                                            <AddIcon sx={{ color: "green", width: "50px", height: "50px" }} /> : item.change === "nerf" ?
-                                                <RemoveIcon sx={{ color: "red", width: "50px", height: "50px" }} /> :
-                                                <CircleIcon sx={{ width: "50px", height: "25px" }} />
-                                    }
-                                </ListItemIcon>
-                                <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item.description} />
-                            </ListItem>
-                        ))}
-                    </List>
-                </Box>
-            </Box>
-        );
-    }
+            }
+
+        </Box>
+    );
 }
 
 
@@ -263,7 +210,7 @@ export function AbilitySection({ ability, ability_icon }: { ability: Patchnote[]
             }
             {
                 ability.map((item: Patchnote, index: number) => (
-                    <List>
+                    <List key={index}>
                         <ListItem key={index}>
                             <ListItemIcon>
                                 {

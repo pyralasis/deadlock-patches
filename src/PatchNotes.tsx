@@ -34,18 +34,21 @@ function PatchNotes() {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
-    preloadHeroImages(Object.values(HERO_DEFINITIONS));
-    preloadGeneralImages(Object.values(GENERAL_DEFINITIONS));
-    preloadGeneralImages(Object.values(ITEM_DEFINITIONS));
+    // preloadHeroImages(Object.values(HERO_DEFINITIONS));
+    // preloadGeneralImages(Object.values(GENERAL_DEFINITIONS));
+    // preloadGeneralImages(Object.values(ITEM_DEFINITIONS));
 
-    if (!isMobile)
-        return (
-            <DesktopLayout date={date || ""} />
-        );
-    else
-        return (
-            <MobileLayout date={date || ""} />
-        );
+    // if (!isMobile)
+    //     return (
+    //         <DesktopLayout date={date || ""} />
+    //     );
+    // else
+    //     return (
+    //         <MobileLayout date={date || ""} />
+    //     );
+    return (
+        <DesktopLayout date={date || ""} />
+    );
 }
 
 export default PatchNotes
