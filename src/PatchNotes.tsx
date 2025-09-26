@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Box, Button, Grid, IconButton, Popover, Tooltip, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { GENERAL_DEFINITIONS, HERO_DEFINITIONS, ITEM_DEFINITIONS } from './SectionDefinitions';
-import { SectionStepper } from './components/SectionStepper';
+import { PatchSectionStepper } from './components/PatchSectionStepper';
 import { SectionScroller } from './components/SectionScroller';
 import { SectionData } from './SectionTypes';
 import HomeIcon from '@mui/icons-material/Home';
@@ -188,7 +188,7 @@ function PatchNotes() {
                             overflow: "hidden"
                         }}
                     >
-                        <SectionStepper
+                        <PatchSectionStepper
                             sectionData={sectionData}
                             activeSection={activeSectionId}
                             date={date}

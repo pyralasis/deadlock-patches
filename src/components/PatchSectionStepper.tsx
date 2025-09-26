@@ -10,7 +10,7 @@ interface SectionStepperProps {
     onStepperClick: CallableFunction;
 }
 
-export function SectionStepper({ sectionData, activeSection, date, onStepperClick }: SectionStepperProps) {
+export function PatchSectionStepper({ sectionData, activeSection, date, onStepperClick }: SectionStepperProps) {
     const stepRefs = useRef<Record<string, HTMLDivElement | null>>({});
     const stepperContainerRef = useRef<HTMLDivElement | null>(null);
 

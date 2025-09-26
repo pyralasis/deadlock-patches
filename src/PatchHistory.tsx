@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Box, Button, Grid, IconButton, Popover, Tooltip, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { HERO_DEFINITIONS } from './SectionDefinitions';
-import { SectionStepper } from './components/SectionStepper';
+import { PatchSectionStepper } from './components/PatchSectionStepper';
 import { SectionData } from './SectionTypes';
 import HomeIcon from '@mui/icons-material/Home';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -9,6 +9,7 @@ import HistoryIcon from '@mui/icons-material/History';
 import { getHeroPatches } from './utils';
 import { MobilePatchNavigation } from './components/MobilePatchNavigation';
 import { HistorySection } from './components/HistorySection';
+import { HistorySectionStepper } from './components/HistorySectionStepper';
 
 function PatchHistory() {
     const theme = useTheme();
@@ -158,12 +159,11 @@ function PatchHistory() {
                             overflow: "hidden"
                         }}
                     >
-                        <SectionStepper
+                        <HistorySectionStepper
                             sectionData={sectionData}
-                            activeSection={activeSectionId}
-                            date={date}
-                            onStepperClick={(sectionId: string) => {
-                                document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+                            activeSection={hero || ""}
+                            onStepperClick={(hero: string) => {
+                                navigate(`/hero-history?hero=${hero}`)
                             }}
                         />
                     </Grid>
