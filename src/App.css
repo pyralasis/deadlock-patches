@@ -7,7 +7,7 @@
 
 .hero-section-snap {
   scroll-snap-align: start;
-  height: 100vh;
+  height: 100%;
   display: flex;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .section {
-  min-height: 95vh;
+  /* min-height: 95vh; */
   scroll-snap-align: start;
   display: flex;
   justify-content: center;

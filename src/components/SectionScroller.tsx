@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { PatchSection } from "./PatchSection";
 import { SectionData } from "../SectionTypes";
 
@@ -12,6 +12,9 @@ interface SectionScrollerProps {
 }
 
 export function SectionScroller({ sectionData, containerRef, activeSection, date }: SectionScrollerProps) {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+
     const activeSectionBackground = sectionData.find((section) => section.id === activeSection)?.definition.background;
 
     return (
@@ -25,7 +28,7 @@ export function SectionScroller({ sectionData, containerRef, activeSection, date
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: '100% 100%',
                     height: "100%",
-                    overflowY: 'auto',
+                    overflowY: !isMobile ? 'auto' : "hidden",
                     scrollSnapType: 'y mandatory',
                 }}
             >

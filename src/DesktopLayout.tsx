@@ -8,6 +8,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import { useNavigate } from 'react-router-dom';
 import HistoryIcon from '@mui/icons-material/History';
 import { getGeneralPatches, getHeroPatches, getItemPatches } from './utils';
+import { MobilePatchNavigation } from './components/MobilePatchNavigation';
 
 export function DesktopLayout({ date }: { date: string }) {
     const theme = useTheme();
@@ -162,9 +163,13 @@ export function DesktopLayout({ date }: { date: string }) {
             }
 
             <Grid container>
-                <Grid size={!isMobile ? 11.5 : 12} height={"100vh"}>
+                <Grid size={!isMobile ? 11.5 : 12} height={!isMobile ? "100vh" : "calc(100vh - 150px)"}>
                     <SectionScroller sectionData={sectionData} containerRef={containerRef} activeSection={activeSectionId} date={date} />
+
                 </Grid>
+                {isMobile &&
+                    <MobilePatchNavigation sectionData={sectionData} activeSection={activeSectionId} date={date} handleChangeSection={handleChangeSection} />
+                }
                 {!isMobile &&
                     <Grid size={0.5}
                         sx={{
@@ -190,6 +195,7 @@ export function DesktopLayout({ date }: { date: string }) {
                     </Grid>
                 }
 
+
                 <Box position={"fixed"} right={"5%"} bottom={"20px"} display={'flex'} flexDirection={'column-reverse'}>
                     <Tooltip title="Home">
                         <IconButton size="large" onClick={() => { navigate("/") }}>
@@ -206,7 +212,9 @@ export function DesktopLayout({ date }: { date: string }) {
                         </IconButton>
                     </Tooltip>
                 </Box>
+
             </Grid >
+
         </>
 
     );

@@ -27,7 +27,7 @@ export function MobilePatchNavigation({ sectionData, activeSection, date, handle
                             >
                                 <Box
                                     component={"img"}
-                                    src={s.definition.icon}
+                                    src={`${s.definition.icon}.webp`}
                                     height={"50px"}
                                 />
                             </Button>
@@ -53,7 +53,7 @@ export function MobilePatchNavigation({ sectionData, activeSection, date, handle
                             >
                                 <Box
                                     component={"img"}
-                                    src={s.definition.icon}
+                                    src={`${s.definition.icon}.webp`}
                                     height={"50px"}
                                 />
                             </Button>

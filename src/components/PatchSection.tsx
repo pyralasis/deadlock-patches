@@ -48,7 +48,8 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                 display: 'flex',
                 flexDirection: 'row',
                 alignItems: 'center',
-                minHeight: '100vh',
+                height: '100%',
+                maxHeight: '100%',
                 scrollSnapAlign: 'start',
             }}
         >
@@ -58,12 +59,10 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                 sx={{
                     width: !isMobile ? "50%" : "100%",
                     height: '100%',
-                    maxHeight: '100vh',
+                    maxHeight: '100%',
                     overflowY: 'auto',
-                    marginTop: 'auto',
-                    marginBottom: 'auto',
-                    paddingLeft: '2em',
-                    paddingRight: '2em',
+                    paddingLeft: !isMobile ? '2em' : ".5em",
+                    paddingRight: !isMobile ? '2em' : ".5em",
                     boxSizing: 'border-box',
                     outline: 'none',
                     scrollbarWidth: 'none',
@@ -74,25 +73,28 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                 }}
             >
 
-                <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'}>
-                    <Box component="picture">
-                        <source srcSet={`${heroDefinition.icon}.webp`} type="image/webp" />
-                        <Box
-                            component="img"
-                            src={`${heroDefinition.icon}.png`}
-                            alt={heroDefinition.name}
-                            width="100px"
-                            loading="lazy"
-                        />
+                {!isMobile &&
+                    <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'}>
+                        <Box component="picture">
+                            <source srcSet={`${heroDefinition.icon}.webp`} type="image/webp" />
+                            <Box
+                                component="img"
+                                src={`${heroDefinition.icon}.png`}
+                                alt={heroDefinition.name}
+                                width="100px"
+                                loading="lazy"
+                            />
+                        </Box>
+                        <Typography
+                            fontFamily={"DecoturaICG"}
+                            fontSize={"2em"}
+                            sx={{ paddingLeft: "1em" }}
+                        >
+                            {heroDefinition.name}
+                        </Typography>
                     </Box>
-                    <Typography
-                        fontFamily={"DecoturaICG"}
-                        fontSize={"2em"}
-                        sx={{ paddingLeft: "1em" }}
-                    >
-                        {heroDefinition.name}
-                    </Typography>
-                </Box>
+                }
+
 
                 {
                     sortedHeroPatchnotes.general.map((item: Patchnote, index: number) => (
