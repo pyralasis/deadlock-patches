@@ -1,11 +1,11 @@
 import Box from '@mui/material/Box';
 import { ListItemIcon, List, ListItem, ListItemText, Typography, useMediaQuery, useTheme } from '@mui/material';
-import { HERO_DEFINITIONS, SectionDefinition, SPIRIT_ITEM_DEFINITIONS, VITALITY_ITEM_DEFINITIONS, WEAPON_ITEM_DEFINITIONS } from '../SectionDefinitions';
+import { HERO_DEFINITIONS, SectionDefinition } from '../SectionDefinitions';
 import { Patchnote } from '../PatchData';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import CircleIcon from '@mui/icons-material/Circle';
-import { sortHeroPatchnotes, sortItemPatchnotes } from '../utils';
+import { sortHeroPatchnotes } from '../utils';
 import { SectionData } from '../SectionTypes';
 
 export type SortedHeroPatchnotes = {

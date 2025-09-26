@@ -1,19 +1,13 @@
-import { useEffect, useRef, useState } from 'react';
-import { Box, Button, Grid, IconButton, List, ListItem, ListItemIcon, ListItemText, Popover, Tooltip, Typography, useMediaQuery, useTheme } from '@mui/material';
-import { GENERAL_DEFINITIONS, HERO_DEFINITIONS, ITEM_DEFINITIONS } from './SectionDefinitions';
+import { useEffect, useState } from 'react';
+import { Box, Button, Grid, IconButton, Popover, Tooltip, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { HERO_DEFINITIONS } from './SectionDefinitions';
 import { SectionStepper } from './components/SectionStepper';
-import { SectionScroller } from './components/SectionScroller';
 import { SectionData } from './SectionTypes';
 import HomeIcon from '@mui/icons-material/Home';
 import { useLocation, useNavigate } from 'react-router-dom';
 import HistoryIcon from '@mui/icons-material/History';
-import { getGeneralPatches, getHeroPatches, getItemPatches, sortHeroPatchnotes } from './utils';
+import { getHeroPatches } from './utils';
 import { MobilePatchNavigation } from './components/MobilePatchNavigation';
-import { Patchnote } from './PatchData';
-import { AbilitySection } from './components/PatchSection';
-import AddIcon from '@mui/icons-material/Add';
-import RemoveIcon from '@mui/icons-material/Remove';
-import CircleIcon from '@mui/icons-material/Circle';
 import { HistorySection } from './components/HistorySection';
 
 function PatchHistory() {
@@ -29,7 +23,6 @@ function PatchHistory() {
 
     const [sectionData, setSectionData] = useState<SectionData[]>([]);
 
-    const containerRef = useRef<HTMLDivElement | null>(null);
     const [activeSectionId, setActiveSectionId] = useState("");
 
     const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
