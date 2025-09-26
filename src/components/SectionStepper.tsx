@@ -14,7 +14,6 @@ export function SectionStepper({ sectionData, activeSection, date, onStepperClic
     const stepRefs = useRef<Record<string, HTMLDivElement | null>>({});
     const stepperContainerRef = useRef<HTMLDivElement | null>(null);
 
-
     useEffect(() => {
         const container = stepperContainerRef?.current;
         const target = stepRefs.current?.[activeSection];
