@@ -74,7 +74,6 @@ export function HistorySection({ id, type, sectionData, hero }: SectionProps) {
                 {
                     sectionData.map((section) => {
                         if (section.id == hero) {
-                            console.log(section);
                             return (Object.keys(section.patches).map((date) => {
                                 const sortedPatches = sortHeroPatchnotes(section.patches[date])
                                 if (section.patches[date].length != 0)

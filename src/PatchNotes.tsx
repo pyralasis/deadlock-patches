@@ -9,6 +9,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import HistoryIcon from '@mui/icons-material/History';
 import { getGeneralPatches, getHeroPatches, getItemPatches } from './utils';
 import { MobilePatchNavigation } from './components/MobilePatchNavigation';
+import { esES } from '@mui/material/locale';
 
 function PatchNotes() {
     const theme = useTheme();
@@ -17,6 +18,8 @@ function PatchNotes() {
     const location = useLocation();
     const query = new URLSearchParams(location.search);
     const date = query.get("date") || "";
+    const sectionQuery = query.get("section") || "";
+
 
     const navigate = useNavigate();
 
@@ -38,7 +41,6 @@ function PatchNotes() {
     const handleChangeSection = (sectionId: string) => {
         setActiveSectionId(sectionId);
         handleClose();
-        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     };
 
 
@@ -87,6 +89,14 @@ function PatchNotes() {
                 if (tempSectionData.length > 0) {
                     setActiveSectionId(tempSectionData[0].id);
                 }
+                if (sectionQuery != "" || sectionQuery != null) {
+                    setActiveSectionId(sectionQuery);
+                    setTimeout(() => {
+                        document.getElementById(sectionQuery)?.scrollIntoView({ behavior: "instant" });
+                    }, 0);
+                }
+
+
 
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach((entry) => {
@@ -112,6 +122,7 @@ function PatchNotes() {
         };
 
         fetchData();
+
     }, []);
 
     const open = Boolean(anchorEl);
@@ -210,7 +221,7 @@ function PatchNotes() {
                     <Tooltip title="Patch History">
                         <IconButton sx={{ display: Object.keys(HERO_DEFINITIONS).includes(activeSectionId) ? "flex-inline" : "none" }} size="large"
                             onClick={() => {
-                                navigate(`/hero-history?hero=${encodeURIComponent(activeSectionId)}`)
+                                navigate(`/hero-history?hero=${encodeURIComponent(activeSectionId)}&date=${encodeURIComponent(date)}`)
                             }}>
                             <HistoryIcon sx={{ color: "lightblue" }} />
                         </IconButton>

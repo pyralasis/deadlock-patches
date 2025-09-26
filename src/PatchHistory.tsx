@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Box, Button, Grid, IconButton, Popover, Tooltip, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { HERO_DEFINITIONS } from './SectionDefinitions';
-import { PatchSectionStepper } from './components/PatchSectionStepper';
 import { SectionData } from './SectionTypes';
 import HomeIcon from '@mui/icons-material/Home';
 import { useLocation, useNavigate } from 'react-router-dom';
-import HistoryIcon from '@mui/icons-material/History';
-import { getHeroPatches } from './utils';
+import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn'; import { getHeroPatches } from './utils';
 import { MobilePatchNavigation } from './components/MobilePatchNavigation';
 import { HistorySection } from './components/HistorySection';
 import { HistorySectionStepper } from './components/HistorySectionStepper';
@@ -18,7 +16,7 @@ function PatchHistory() {
     const location = useLocation();
     const query = new URLSearchParams(location.search);
     const hero: string | null = query.get("hero");
-    const date = query.get("date") || "";
+    const date: string | null = query.get("date") || "";
 
     const navigate = useNavigate();
 
@@ -83,23 +81,12 @@ function PatchHistory() {
     const activeSectionType = sectionData.find((section) => section.id === activeSectionId)?.type;
     const activeSectionName = sectionData.find((section) => section.id === activeSectionId)?.definition.name;
 
-    let nameElement;
-    if (activeSectionType === "hero") {
-        nameElement = (
-            <Box component={"img"} src={activeSectionNameplate} height={"90%"} width={"calc(100% - 100px)"}></Box>
-        );
-    } else {
-        nameElement = (
-            <Typography fontFamily={"DecoturaICG"} fontSize={64}>{activeSectionName} </Typography>
-        );
-    }
-
     return (
         <>
             {isMobile &&
                 <Box id="mobile-header" display={"flex"} flexDirection={"row"} sx={{ height: "100px" }}>
                     <Button sx={{ width: "100px" }} onClick={handleClick} >
-                        <Box component={"img"} src={`${activeSectionIcon}.webp`} height={"100%"}></Box>
+                        <Box component={"img"} src={`${HERO_DEFINITIONS[hero || ""].icon}.webp`} height={"100%"}></Box>
                     </Button>
                     <Popover
                         id={id}
@@ -115,16 +102,14 @@ function PatchHistory() {
                         <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between", flexWrap: "wrap" }}>
                             {sectionData.map((section, _index) => (
 
-                                section.patches[date] && section.patches[date].length !== 0 ? (
-                                    <Button onClick={() => handleChangeSection(section.id)}>
-                                        <Box component={"img"} src={`${section.definition.icon}.webp`} height={"80px"}></Box>
-                                    </Button>
-                                ) : null
+                                <Button onClick={() => handleChangeSection(section.id)}>
+                                    <Box component={"img"} src={`${section.definition.icon}.webp`} height={"80px"}></Box>
+                                </Button>
+
                             ))}
                         </Box>
                     </Popover>
-                    {nameElement}
-
+                    <Box component={"img"} src={HERO_DEFINITIONS[hero || ""].nameplate} height={"90%"} width={"calc(100% - 100px)"}></Box>
                 </Box>
             }
 
@@ -163,7 +148,7 @@ function PatchHistory() {
                             sectionData={sectionData}
                             activeSection={hero || ""}
                             onStepperClick={(hero: string) => {
-                                navigate(`/hero-history?hero=${hero}`)
+                                navigate(`/hero-history?hero=${encodeURIComponent(hero)}`)
                             }}
                         />
                     </Grid>
@@ -177,12 +162,12 @@ function PatchHistory() {
                         </IconButton>
                     </Tooltip>
 
-                    <Tooltip title="Patch History">
-                        <IconButton sx={{ display: Object.keys(HERO_DEFINITIONS).includes(activeSectionId) ? "flex-inline" : "none" }} size="large"
+                    <Tooltip title="Return to Patch">
+                        <IconButton sx={{ display: date != "" ? "flex-inline" : "none" }} size="large"
                             onClick={() => {
-                                navigate(`/hero-history?hero=${encodeURIComponent(activeSectionId)}`)
+                                navigate(`/patch-notes?date=${encodeURIComponent(date)}&section=${encodeURIComponent(hero || "")}`)
                             }}>
-                            <HistoryIcon sx={{ color: "lightblue" }} />
+                            <KeyboardReturnIcon sx={{ color: "lightblue" }} />
                         </IconButton>
                     </Tooltip>
                 </Box>
