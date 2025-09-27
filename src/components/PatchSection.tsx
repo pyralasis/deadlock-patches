@@ -74,7 +74,7 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
             >
 
                 {!isMobile &&
-                    <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'}>
+                    <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'} paddingBottom={"1em"}>
                         <Box component="picture">
                             <source srcSet={`${heroDefinition.icon}.webp`} type="image/webp" />
                             <Box
@@ -83,6 +83,7 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                                 alt={heroDefinition.name}
                                 width="100px"
                                 loading="lazy"
+                                borderRadius={20}
                             />
                         </Box>
                         <Typography
@@ -118,18 +119,23 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                 <AbilitySection ability={sortedHeroPatchnotes.ability4} ability_icon={heroDefinition.ability4} />
                 {
                     Object.keys(sortedItemPatchnotes).map((item) => {
+                        const iconBase =
+                            WEAPON_ITEM_DEFINITIONS[item]?.icon ||
+                            VITALITY_ITEM_DEFINITIONS[item]?.icon ||
+                            SPIRIT_ITEM_DEFINITIONS[item]?.icon;
                         return (
 
                             <>
                                 <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'} key={item}>
-                                    <Box component="picture">
-                                        <source srcSet={`${WEAPON_ITEM_DEFINITIONS[item]?.icon}.webp` || `${VITALITY_ITEM_DEFINITIONS[item]?.icon}.webp` || `${SPIRIT_ITEM_DEFINITIONS[item]?.icon}.webp`} type="image/webp" />
+                                    <Box component="picture" borderRadius={10}>
+                                        <source srcSet={`${iconBase}.webp`} type="image/webp" />
                                         <Box
                                             component="img"
-                                            src={`${WEAPON_ITEM_DEFINITIONS[item]?.icon}.png` || `${VITALITY_ITEM_DEFINITIONS[item]?.icon}.png` || `${SPIRIT_ITEM_DEFINITIONS[item]?.icon}.png`}
+                                            src={`${iconBase}.png`}
                                             alt={item}
                                             width="100px"
                                             loading="lazy"
+                                            borderRadius={2}
                                         />
                                     </Box>
                                     <Typography
@@ -139,8 +145,7 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                                     >
                                         {item}
                                     </Typography>
-
-                                </Box>
+                                </Box >
                                 {
                                     sortedItemPatchnotes[item].map((item: Patchnote, index: number) => (
                                         <List key={index}>
@@ -159,10 +164,12 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                                 }
                             </>
                         )
-                    })
+                    }
+                    )
                 }
             </Box>
-            {!isMobile &&
+            {
+                !isMobile &&
                 <Box
                     className="hero-section-right"
                     sx={{
@@ -179,7 +186,7 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                 </Box>
             }
 
-        </Box>
+        </Box >
     );
 }
 
