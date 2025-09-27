@@ -9,7 +9,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import HistoryIcon from '@mui/icons-material/History';
 import { getGeneralPatches, getHeroPatches, getItemPatches } from './utils';
 import { MobilePatchNavigation } from './components/MobilePatchNavigation';
-import { esES } from '@mui/material/locale';
 
 function PatchNotes() {
     const theme = useTheme();

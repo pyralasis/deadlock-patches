@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Box, Button, Grid, IconButton, Popover, Tooltip, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Button, Grid, IconButton, Popover, Tooltip, useMediaQuery, useTheme } from '@mui/material';
 import { HERO_DEFINITIONS } from './SectionDefinitions';
 import { SectionData } from './SectionTypes';
 import HomeIcon from '@mui/icons-material/Home';
@@ -76,10 +76,6 @@ function PatchHistory() {
 
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;
-    const activeSectionIcon = sectionData.find((section) => section.id === activeSectionId)?.definition.icon;
-    const activeSectionNameplate = sectionData.find((section) => section.id === activeSectionId)?.definition.nameplate;
-    const activeSectionType = sectionData.find((section) => section.id === activeSectionId)?.type;
-    const activeSectionName = sectionData.find((section) => section.id === activeSectionId)?.definition.name;
 
     return (
         <>
