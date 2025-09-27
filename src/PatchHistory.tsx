@@ -8,6 +8,7 @@ import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn'; import { ge
 import { MobilePatchNavigation } from './components/MobilePatchNavigation';
 import { HistorySection } from './components/HistorySection';
 import { HistorySectionStepper } from './components/HistorySectionStepper';
+import { MobileHistoryNavigation } from './components/MobileHistoryNavigation';
 
 function PatchHistory() {
     const theme = useTheme();
@@ -35,9 +36,8 @@ function PatchHistory() {
     };
 
     const handleChangeSection = (sectionId: string) => {
-        setActiveSectionId(sectionId);
-        handleClose();
-        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+        console.log(sectionId);
+        navigate(`/hero-history?hero=${sectionId}&date=${date}`)
     };
 
 
@@ -124,7 +124,7 @@ function PatchHistory() {
                     </Box>
                 </Grid>
                 {isMobile &&
-                    <MobilePatchNavigation sectionData={sectionData} activeSection={activeSectionId} date={date} handleChangeSection={handleChangeSection} />
+                    <MobileHistoryNavigation sectionData={sectionData} activeSection={hero || ""} handleChangeSection={handleChangeSection} />
                 }
                 {!isMobile &&
                     <Grid size={0.5}
@@ -151,7 +151,7 @@ function PatchHistory() {
                 }
 
 
-                <Box position={"fixed"} right={"5%"} bottom={"20px"} display={'flex'} flexDirection={'column-reverse'}>
+                <Box position={"fixed"} right={"5%"} bottom={!isMobile ? "20px" : "50px"} display={'flex'} flexDirection={'column-reverse'}>
                     <Tooltip title="Home">
                         <IconButton size="large" onClick={() => { navigate("/") }}>
                             <HomeIcon sx={{ color: "lightblue" }} />

@@ -210,7 +210,7 @@ function PatchNotes() {
                 }
 
 
-                <Box position={"fixed"} right={"5%"} bottom={"20px"} display={'flex'} flexDirection={'column-reverse'}>
+                <Box position={"fixed"} right={"5%"} bottom={!isMobile ? "20px" : "50px"} display={'flex'} flexDirection={'column-reverse'}>
                     <Tooltip title="Home">
                         <IconButton size="large" onClick={() => { navigate("/") }}>
                             <HomeIcon sx={{ color: "lightblue" }} />
