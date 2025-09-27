@@ -179,7 +179,7 @@
             },
             {
                 "description": "Rend now causes you to briefly float in the air during the cast time",
-                "change": "buff",
+                "change": "neutral",
                 "type": "ability",
                 "ability": {
                     "slot": 4,
@@ -214,7 +214,7 @@
             },
             {
                 "description": "Spirit Snare T3 changed from \"Grey Talon deals +30% more Bullet Damage to enemies hit by Spirit Snare for 10s\" to \"+1s Curse Duration and +1.5m Radius\"",
-                "change": "buff",
+                "change": "neutral",
                 "type": "ability",
                 "ability": {
                     "slot": 3,
@@ -600,7 +600,7 @@
         "Vindicta": [
             {
                 "description": "Stake no longer has a smaller tether range than capture range (6m to 9m, no longer pulls you)",
-                "change": "buff",
+                "change": "nerf",
                 "type": "ability",
                 "ability": {
                     "slot": 1,
@@ -713,7 +713,7 @@
         "Vyper": [
             {
                 "description": "Falloff min range increased from 13m to 15m",
-                "change": "nerf",
+                "change": "buff",
                 "type": "general"
             },
             {
