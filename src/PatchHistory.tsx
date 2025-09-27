@@ -5,7 +5,6 @@ import { SectionData } from './SectionTypes';
 import HomeIcon from '@mui/icons-material/Home';
 import { useLocation, useNavigate } from 'react-router-dom';
 import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn'; import { getHeroPatches } from './utils';
-import { MobilePatchNavigation } from './components/MobilePatchNavigation';
 import { HistorySection } from './components/HistorySection';
 import { HistorySectionStepper } from './components/HistorySectionStepper';
 import { MobileHistoryNavigation } from './components/MobileHistoryNavigation';
@@ -22,8 +21,6 @@ function PatchHistory() {
     const navigate = useNavigate();
 
     const [sectionData, setSectionData] = useState<SectionData[]>([]);
-
-    const [activeSectionId, setActiveSectionId] = useState("");
 
     const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
