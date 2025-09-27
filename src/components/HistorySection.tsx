@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import { ListItemIcon, List, ListItem, ListItemText, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { ListItemIcon, List, ListItem, ListItemText, Typography, useMediaQuery, useTheme, Button } from '@mui/material';
 import { HERO_DEFINITIONS, SectionDefinition } from '../SectionDefinitions';
 import { Patchnote } from '../PatchData';
 import AddIcon from '@mui/icons-material/Add';
@@ -7,6 +7,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import CircleIcon from '@mui/icons-material/Circle';
 import { sortHeroPatchnotes } from '../utils';
 import { SectionData } from '../SectionTypes';
+import { useNavigate } from 'react-router-dom';
 
 export type SortedHeroPatchnotes = {
     general: Patchnote[];
@@ -27,6 +28,8 @@ export function HistorySection({ id, type, sectionData, hero }: SectionProps) {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
     const heroDefinition: SectionDefinition = HERO_DEFINITIONS[hero];
+    const navigate = useNavigate();
+
 
     let nameElement;
     if (type === "hero") {
@@ -79,12 +82,16 @@ export function HistorySection({ id, type, sectionData, hero }: SectionProps) {
                                 if (section.patches[date].length != 0)
                                     return (
                                         <>
-                                            <Typography
-                                                fontFamily={"DecoturaICG"}
-                                                fontSize={"2em"}
-                                            >
-                                                {date}
-                                            </Typography>
+                                            <Button size='large' onClick={() => navigate(`/patch-notes?date=${date}&section=${hero}`)}>
+                                                <Typography
+                                                    fontFamily={"DecoturaICG"}
+                                                    fontSize={"5em"}
+
+                                                >
+                                                    {date}
+                                                </Typography>
+                                            </Button>
+
                                             {
 
                                                 sortedPatches.general.map((item: Patchnote, index: number) => (
@@ -124,7 +131,7 @@ export function HistorySection({ id, type, sectionData, hero }: SectionProps) {
                         width: '50%',
                         position: 'sticky',
                         top: 0,
-                        height: '100vh',
+                        height: '100dvh',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',

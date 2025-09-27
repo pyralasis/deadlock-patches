@@ -169,7 +169,7 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                         width: '50%',
                         position: 'sticky',
                         top: 0,
-                        height: '100vh',
+                        height: '100dvh',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',

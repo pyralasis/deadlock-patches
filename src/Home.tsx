@@ -46,7 +46,7 @@ function Home() {
                 overflowY: "scroll"
             }}>
             <Box
-                width={`${isMobile ? "100%" : "80vh"}`}
+                width={`${isMobile ? "100%" : "80dvh"}`}
                 display={"flex"}
                 flexDirection={"column"}
                 alignItems={"center"}

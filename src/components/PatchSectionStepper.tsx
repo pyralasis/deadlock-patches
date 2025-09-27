@@ -36,7 +36,7 @@ export function PatchSectionStepper({ sectionData, activeSection, date, onSteppe
             '&::-webkit-scrollbar': {
                 display: 'none',
             },
-            maxHeight: "100vh"
+            maxHeight: "100dvh"
         }}
         >
             <Stepper
@@ -45,7 +45,7 @@ export function PatchSectionStepper({ sectionData, activeSection, date, onSteppe
                 activeStep={sectionData.findIndex((section) => section.id === activeSection)}
                 connector={null}
                 sx={{
-                    maxHeight: "100vh"
+                    maxHeight: "100dvh"
                 }}
             >
                 {sectionData.map((section, index) => {

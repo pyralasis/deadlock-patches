@@ -1,7 +1,7 @@
 /* Scroll snapping for hero sections */
 .hero-section-container {
   scroll-snap-type: y mandatory;
-  height: 100vh;
+  height: 100dvh;
   overflow-y: auto;
 }
 
@@ -14,7 +14,7 @@
 .hero-section-right {
   position: sticky;
   top: 0;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,13 +22,13 @@
 }
 
 .hero-section-left {
-  height: 100vh;
+  height: 100dvh;
   overflow-y: auto;
   overscroll-behavior-y: contain;
   padding-left: 2em;
   padding-right: 2em;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
+  padding-top: 5dvh;
+  padding-bottom: 5dvh;
   box-sizing: border-box;
 }
 
@@ -36,7 +36,7 @@
   margin: 0 auto;
   text-align: center;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   overflow-y: hidden;
   overflow-x: hidden;
 }

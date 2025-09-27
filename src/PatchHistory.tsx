@@ -114,7 +114,7 @@ function PatchHistory() {
             }
 
             <Grid container>
-                <Grid size={!isMobile ? 11.5 : 12} height={!isMobile ? "100vh" : "calc(100vh - 150px)"}>
+                <Grid size={!isMobile ? 11.5 : 12} height={!isMobile ? "100dvh" : "calc(100dvh - 150px)"}>
                     <Box
                         width={"100%"}
                         height={"100%"}
@@ -136,7 +136,7 @@ function PatchHistory() {
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
-                            height: '100vh',
+                            height: '100dvh',
                             scrollbarWidth: 'none',
                             '&::-webkit-scrollbar': {
                                 display: 'none',
