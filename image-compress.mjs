@@ -101,7 +101,7 @@ async function optimizeImages() {
         ],
     });
 
-    const files7Webp = await imagemin(['dist/public/item_icons/vitality/*.png'], {
+    const files7Webp = await imagemin(['dist/item_icons/vitality/*.png'], {
         destination: 'dist/item_icons/vitality/',
         plugins: [
             webp({ quality: 75 })
@@ -122,6 +122,9 @@ async function optimizeImages() {
 
     console.log(`Optimized ${files5.length} images in weapon`);
     console.log(`Converted ${files5Webp.length} PNGs to WebP in weapon`);
+
+    console.log(`Optimized ${files7.length} images in vitality`);
+    console.log(`Converted ${files7Webp.length} PNGs to WebP in vitality`);
 
 }
 
