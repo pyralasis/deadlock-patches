@@ -212,7 +212,7 @@ export const SPIRIT_ITEM_DEFINITIONS: Record<string, SectionDefinition> = {
     "Knockdown": new SectionDefinition("Knockdown", "", "", "/item_icons/spirit/knockdown", "", "", "", ""),
     "Radiant Regeneration": new SectionDefinition("Radiant Regeneration", "", "", "/item_icons/spirit/radiant_regeneration", "", "", "", ""),
     "Rapid Recharge": new SectionDefinition("Rapid Recharge", "", "", "/item_icons/spirit/rapid_recharge", "", "", "", ""),
-    "Silence Wave": new SectionDefinition("Silence Wave", "", "", "/item_icons/spirit/silence_wave", "", "", "", ""),
+    "Silence Wave": new SectionDefinition("Silence Wave", "", "", "/item_icons/spirit/silence_glyph", "", "", "", ""),
     "Spirit Snatch": new SectionDefinition("Spirit Snatch", "", "", "/item_icons/spirit/spirit_snatch", "", "", "", ""),
     "Superior Cooldown": new SectionDefinition("Superior Cooldown", "", "", "/item_icons/spirit/superior_cooldown", "", "", "", ""),
     "Superior Duration": new SectionDefinition("Superior Duration", "", "", "/item_icons/spirit/superior_duration", "", "", "", ""),
