@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Box, Button, Grid, IconButton, Popover, Tooltip, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { GENERAL_DEFINITIONS, HERO_DEFINITIONS, ITEM_DEFINITIONS } from './SectionDefinitions';
 import { PatchSectionStepper } from './components/PatchSectionStepper';
-import { SectionScroller } from './components/SectionScroller';
+import { PatchSectionScroller } from './components/PatchSectionScroller';
 import { SectionData } from './SectionTypes';
 import HomeIcon from '@mui/icons-material/Home';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -178,7 +178,7 @@ function PatchNotes() {
 
             <Grid container>
                 <Grid size={!isMobile ? 11.5 : 12} height={!isMobile ? "100dvh" : "calc(100dvh - 150px)"}>
-                    <SectionScroller sectionData={sectionData} containerRef={containerRef} activeSection={activeSectionId} date={date} />
+                    <PatchSectionScroller sectionData={sectionData} containerRef={containerRef} activeSection={activeSectionId} date={date} />
 
                 </Grid>
                 {isMobile &&

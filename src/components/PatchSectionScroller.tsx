@@ -4,14 +4,14 @@ import { SectionData } from "../SectionTypes";
 
 
 
-interface SectionScrollerProps {
+interface PatchSectionScrollerProps {
     sectionData: SectionData[];
     containerRef: React.RefObject<HTMLDivElement | null>;
     activeSection: string;
     date: string;
 }
 
-export function SectionScroller({ sectionData, containerRef, activeSection, date }: SectionScrollerProps) {
+export function PatchSectionScroller({ sectionData, containerRef, activeSection, date }: PatchSectionScrollerProps) {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 

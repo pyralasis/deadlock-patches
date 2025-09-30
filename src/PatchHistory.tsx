@@ -1,26 +1,31 @@
-import { useEffect, useState } from 'react';
-import { Box, Button, Grid, IconButton, Popover, Tooltip, useMediaQuery, useTheme } from '@mui/material';
+import { useEffect, useRef, useState } from 'react';
+import { Box, Button, Grid, IconButton, Popover, Tooltip, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { HERO_DEFINITIONS } from './SectionDefinitions';
 import { SectionData } from './SectionTypes';
 import HomeIcon from '@mui/icons-material/Home';
 import { useLocation, useNavigate } from 'react-router-dom';
-import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn'; import { getHeroPatches } from './utils';
-import { HistorySection } from './components/HistorySection';
+import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn';
+import { getHeroPatches } from './utils';
 import { HistorySectionStepper } from './components/HistorySectionStepper';
 import { MobileHistoryNavigation } from './components/MobileHistoryNavigation';
+import { HistorySectionScroller } from './components/HistorySectionScroller';
 
-function PatchHistory() {
+function PatchNotes() {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
     const location = useLocation();
     const query = new URLSearchParams(location.search);
-    const hero: string | null = query.get("hero");
-    const date: string | null = query.get("date") || "";
+    const date = query.get("date") || "";
+    const hero = query.get("hero") || "";
+
 
     const navigate = useNavigate();
 
     const [sectionData, setSectionData] = useState<SectionData[]>([]);
+
+    const containerRef = useRef<HTMLDivElement | null>(null);
+    const [activeSectionId, setActiveSectionId] = useState("");
 
     const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
@@ -33,8 +38,8 @@ function PatchHistory() {
     };
 
     const handleChangeSection = (sectionId: string) => {
-        console.log(sectionId);
-        navigate(`/hero-history?hero=${sectionId}&date=${date}`)
+        setActiveSectionId(sectionId);
+        handleClose();
     };
 
 
@@ -53,7 +58,6 @@ function PatchHistory() {
 
                 const tempSectionData: SectionData[] = [];
 
-
                 Object.keys(HERO_DEFINITIONS).forEach(key => {
                     tempSectionData.push({
                         id: key,
@@ -62,24 +66,72 @@ function PatchHistory() {
                         patches: getHeroPatches(key, allData)
                     });
                 });
+
                 setSectionData(tempSectionData);
+
+                if (tempSectionData.length > 0) {
+                    setActiveSectionId(tempSectionData[0].id);
+                }
+                if (hero != "" || hero != null) {
+                    setActiveSectionId(hero);
+                    setTimeout(() => {
+                        document.getElementById(hero)?.scrollIntoView({ behavior: "instant" });
+                    }, 0);
+                }
+
+
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            setActiveSectionId(entry.target.id);
+                        }
+                    });
+                }, {
+                    root: containerRef.current,
+                    threshold: 0.5,
+                });
+
+                setTimeout(() => {
+                    const sections = containerRef.current?.querySelectorAll('section') ?? [];
+                    sections.forEach((section) => observer.observe(section));
+                }, 0);
+
+                return () => observer.disconnect();
+
             } catch (error) {
                 console.error('Failed to fetch JSON data:', error);
             }
         };
 
         fetchData();
+
     }, []);
 
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;
+    const activeSectionIcon = sectionData.find((section) => section.id === activeSectionId)?.definition.icon;
+    const activeSectionNameplate = sectionData.find((section) => section.id === activeSectionId)?.definition.nameplate;
+    const activeSectionType = sectionData.find((section) => section.id === activeSectionId)?.type;
+    const activeSectionName = sectionData.find((section) => section.id === activeSectionId)?.definition.name;
+
+    let nameElement;
+    if (activeSectionType === "hero") {
+        nameElement = (
+            <Box component={"img"} src={activeSectionNameplate} height={"90%"} width={"calc(100% - 100px)"}></Box>
+        );
+    } else {
+        nameElement = (
+            <Typography fontFamily={"DecoturaICG"} fontSize={64}>{activeSectionName} </Typography>
+        );
+    }
 
     return (
         <>
             {isMobile &&
                 <Box id="mobile-header" display={"flex"} flexDirection={"row"} sx={{ height: "100px" }}>
                     <Button sx={{ width: "100px" }} onClick={handleClick} >
-                        <Box component={"img"} src={`${HERO_DEFINITIONS[hero || ""].icon}.webp`} height={"100%"}></Box>
+                        <Box component={"img"} src={`${activeSectionIcon}.webp`} height={"100%"}></Box>
                     </Button>
                     <Popover
                         id={id}
@@ -95,33 +147,26 @@ function PatchHistory() {
                         <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between", flexWrap: "wrap" }}>
                             {sectionData.map((section, _index) => (
 
-                                <Button onClick={() => handleChangeSection(section.id)}>
-                                    <Box component={"img"} src={`${section.definition.icon}.webp`} height={"80px"}></Box>
-                                </Button>
-
+                                section.patches[date] && section.patches[date].length !== 0 ? (
+                                    <Button onClick={() => handleChangeSection(section.id)}>
+                                        <Box component={"img"} src={`${section.definition.icon}.webp`} height={"80px"}></Box>
+                                    </Button>
+                                ) : null
                             ))}
                         </Box>
                     </Popover>
-                    <Box component={"img"} src={HERO_DEFINITIONS[hero || ""].nameplate} height={"90%"} width={"calc(100% - 100px)"}></Box>
+                    {nameElement}
+
                 </Box>
             }
 
             <Grid container>
                 <Grid size={!isMobile ? 11.5 : 12} height={!isMobile ? "100dvh" : "calc(100dvh - 150px)"}>
-                    <Box
-                        width={"100%"}
-                        height={"100%"}
-                        sx={{
-                            backgroundImage: `url(${HERO_DEFINITIONS[hero || "Abrams"].background}.png), url(${HERO_DEFINITIONS[hero || "Abrams"].background}.webp)`,
-                            backgroundSize: "cover",
-                            backgroundRepeat: "no-repeat"
-                        }}
-                    >
-                        <HistorySection id={''} type={'hero'} sectionData={sectionData} hero={hero || ""} />
-                    </Box>
+                    <HistorySectionScroller sectionData={sectionData} containerRef={containerRef} activeSection={activeSectionId} />
+
                 </Grid>
                 {isMobile &&
-                    <MobileHistoryNavigation sectionData={sectionData} activeSection={hero || ""} handleChangeSection={handleChangeSection} />
+                    <MobileHistoryNavigation sectionData={sectionData} activeSection={activeSectionId} handleChangeSection={handleChangeSection} />
                 }
                 {!isMobile &&
                     <Grid size={0.5}
@@ -139,9 +184,9 @@ function PatchHistory() {
                     >
                         <HistorySectionStepper
                             sectionData={sectionData}
-                            activeSection={hero || ""}
-                            onStepperClick={(hero: string) => {
-                                navigate(`/hero-history?hero=${encodeURIComponent(hero)}`)
+                            activeSection={activeSectionId}
+                            onStepperClick={(sectionId: string) => {
+                                document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
                             }}
                         />
                     </Grid>
@@ -169,4 +214,4 @@ function PatchHistory() {
     );
 }
 
-export default PatchHistory;
+export default PatchNotes;
