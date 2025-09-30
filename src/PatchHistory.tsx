@@ -39,6 +39,7 @@ function PatchNotes() {
 
     const handleChangeSection = (sectionId: string) => {
         setActiveSectionId(sectionId);
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: "instant" });
         handleClose();
     };
 
