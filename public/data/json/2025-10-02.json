@@ -1,0 +1,1476 @@
+{
+    "date": "2025-10-02",
+    "characters": {
+        "Abrams": [
+            {
+                "description": "Siphon Life damage and spirit scaling reduced by 10%",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Siphon Life"
+                }
+            },
+            {
+                "description": "Siphon Life heal ratio increased by 10%",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Siphon Life"
+                }
+            },
+            {
+                "description": "Shoulder Charge T1 changed from +25% Weapon Power to +20 Bullet Damage Per Shot (results in a weaker followup melee hit)",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Shoulder Charge"
+                }
+            }
+        ],
+        "Bebop": [],
+        "Billy": [
+            {
+                "description": "Add footsteps to Billy's out of combat run animations",
+                "change": "buff",
+                "type": "general"
+            },
+            {
+                "description": "Base move speed reduced from 7.3 to 7.1",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Blasted T1 movespeed increased from +1.75 to +2.25m",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Blasted"
+                }
+            }
+        ],
+        "Calico": [
+            {
+                "description": "Base bullet damage increased from 1.9 to 2.0",
+                "change": "buff",
+                "type": "general"
+            },
+            {
+                "description": "Gloom Bombs radius increased from 2.5m to 3m",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Gloom Bombs"
+                }
+            },
+            {
+                "description": "Ava duration increased from 14s to 16s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Ava"
+                }
+            },
+            {
+                "description": "Leaping Slash height increased from 1.5m to 2.5m",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Leaping Slash"
+                }
+            },
+            {
+                "description": "Return to Shadows cooldown reduced from 100s to 90s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Return to Shadows"
+                }
+            },
+            {
+                "description": "Return to Shadows radius increased from 7m to 7.5m",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Return to Shadows"
+                }
+            }
+        ],
+        "Doorman": [
+            {
+                "description": "Doorway placement has been improved",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Doorway"
+                }
+            },
+            {
+                "description": "Doorway can now be placed through veils again",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Doorway"
+                }
+            },
+            {
+                "description": "Improved performance when placing Doorway",
+                "change": "neutral",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Doorway"
+                }
+            }
+        ],
+        "Drifter": [
+            {
+                "description": "Stalker's Mark new sound added for teleport precast",
+                "change": "neutral",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Stalker's Mark"
+                }
+            },
+            {
+                "description": "Stalker's Mark replaced temp whizby sound with an updated version",
+                "change": "neutral",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Stalker's Mark"
+                }
+            },
+            {
+                "description": "Stalker's Mark ambush cast delay increased from 0.0s to 0.35s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Stalker's Mark"
+                }
+            }
+        ],
+        "Dynamo": [
+            {
+                "description": "Kinetic Pulse height increased from 0.7m to 1.0m",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Kinetic Pulse"
+                }
+            },
+            {
+                "description": "Rejuvenating Aurora spirit scaling per level increased from 0.372 to 0.4",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Rejuvenating Aurora"
+                }
+            }
+        ],
+        "Grey Talon": [
+            {
+                "description": "Charged Shot spirit scaling reduced from 1.11 to 1.0",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Charged Shot"
+                }
+            },
+            {
+                "description": "Charged Shot T3 spirit scaling reduced from 1.11 to 1.0",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Charged Shot"
+                }
+            },
+            {
+                "description": "Rain of Arrows no longer lingers the air benefits like unlimited air dash once the ability is canceled or runs out",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Rain of Arrows"
+                }
+            }
+        ],
+        "Haze": [],
+        "Holliday": [],
+        "Infernus": [],
+        "Ivy": [
+            {
+                "description": "Bullet damage growth reduced from 0.15 to 0.11",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Spirit scaling per boon increased from 1.1 to 1.2",
+                "change": "buff",
+                "type": "general"
+            },
+            {
+                "description": "Kudzu Bomb DPS reduced from 55 to 50",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Kudzu Bomb"
+                }
+            },
+            {
+                "description": "Kedzu Bomb T3 DPS reduced from +46 to +40",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Kedzu Bomb"
+                }
+            },
+            {
+                "description": "Stone Form damage spirit scaling increased from 1.0 to 1.5",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Stone Form"
+                }
+            },
+            {
+                "description": "Air Drop no longer grants allied bullet resistance (still grants barrier on drop)",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Air Drop"
+                }
+            }
+        ],
+        "Kelvin": [
+            {
+                "description": "Base bullet damage reduced from 18.9 to 17.8",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Clip size reduced from 15 to 14",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Spirit Power per boon increased from 1.1 to 1.3",
+                "change": "buff",
+                "type": "general"
+            }
+        ],
+        "Lady Geist": [
+            {
+                "description": "Essence Bomb spirit scaling increased from 1.07 to 1.22",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Essence Bomb"
+                }
+            }
+        ],
+        "Lash": [
+            {
+                "description": "Ground Strike range reduced from 11m to 10m",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Ground Strike"
+                }
+            },
+            {
+                "description": "Ground Strike cooldown increased from 19s to 21s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Ground Strike"
+                }
+            },
+            {
+                "description": "Ground Strike damage reduced from 70 to 60",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Ground Strike"
+                }
+            }
+        ],
+        "McGinnis": [],
+        "Mina": [
+            {
+                "description": "New heavy melee animation",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Can now float in the air with the umbrella for up to 2.5s with right click",
+                "change": "buff",
+                "type": "general"
+            },
+            {
+                "description": "Rake heal spirit scale reduced from 1.5 to 0.5",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Rake"
+                }
+            },
+            {
+                "description": "Rake T2 now also increases heal spirit scale by 1.0",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Rake"
+                }
+            },
+            {
+                "description": "Rake T3 damage increased from 6% to 7%",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Rake"
+                }
+            },
+            {
+                "description": "Sanguine Retreat cooldown increased from 27s to 30s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Sanguine Retreat"
+                }
+            },
+            {
+                "description": "Nox Nostra now has 50% reduction in damage against objectives",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Nox Nostra"
+                }
+            },
+            {
+                "description": "Nox Nostra reduced the Cap on objective damage from the T3 from +50 Damage per Bat to +20 Damage (only a nerf against objectives)",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Nox Nostra"
+                }
+            }
+        ],
+        "Mirage": [
+            {
+                "description": "Djinn's Mark is now affected by cooldown reduction",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Djinn's Mark"
+                }
+            }
+        ],
+        "Mo & Krill": [
+            {
+                "description": "Bullet damage growth per boon increased from 0.063 to 0.07",
+                "change": "buff",
+                "type": "general"
+            },
+            {
+                "description": "Burrow bullet resistance reduced from 80% to 60%",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Burrow"
+                }
+            },
+            {
+                "description": "Combo duration reduced from 2.5s to 2.4s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Combo"
+                }
+            },
+            {
+                "description": "Combo T2 duration reduced from 0.75s to 0.7s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Combo"
+                }
+            }
+        ],
+        "Paige": [
+            {
+                "description": "Bullet projectile speed increased by 15%",
+                "change": "buff",
+                "type": "general"
+            },
+            {
+                "description": "Bullet damage growth per boon reduced from 0.8 to 0.66",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Defend and Fight! duration increased from 5s to 7s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Defend and Fight!"
+                }
+            },
+            {
+                "description": "Defend and Fight! cooldown increased from 26s to 30s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Defend and Fight!"
+                }
+            },
+            {
+                "description": "Captivating Read reduced cooldown from 30s to 25s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Captivating Read"
+                }
+            },
+            {
+                "description": "Captivating Read moved the UI element to the bottom of the screen so it's more noticeable when you get hit",
+                "change": "neutral",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Captivating Read"
+                }
+            },
+            {
+                "description": "Captivating Read radius increased from 7m to 7.5m",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Captivating Read"
+                }
+            },
+            {
+                "description": "Conjure Dragon now properly applies burning effect below the dragon if the dragon is far off the ground",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Conjure Dragon"
+                }
+            },
+            {
+                "description": "Rallying Charge damage reduced from 150 (+1.2) to 125 (+1.0)",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Rallying Charge"
+                }
+            },
+            {
+                "description": "Rallying Charge healing reduced from 150 (+2) to 125 (+1.6)",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Rallying Charge"
+                }
+            },
+            {
+                "description": "Rallying Charge both damage & healing now grows as the horses travel, up to a max +100% of both at 350m",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Rallying Charge"
+                }
+            },
+            {
+                "description": "Rallying Charge increased horse speed from 1700 to 2000",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Rallying Charge"
+                }
+            },
+            {
+                "description": "Rallying Charge reduced knock-up speed from 800 to 600",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Rallying Charge"
+                }
+            },
+            {
+                "description": "Rallying Charge spawn-in time reduced from 0.15s to 0.05s to remove deadzone in front",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Rallying Charge"
+                }
+            }
+        ],
+        "Paradox": [],
+        "Pocket": [],
+        "Seven": [
+            {
+                "description": "Static Charge T2 reduced from +8m to +7m",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Static Charge"
+                }
+            },
+            {
+                "description": "Power Surge spirit power scaling reduced by 10%",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Power Surge"
+                }
+            },
+            {
+                "description": "Storm Cloud’s Lightning Strike damage reduced from 90 to 75",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Storm Cloud"
+                }
+            },
+            {
+                "description": "Storm Cloud’s Lightning Strike spirit power reduced from 1.4 to 0.5",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Storm Cloud"
+                }
+            }
+        ],
+        "Shiv": [],
+        "Sinclair": [],
+        "Victor": [
+            {
+                "description": "Base health changed from 680 (+41 per boon, max of 1992) to 720 (+39 per boon, max of 1968)",
+                "change": "buff",
+                "type": "general"
+            },
+            {
+                "description": "Pain Battery fixed the bolts hitting world geometry more often than intended",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Pain Battery"
+                }
+            },
+            {
+                "description": "Pain Battery damage required to charge up reduced from 50% max health to 40%",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Pain Battery"
+                }
+            },
+            {
+                "description": "Aura of Suffering reduced DPS spirit scaling on the minimum damage from 0.25 to 0.22 and on the maximum damage from 1.25 to 1.1",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Aura of Suffering"
+                }
+            },
+            {
+                "description": "Aura of Suffering self damage reduced from 100% to 85%",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Aura of Suffering"
+                }
+            },
+            {
+                "description": "Shocking Reanimation increased stun duration from 1s to 1.5s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Shocking Reanimation"
+                }
+            },
+            {
+                "description": "Shocking Reanimation damage spirit scaling increased from 1.8 to 2.0",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Shocking Reanimation"
+                }
+            },
+            {
+                "description": "Shocking Reanimation T1 changed from \"+10 spirit damage per bullet and 25% fire rate until reload\" to \"+3m Radius and +100 Damage\"",
+                "change": "neutral",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Shocking Reanimation"
+                }
+            },
+            {
+                "description": "Shocking Reanimation T3 changed from \"+200 damage and +3m radius\" to \"+10 spirit damage per bullet and 20% fire rate while the ability is on cooldown\"",
+                "change": "neutral",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Shocking Reanimation"
+                }
+            },
+            {
+                "description": "Shocking Reanimation improved hit detection",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Shocking Reanimation"
+                }
+            },
+            {
+                "description": "Fixed Shocking Reanimation sometimes not hitting targets that are in the Z axis",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Shocking Reanimation"
+                }
+            }
+        ],
+        "Vindicta": [
+            {
+                "description": "Base bullet damage increased from 11.4 to 11.8",
+                "change": "buff",
+                "type": "general"
+            },
+            {
+                "description": "Flight duration increased from 13s to 15s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Flight"
+                }
+            },
+            {
+                "description": "Flight T2 increased from 7s to 8s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Flight"
+                }
+            },
+            {
+                "description": "Flight spirit damage scaling increased from 0.19 to 0.22",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Flight"
+                }
+            },
+            {
+                "description": "Assassinate bonus damage spirit scaling increased from 1.4 to 1.7",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Assassinate"
+                }
+            },
+            {
+                "description": "Assassinate cooldown reduced from 60s to 50s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Assassinate"
+                }
+            }
+        ],
+        "Viscous": [
+            {
+                "description": "Alt fire base damage reduced from 48 to 42",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Alt fire damage growth increased from 1.25 to 1.6",
+                "change": "buff",
+                "type": "general"
+            },
+            {
+                "description": "Splatter damage reduced from 80 to 70",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Splatter"
+                }
+            },
+            {
+                "description": "Splatter T1 increased from -5.75s to -6s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Splatter"
+                }
+            }
+        ],
+        "Vyper": [
+            {
+                "description": "Screwjab Dagger has been reworked",
+                "change": "neutral",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Screwjab Dagger"
+                }
+            },
+            {
+                "description": "Screwjab Dagger now stacks in both damage and slows the more daggers you hit against the same target",
+                "change": "neutral",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Screwjab Dagger"
+                }
+            },
+            {
+                "description": "Screwjab Dagger is now charge-based, with a 4.5s time between charges. Starts with 2 charges.",
+                "change": "neutral",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Screwjab Dagger"
+                }
+            },
+            {
+                "description": "Screwjab Dagger damage changed from 50 (+1) to 50 (+0.65) and 25 (+0.33) per stack",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Screwjab Dagger"
+                }
+            },
+            {
+                "description": "Screwjab Dagger has a max stack of 3 (shows in overhead)",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Screwjab Dagger"
+                }
+            },
+            {
+                "description": "Screwjab Dagger slow changed from 50% to 35% + 15% per stack",
+                "change": "neutral",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Screwjab Dagger"
+                }
+            },
+            {
+                "description": "Screwjab Dagger slow duration increased from 1s to 2s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Screwjab Dagger"
+                }
+            },
+            {
+                "description": "Screwjab Dagger cooldown increased from 9s to 10s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Screwjab Dagger"
+                }
+            },
+            {
+                "description": "Screwjab Dagger T1 changed from -4s Cooldown to +1 Charge",
+                "change": "neutral",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Screwjab Dagger"
+                }
+            },
+            {
+                "description": "Screwjab Dagger T2 changed from +50 damage to -8% Bullet Resist, and -5% per Stack",
+                "change": "neutral",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Screwjab Dagger"
+                }
+            },
+            {
+                "description": "Screwjab Dagger T3 changed from +2s slow duration and -1 stamina to 40% CDR on hit",
+                "change": "neutral",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Screwjab Dagger"
+                }
+            },
+            {
+                "description": "Screwjab Dagger projectile speed increased from 3500 to 4200",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Screwjab Dagger"
+                }
+            },
+            {
+                "description": "Screwjab Dagger updated sfx",
+                "change": "neutral",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Screwjab Dagger"
+                }
+            },
+            {
+                "description": "Screwjab Dagger added a pitch incrementor to impact sound. The sound will slightly increment in pitch relative to each stack that gets applied to a target.",
+                "change": "neutral",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Screwjab Dagger"
+                }
+            },
+            {
+                "description": "Lethal Venom can now be cast on non-trooper enemies (neutrals and objectives)",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Lethal Venom"
+                }
+            },
+            {
+                "description": "Lethal Venom T3 upgrade can now trigger on all enemies, including troopers",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Lethal Venom"
+                }
+            },
+            {
+                "description": "Lethal Venom T3 build-up per shot reduced from 5 to 4.5 (a nerf)",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Lethal Venom"
+                }
+            },
+            {
+                "description": "Slither is no longer leveled up by default at the start of the game",
+                "change": "neutral",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Slither"
+                }
+            },
+            {
+                "description": "Slither T3 changed from 20% resists to “180 health barrier when initiating a slide”, has 0.6 spirit scaling, lasts 5s and 8s cd.",
+                "change": "neutral",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Slither"
+                }
+            },
+            {
+                "description": "Slither now leaves a green trail",
+                "change": "neutral",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Slither"
+                }
+            }
+        ],
+        "Warden": [
+            {
+                "description": "Last Stand DPS spirit scaling reduced from 1.45 to 1.3",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Last Stand"
+                }
+            },
+            {
+                "description": "Fire rate spirit scaling increased from 0.22 to 0.25",
+                "change": "buff",
+                "type": "general"
+            }
+        ],
+        "Wraith": [
+            {
+                "description": "Base bullet damage increased from 5.115 to 5.4",
+                "change": "buff",
+                "type": "general"
+            },
+            {
+                "description": "Bullet damage growth per boon reduced from 0.175 to 0.155",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Card Trick delay reduced from 0.75 to 0.7",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Card Trick"
+                }
+            }
+        ],
+        "Yamato": []
+    },
+    "items": {
+        "Weapon": [
+            {
+                "item_name": "Headshot Booster",
+                "description": "Damage reduced from 50 to 45",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "High Velocity Rounds",
+                "description": "Bullet Velocity increased from +35% to +45% (reflected through upgrades as well)",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Backstabber",
+                "description": "Cooldown increased from 5s to 6s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Mystic Shot",
+                "description": "Damage reduced from 60 to 55",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Cultist Sacrifice",
+                "description": "Fire Rate reduced from 10% to 8%",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Cultist Sacrifice",
+                "description": "Fire Rate boon scaling reduced from 0.8 to 0.7",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Cultist Sacrifice",
+                "description": "Health boon scaling reduced from 7 to 4",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Cultist Sacrifice",
+                "description": "Health reduced from 100 to 75",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Cultist Sacrifice",
+                "description": "Cooldown increased from 250s to 260s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Spirit Rend",
+                "description": "Debuff duration increased from 7s to 8s",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Spirit Rend",
+                "description": "Cooldown reduced from 2.5s to 2.25s",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Toxic Bullets",
+                "description": "Burn increased from 2.1% to 2.2%",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Blood Tribute",
+                "description": "Heal reduction reduced from -40% to -30%",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Tesla Bullets",
+                "description": "Fixed proc rate being improved with general cooldown reduction",
+                "change": "fix",
+                "type": "item"
+            },
+            {
+                "item_name": "Capacitor",
+                "description": "Fixed proc rate being improved with general cooldown reduction",
+                "change": "fix",
+                "type": "item"
+            },
+            {
+                "item_name": "Shadow Weave",
+                "description": "Spotted radius reduced from 26m to 20m",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Spiritual Overflow",
+                "description": "No longer grants +20% Ability Duration on proc",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Spiritual Overflow",
+                "description": "Now grants +20% Cooldown Reduction on proc",
+                "change": "buff",
+                "type": "item"
+            }
+        ],
+        "Vitality": [
+            {
+                "item_name": "Extra Health",
+                "description": "Bonus Health increased from 175 to 185",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Sprint Boots",
+                "description": "Sprint increased from 2 to 2.25 (affects upgrades)",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Rebuttal",
+                "description": "Now grants +18% Melee Resistance",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Spirit Lifesteal",
+                "description": "Now provides +6 Spirit Power",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Restorative Locket",
+                "description": "Boon scaling increased from 0.3 to 0.4",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Weapon Shielding",
+                "description": "Damage Threshold reduced from 175 to 150",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Weapon Shielding",
+                "description": "Movespeed increased from 1.5 to 1.75",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Spirit Shielding",
+                "description": "Movespeed increased from 1.5 to 1.75",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Reactive Barrier",
+                "description": "Cooldown increased from 22s to 24s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Veil Walker",
+                "description": "Heal reduced from 150 to 85",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Veil Walker",
+                "description": "Heal scale per boon increased from 4 to 6",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Veil Walker",
+                "description": "Cooldown increased from 12s to 15s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Veil Walker",
+                "description": "Reveal on damage duration increased from 0.25s to 0.5s",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Veil Walker",
+                "description": "Initial invis fade duration increased from 0s to 0.25s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Veil Walker",
+                "description": "Reveal on spotted duration increased from 0.25s to 1.25s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Counterspell",
+                "description": "Parry duration reduced from 0.9s to 0.8s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Majestic Leap",
+                "description": "Barrier reduced from 350 to 140",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Majestic Leap",
+                "description": "Barrier now scales with Boons (10 scaling)",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Rescue Beam",
+                "description": "Cast range increased from 28m to 32m",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Fury Trance",
+                "description": "Cooldown increased from 16s to 18s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Spirit Resilience",
+                "description": "Spirit Resistance increased from 25% to 30%",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Diviner's Kevlar",
+                "description": "Duration increased from 13s to 20s",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Diviner's Kevlar",
+                "description": "Spirit Power increased from +25 to +35",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Cheat Death",
+                "description": "Damage output reduction reduced from -70% to -60%",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Cheat Death",
+                "description": "Healing reduction reduced from -70% to -60%",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Inhibitor",
+                "description": "Buildup rate increased (now matches Slowing Bullets buildup rate)",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Inhibitor",
+                "description": "No longer limited to hero only targets",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Unstoppable",
+                "description": "Duration increased from 5s to 5.5s",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Colossus",
+                "description": "Active resist increased from 30% to 35%",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Colossus",
+                "description": "Radius increased from 12m to 14m",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Spellbreaker",
+                "description": "Threshold increased from 150 to 175",
+                "change": "buff",
+                "type": "item"
+            }
+        ],
+        "Spirit": [
+            {
+                "item_name": "Rusted Barrel",
+                "description": "Cast range increased from 28m to 32m",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Rusted Barrel",
+                "description": "Bullet Resistance reduction increased from -6% to -8%",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Mystic Burst",
+                "description": "Cooldown increased from 12s to 14s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Quicksilver Reload",
+                "description": "Bonus damage reduced from 55 to 44",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Cold Front",
+                "description": "Bonus damage reduced from 100 to 95",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Cold Front",
+                "description": "Cooldown increased from 24s to 25s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Mystic Slow",
+                "description": "Now reduces dash distance by 10% (affects upgrades)",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Disarming Hex",
+                "description": "Cast range increased from 23m to 32m",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Silence Wave",
+                "description": "Silence duration reduced from 3.25s to 3s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Spirit Snatch",
+                "description": "Melee damage reduced from 10% to 7%",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Greater Expansion",
+                "description": "Spirit Resist increased from 8% to 10%",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Spirit Burn",
+                "description": "Now goes on cooldown for half the normal time when used on non-heroes (rather than 0 cooldown)",
+                "change": "nerf",
+                "type": "item"
+            }
+        ]
+    },
+    "general": {
+        "Map": [],
+        "Gameplay": [
+            {
+                "description": "Weapon Investment bonus increased from 7/9/13/20/29/40/58/72/83/93% to 7/9/13/20/29/40/60/75/95/115 (for 0.8/1.6/2.4/3.2/4.8/7.2/9.6/16/22.4/28.8k spent)",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Applying a CC to an enemy is reduced in duration when affected by other CCs in a short interval. Each previously applied CC reduces the duration by 7% up to a max of 21% over the past 7 seconds. CC is defined as the same set of debuffs that affect Reactive Barrier (stun, sleep, immobilize, tether, etc). Note that abilities that apply multiple things only count as one CC (aka Abrams shoulder charge CC on the grab and the stun, Lash ult grab and stun, etc).",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Matchmaking updates to include more considerations for a balanced roster beyond only frontliners",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Reduced shooting lock-out period when jumping from 0.15s to 0.0s",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Shooting while jumping now applies a -10% inaccuracy period for 0.15s after jumping",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Wall Jumps after the first one now cost 0.5 stamina (first wall jump per sequence is free)",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Reduced corner boosting velocity by 20%",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Mid Boss base HP increased from 12500 to 13000",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Mid Boss damage resistance per second reduced from 50 + 7/min to 35 + 5/min",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Rejuv bonus HP reduced from 15% to 10%",
+                "change": "neutral",
+                "type": "pve"
+            },
+            {
+                "description": "2nd Midboss rejuv credits reduced from 4 to 3",
+                "change": "neutral",
+                "type": "pve"
+            },
+            {
+                "description": "Dropped Unsecured soul bags now require a Heavy Melee to secure rather than standing ontop of them",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Soul Urn: Carriers now have +30% bullet and +30% spirit Resist",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Soul Urn: Movespeed bonus reduced from +7m to +3.5m",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Soul Urn: Damage taken when holding too long increased from 1% to 1.5% Max Health per second",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Added an extra boon at 12k (nearby boon levels adjusted slightly, 10.2/11.6/13.2k to 10/11/12/13.2k)",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Neutral Shop no longer gets disabled if an enemy is nearby",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Distance to attack Walkers reduced from 35m to 34m",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Fixed ordering issues with various items with Bullet based Procs. Debuffs (ie. negative Bullet Resist) from all procs are now applied before any bonus damage from the procs. Items include Weakening Headshot, Crippling Headshot, Headshot Booster, Headhunter, Hollow Point and Mystic Shot.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Enabled input buffering for shooting, dashing, melee and parry. This allows input to register before the current action is finished",
+                "change": "neutral",
+                "type": "general"
+            }
+        ],
+        "Bugfixes": []
+    }
+}
