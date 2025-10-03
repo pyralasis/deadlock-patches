@@ -1,0 +1,90 @@
+{
+    "date": "2025-10-03",
+    "characters": {
+        "Abrams": [],
+        "Bebop": [],
+        "Billy": [],
+        "Calico": [],
+        "Doorman": [],
+        "Drifter": [],
+        "Dynamo": [],
+        "Grey Talon": [],
+        "Haze": [],
+        "Holliday": [],
+        "Infernus": [],
+        "Ivy": [],
+        "Kelvin": [],
+        "Lady Geist": [],
+        "Lash": [],
+        "McGinnis": [],
+        "Mina": [],
+        "Mirage": [],
+        "Mo & Krill": [],
+        "Paige": [],
+        "Paradox": [],
+        "Pocket": [],
+        "Seven": [],
+        "Shiv": [],
+        "Sinclair": [],
+        "Victor": [
+            {
+                "description": "Pain Battery T3 heal reduced from 20% to 18%",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Pain Battery"
+                }
+            },
+            {
+                "description": "Jumpstart cooldown increased from 22s to 23s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Jumpstart"
+                }
+            },
+            {
+                "description": "Aura of Suffering self damage can no longer be reduced by spirit resistance (same as Jumpstart)",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Aura of Suffering"
+                }
+            },
+            {
+                "description": "Aura of Suffering self damage reduced from 85% to 80%",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Aura of Suffering"
+                }
+            }
+        ],
+        "Vindicta": [],
+        "Viscous": [],
+        "Vyper": [],
+        "Warden": [],
+        "Wraith": [],
+        "Yamato": []
+    },
+    "items": {
+        "Weapon": [],
+        "Vitality": [],
+        "Spirit": []
+    },
+    "general": {
+        "Map": [],
+        "Gameplay": [
+            {
+                "description": "Fixed Wall Jumps not refunding stamina if a mantle or zipline occurs within the refund window (similar to how we treat other stamina refunds)",
+                "change": "neutral",
+                "type": "general"
+            }
+        ],
+        "Bugfixes": []
+    }
+}
