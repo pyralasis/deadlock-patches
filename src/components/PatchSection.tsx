@@ -108,7 +108,7 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                                                 <RemoveIcon sx={{ color: "red" }} /> : <CircleIcon />
                                     }
                                 </ListItemIcon>
-                                <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '.5em', color: "white" } } }} primary={item.description} />
+                                <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: !isMobile ? '.6em' : '.5em', color: "white" } } }} primary={item.description} />
                             </ListItem>
                         </List>
                     ))
@@ -157,7 +157,7 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                                                                 <RemoveIcon sx={{ color: "red" }} /> : <CircleIcon />
                                                     }
                                                 </ListItemIcon>
-                                                <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '.5em', color: "white" } } }} primary={item.description} />
+                                                <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: !isMobile ? '.6em' : '.5em', color: "white" } } }} primary={item.description} />
                                             </ListItem>
                                         </List>
                                     ))
@@ -192,6 +192,8 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
 
 
 export function AbilitySection({ ability, ability_icon }: { ability: Patchnote[], ability_icon: string }) {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
     return (
         <Box>
             {ability.length != 0 &&
@@ -227,7 +229,7 @@ export function AbilitySection({ ability, ability_icon }: { ability: Patchnote[]
                                             <RemoveIcon sx={{ color: "red" }} /> : <CircleIcon />
                                 }
                             </ListItemIcon>
-                            <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '.5em', color: "white" } } }} primary={item.description} />
+                            <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: !isMobile ? '.6em' : '.5em', color: "white" } } }} primary={item.description} />
                         </ListItem>
                     </List>
                 ))
