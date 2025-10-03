@@ -153,7 +153,7 @@ function PatchNotes() {
     return (
         <>
             {isMobile &&
-                <Box id="mobile-header" display={"flex"} flexDirection={"row"} sx={{ height: "100px" }}>
+                <Box id="mobile-header" display={"flex"} flexDirection={"row"} borderBottom={"1px solid #3c3c3c"} sx={{ height: "100px" }}>
                     <Button sx={{ width: "100px" }} onClick={handleClick} >
                         <Box component={"img"} src={`${activeSectionIcon}.webp`} height={"100%"}></Box>
                     </Button>

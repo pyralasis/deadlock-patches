@@ -104,11 +104,11 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                                 <ListItemIcon>
                                     {
                                         item.change === "buff" ?
-                                            <AddIcon sx={{ color: "green" }} /> : item.change === "nerf" ?
-                                                <RemoveIcon sx={{ color: "red" }} /> : <CircleIcon />
+                                            <AddIcon fontSize='large' sx={{ color: "green" }} /> : item.change === "nerf" ?
+                                                <RemoveIcon fontSize='large' sx={{ color: "red" }} /> : <CircleIcon fontSize='small' />
                                     }
                                 </ListItemIcon>
-                                <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: !isMobile ? '.6em' : '.5em', color: "white" } } }} primary={item.description} />
+                                <ListItemText sx={{ wordWrap: "break-word" }} slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: !isMobile ? '.6em' : '.4em', color: "white" } } }} primary={item.description} />
                             </ListItem>
                         </List>
                     ))
@@ -153,11 +153,11 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                                                 <ListItemIcon>
                                                     {
                                                         item.change === "buff" ?
-                                                            <AddIcon sx={{ color: "green" }} /> : item.change === "nerf" ?
-                                                                <RemoveIcon sx={{ color: "red" }} /> : <CircleIcon />
+                                                            <AddIcon fontSize='large' sx={{ color: "green" }} /> : item.change === "nerf" ?
+                                                                <RemoveIcon fontSize='large' sx={{ color: "red" }} /> : <CircleIcon fontSize='small' />
                                                     }
                                                 </ListItemIcon>
-                                                <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: !isMobile ? '.6em' : '.5em', color: "white" } } }} primary={item.description} />
+                                                <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: !isMobile ? '.6em' : '.4em', color: "white" } } }} primary={item.description} />
                                             </ListItem>
                                         </List>
                                     ))
@@ -225,11 +225,11 @@ export function AbilitySection({ ability, ability_icon }: { ability: Patchnote[]
                             <ListItemIcon>
                                 {
                                     item.change === "buff" ?
-                                        <AddIcon sx={{ color: "green" }} /> : item.change === "nerf" ?
-                                            <RemoveIcon sx={{ color: "red" }} /> : <CircleIcon />
+                                        <AddIcon fontSize='large' sx={{ color: "green" }} /> : item.change === "nerf" ?
+                                            <RemoveIcon fontSize='large' sx={{ color: "red" }} /> : <CircleIcon fontSize='small' />
                                 }
                             </ListItemIcon>
-                            <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: !isMobile ? '.6em' : '.5em', color: "white" } } }} primary={item.description} />
+                            <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: !isMobile ? '.6em' : '.4em', color: "white" } } }} primary={item.description} />
                         </ListItem>
                     </List>
                 ))

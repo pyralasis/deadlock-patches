@@ -1,5 +1,6 @@
 import { Box, Button } from "@mui/material";
 import { SectionData } from "../SectionTypes";
+import { grey } from "@mui/material/colors";
 
 interface MobilePatchNavigationProps {
     sectionData: SectionData[];
@@ -9,7 +10,7 @@ interface MobilePatchNavigationProps {
 }
 
 export function MobilePatchNavigation({ sectionData, activeSection, date, handleChangeSection }: MobilePatchNavigationProps) {
-    return (<Box width={"100%"} height={"50px"} display={"flex"} flexDirection={"row"}>
+    return (<Box width={"100%"} height={"50px"} display={"flex"} flexDirection={"row"} borderTop={"1px solid #3c3c3c"}>
         {
             (() => {
                 const currentIdx = sectionData.findIndex(section => section.id === activeSection);
@@ -38,6 +39,7 @@ export function MobilePatchNavigation({ sectionData, activeSection, date, handle
                 return null;
             })()
         }
+        <Box border={".5px solid #3c3c3c"} />
         {
             (() => {
                 const currentIdx = sectionData.findIndex(section => section.id === activeSection);
@@ -64,6 +66,6 @@ export function MobilePatchNavigation({ sectionData, activeSection, date, handle
                 return null;
             })()
         }
-    </Box>
+    </Box >
     )
 }
