@@ -145,57 +145,111 @@ function Home() {
                                     sx={{
                                         width: "10em",
                                         height: "10em",
-                                        backgroundImage: `image-set(
-                                            url(${HERO_DEFINITIONS[hero].background}.webp) type("image/webp"),
-                                            url(${HERO_DEFINITIONS[hero].background}.png) type("image/png")
-                                        )`,
-                                        backgroundRepeat: "no-repeat",
-                                        backgroundSize: '250% 100%',
-                                        backgroundPosition: 'right',
+                                        position: "relative", // Needed for absolute background image
+                                        overflow: "hidden",   // Ensure background doesn't overflow
+                                        // borderRadius: 2,      // Optional, if you want rounded corners
                                     }}
                                 >
-                                    <Button
-                                        onClick={() => navigate(`/hero-history?hero=${hero}`)}
-                                        sx={{ width: "100%", height: "100%", padding: "0" }}>
-                                        <Box display={"flex"} flexDirection={"column"} alignItems={"center"} width={"100%"} height={"100%"}>
-                                            <Box height={"60%"} display={"flex"} justifyContent={"center"} alignItems={"center"}>
-                                                <Box
-                                                    component="picture"
-                                                    paddingTop={"1em"}
+                                    {/* Background image layer */}
+                                    <Box
+                                        component="picture"
+                                        sx={{
+                                            position: "absolute",
+                                            top: 0,
+                                            left: 0,
+                                            width: "100%",
+                                            height: "100%",
+                                            zIndex: 0, // Behind the content
+                                        }}
+                                    >
+                                        <source
+                                            srcSet={`${HERO_DEFINITIONS[hero].background}.webp`}
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            srcSet={`${HERO_DEFINITIONS[hero].background}.png`}
+                                            type="image/png"
+                                        />
+                                        <Box
+                                            component="img"
+                                            loading="lazy"
+                                            src={`${HERO_DEFINITIONS[hero].background}.png`}
+                                            alt={`${HERO_DEFINITIONS[hero].name} background`}
+                                            sx={{
+                                                width: "100%",
+                                                height: "100%",
+                                                objectFit: "cover",
+                                                objectPosition: 'right',
+                                                transform: "scaleX(2.5)", // mimics backgroundSize: '250% 100%'
+                                            }}
+                                        />
+                                    </Box>
 
-                                                    sx={{ width: '75px', }}
+                                    {/* Foreground content */}
+                                    <Box sx={{ position: "relative", zIndex: 1, width: "100%", height: "100%" }}>
+                                        <Button
+                                            onClick={() => navigate(`/hero-history?hero=${hero}`)}
+                                            sx={{ width: "100%", height: "100%", padding: "0" }}
+                                        >
+                                            <Box
+                                                display={"flex"}
+                                                flexDirection={"column"}
+                                                alignItems={"center"}
+                                                width={"100%"}
+                                                height={"100%"}
+                                            >
+                                                <Box
+                                                    height={"60%"}
+                                                    display={"flex"}
+                                                    justifyContent={"center"}
+                                                    alignItems={"center"}
                                                 >
-                                                    <source srcSet={`${HERO_DEFINITIONS[hero].icon}.webp`} type="image/webp" />
-                                                    <source srcSet={`${HERO_DEFINITIONS[hero].icon}.png`} type="image/png" />
+                                                    <Box
+                                                        component="picture"
+                                                        paddingTop={"1em"}
+                                                        sx={{ width: "75px" }}
+                                                    >
+                                                        <source
+                                                            srcSet={`${HERO_DEFINITIONS[hero].icon}.webp`}
+                                                            type="image/webp"
+                                                        />
+                                                        <source
+                                                            srcSet={`${HERO_DEFINITIONS[hero].icon}.png`}
+                                                            type="image/png"
+                                                        />
+                                                        <Box
+                                                            component="img"
+                                                            src={`${HERO_DEFINITIONS[hero].icon}.png`}
+                                                            alt={HERO_DEFINITIONS[hero].name}
+                                                            sx={{
+                                                                width: "100%",
+                                                                height: "100%",
+                                                            }}
+                                                        />
+                                                    </Box>
+                                                </Box>
+
+                                                <Box
+                                                    height={"40%"}
+                                                    display={"flex"}
+                                                    justifyContent={"center"}
+                                                    alignItems={"center"}
+                                                >
                                                     <Box
                                                         component="img"
-                                                        src={`${HERO_DEFINITIONS[hero].icon}.png`}
-                                                        alt={HERO_DEFINITIONS[hero].name}
-                                                        sx={{
-                                                            width: '100%',
-                                                            height: '100%',
-                                                        }}
+                                                        src={HERO_DEFINITIONS[hero].nameplate}
+                                                        alt=""
+                                                        loading="lazy"
+                                                        width={"90%"}
+                                                        height={"90%"}
+                                                        display={"block"}
+                                                        paddingBottom={"1em"}
                                                     />
                                                 </Box>
                                             </Box>
-
-                                            <Box height={"40%"} display={"flex"} justifyContent={"center"} alignItems={"center"}>
-                                                <Box
-                                                    component={"img"}
-                                                    src={HERO_DEFINITIONS[hero].nameplate}
-                                                    alt=""
-                                                    loading="lazy"
-                                                    width={"90%"}
-                                                    height={"90%"}
-                                                    display={"block"}
-                                                    paddingBottom={"1em"}
-                                                />
-                                            </Box>
-                                        </Box>
-
-                                    </Button>
+                                        </Button>
+                                    </Box>
                                 </Card>
-
                             )
                         })
                     }

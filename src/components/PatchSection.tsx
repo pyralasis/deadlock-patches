@@ -108,7 +108,7 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                                                 <RemoveIcon sx={{ color: "red" }} /> : <CircleIcon />
                                     }
                                 </ListItemIcon>
-                                <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item.description} />
+                                <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '.5em', color: "white" } } }} primary={item.description} />
                             </ListItem>
                         </List>
                     ))
@@ -157,7 +157,7 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                                                                 <RemoveIcon sx={{ color: "red" }} /> : <CircleIcon />
                                                     }
                                                 </ListItemIcon>
-                                                <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item.description} />
+                                                <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '.5em', color: "white" } } }} primary={item.description} />
                                             </ListItem>
                                         </List>
                                     ))
@@ -227,7 +227,7 @@ export function AbilitySection({ ability, ability_icon }: { ability: Patchnote[]
                                             <RemoveIcon sx={{ color: "red" }} /> : <CircleIcon />
                                 }
                             </ListItemIcon>
-                            <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '24px', color: "white" } } }} primary={item.description} />
+                            <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: '.5em', color: "white" } } }} primary={item.description} />
                         </ListItem>
                     </List>
                 ))
