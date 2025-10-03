@@ -84,14 +84,11 @@ function PatchNotes() {
         if (sectionData.length > 0) {
             setActiveSectionId(sectionData[0].id);
         }
-    }, [sectionData]);
-
-    useEffect(() => {
         if (hero != "" && hero != null) {
             setActiveSectionId(hero);
             document.getElementById(hero)?.scrollIntoView({ behavior: "instant" });
         }
-    }, [hero]);
+    }, [sectionData, hero]);
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {

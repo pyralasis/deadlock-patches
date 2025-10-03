@@ -105,18 +105,13 @@ function PatchNotes() {
                 }
                 currentSection++;
             }
-            console.log(activeSectionId);
-            console.log(sectionData[currentSection - 1].id);
-
         }
-    }, [sectionData]);
 
-    useEffect(() => {
         if (sectionQuery != "" && sectionQuery != null) {
             setActiveSectionId(sectionQuery);
             document.getElementById(sectionQuery)?.scrollIntoView({ behavior: "instant" });
         }
-    }, [sectionQuery]);
+    }, [sectionData, sectionQuery]);
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
