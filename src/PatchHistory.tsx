@@ -70,36 +70,6 @@ function PatchNotes() {
 
                 setSectionData(tempSectionData);
 
-                if (tempSectionData.length > 0) {
-                    setActiveSectionId(tempSectionData[0].id);
-                }
-                if (hero != "" || hero != null) {
-                    setActiveSectionId(hero);
-                    setTimeout(() => {
-                        document.getElementById(hero)?.scrollIntoView({ behavior: "instant" });
-                    }, 0);
-                }
-
-
-
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            setActiveSectionId(entry.target.id);
-                        }
-                    });
-                }, {
-                    root: containerRef.current,
-                    threshold: 0.5,
-                });
-
-                setTimeout(() => {
-                    const sections = containerRef.current?.querySelectorAll('section') ?? [];
-                    sections.forEach((section) => observer.observe(section));
-                }, 0);
-
-                return () => observer.disconnect();
-
             } catch (error) {
                 console.error('Failed to fetch JSON data:', error);
             }
@@ -107,7 +77,39 @@ function PatchNotes() {
 
         fetchData();
 
-    }, []);
+    }, [setActiveSectionId, setSectionData]);
+
+
+    useEffect(() => {
+        if (sectionData.length > 0) {
+            setActiveSectionId(sectionData[0].id);
+        }
+    }, [sectionData]);
+
+    useEffect(() => {
+        if (hero != "" && hero != null) {
+            setActiveSectionId(hero);
+            document.getElementById(hero)?.scrollIntoView({ behavior: "instant" });
+        }
+    }, [hero]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActiveSectionId(entry.target.id);
+                }
+            });
+        }, {
+            root: containerRef.current,
+            threshold: 0.5,
+        });
+
+        const sections = containerRef.current?.querySelectorAll('section') ?? [];
+        sections.forEach((section) => observer.observe(section));
+
+        return () => observer.disconnect();
+    }, [sectionData]);
 
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;
