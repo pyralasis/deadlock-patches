@@ -146,12 +146,9 @@ function PatchNotes() {
                     >
                         <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between", flexWrap: "wrap" }}>
                             {sectionData.map((section, _index) => (
-
-                                section.patches[date] && section.patches[date].length !== 0 ? (
-                                    <Button onClick={() => handleChangeSection(section.id)}>
-                                        <Box component={"img"} src={`${section.definition.icon}.webp`} height={"80px"}></Box>
-                                    </Button>
-                                ) : null
+                                <Button onClick={() => handleChangeSection(section.id)}>
+                                    <Box component={"img"} src={`${section.definition.icon}.webp`} height={"80px"}></Box>
+                                </Button>
                             ))}
                         </Box>
                     </Popover>
