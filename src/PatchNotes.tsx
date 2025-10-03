@@ -97,7 +97,7 @@ function PatchNotes() {
                 }
 
                 console.log(" IN PATCH NOTES:")
-                console.log(activeSectionId);
+                console.log(tempSectionData[0].id);
 
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach((entry) => {
