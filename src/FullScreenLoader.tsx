@@ -10,22 +10,25 @@ export const useAppPreloader = () => {
     useEffect(() => {
         const loadAssets = async () => {
             try {
-                // Wait for fonts
-                await document.fonts.ready;
+                const tasks: Promise<any>[] = [];
 
-                await preloadImage(`/backgrounds/city.webp`);
-                await preloadImage(`/backgrounds/generic.webp`);
+                // Wait for fonts
+                tasks.push(
+                    document.fonts.ready,
+                    preloadImage(`/backgrounds/city.webp`),
+                    preloadImage(`/backgrounds/generic.webp`)
+                );
 
                 //get image lists
                 for (const definition of Object.values(HERO_DEFINITIONS)) {
-                    await preloadImage(`${definition.background}.webp`);
-                    await preloadImage(`${definition.icon}.webp`);
-                    await preloadImage(`${definition.nameplate}`);
-                    // await preloadImage(`${definition.ability1}.webp`);
-                    // await preloadImage(`${definition.ability2}.webp`);
-                    // await preloadImage(`${definition.ability3}.webp`);
-                    // await preloadImage(`${definition.ability4}.webp`);
+                    tasks.push(
+                        preloadImage(`${definition.background}.webp`),
+                        preloadImage(`${definition.icon}.webp`),
+                        preloadImage(`${definition.nameplate}`),
+                    );
                 }
+
+                await Promise.allSettled(tasks);
 
                 setReady(true);
             } catch (err) {

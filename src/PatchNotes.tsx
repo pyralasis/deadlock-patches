@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Box, Button, Grid, IconButton, Popover, Tooltip, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { GENERAL_DEFINITIONS, HERO_DEFINITIONS, ITEM_DEFINITIONS } from './SectionDefinitions';
 import { PatchSectionStepper } from './components/PatchSectionStepper';
@@ -25,7 +25,12 @@ function PatchNotes() {
     const [sectionData, setSectionData] = useState<SectionData[]>([]);
 
     const containerRef = useRef<HTMLDivElement | null>(null);
-    const [activeSectionId, setActiveSectionId] = useState("");
+    const [activeSectionId, setActiveSectionIdInner] = useState("");
+
+    const setActiveSectionId = useCallback((sectionId: string) => {
+        console.error("Setting active section to:", sectionId);
+        setActiveSectionIdInner(sectionId);
+    }, []);
 
     const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
@@ -33,15 +38,16 @@ function PatchNotes() {
         setAnchorEl(event.currentTarget);
     };
 
-    const handleClose = () => {
+    const handleClose = useCallback(() => {
         setAnchorEl(null);
-    };
+    }, [setAnchorEl]);
 
-    const handleChangeSection = (sectionId: string) => {
+    const handleChangeSection = useCallback((sectionId: string) => {
+        console.log("Changing section to:", sectionId);
         setActiveSectionId(sectionId);
         document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
         handleClose();
-    };
+    }, [handleClose, setActiveSectionId]);
 
 
     useEffect(() => {
@@ -86,36 +92,10 @@ function PatchNotes() {
                 });
                 setSectionData(tempSectionData);
 
-                if (tempSectionData.length > 0) {
-                    setActiveSectionId(tempSectionData[0].id);
-                }
-                if (sectionQuery != "" || sectionQuery != null) {
-                    setActiveSectionId(sectionQuery);
-                    setTimeout(() => {
-                        document.getElementById(sectionQuery)?.scrollIntoView({ behavior: "instant" });
-                    }, 0);
-                }
 
                 console.log(" IN PATCH NOTES:")
                 console.log(tempSectionData[0].id);
-
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            setActiveSectionId(entry.target.id);
-                        }
-                    });
-                }, {
-                    root: containerRef.current,
-                    threshold: 0.5,
-                });
-
-                setTimeout(() => {
-                    const sections = containerRef.current?.querySelectorAll('section') ?? [];
-                    sections.forEach((section) => observer.observe(section));
-                }, 0);
-
-                return () => observer.disconnect();
+                console.log(containerRef.current);
 
             } catch (error) {
                 console.error('Failed to fetch JSON data:', error);
@@ -123,8 +103,50 @@ function PatchNotes() {
         };
 
         fetchData();
+    }, [setActiveSectionId, setSectionData]);
 
-    }, []);
+    useEffect(() => {
+        if (sectionData.length > 0) {
+            let currentSection = 0;
+            let searching = true;
+            while (searching) {
+                if (sectionData[currentSection].patches[date].length > 0) {
+                    setActiveSectionId(sectionData[currentSection].id);
+                    searching = false;
+                }
+                currentSection++;
+            }
+            console.log(activeSectionId);
+            console.log(sectionData[currentSection - 1].id);
+
+        }
+    }, [sectionData]);
+
+    useEffect(() => {
+        if (sectionQuery != "" && sectionQuery != null) {
+            setActiveSectionId(sectionQuery);
+            document.getElementById(sectionQuery)?.scrollIntoView({ behavior: "instant" });
+        }
+    }, [sectionQuery]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActiveSectionId(entry.target.id);
+                }
+            });
+        }, {
+            root: containerRef.current,
+            threshold: 0.5,
+        });
+
+        const sections = containerRef.current?.querySelectorAll('section') ?? [];
+        sections.forEach((section) => observer.observe(section));
+
+        return () => observer.disconnect();
+    }, [sectionData]);
+
 
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;
@@ -181,7 +203,6 @@ function PatchNotes() {
             <Grid container>
                 <Grid size={!isMobile ? 11.5 : 12} height={!isMobile ? "100dvh" : "calc(100dvh - 150px)"}>
                     <PatchSectionScroller sectionData={sectionData} containerRef={containerRef} activeSection={activeSectionId} date={date} />
-
                 </Grid>
                 {isMobile &&
                     <MobilePatchNavigation sectionData={sectionData} activeSection={activeSectionId} date={date} handleChangeSection={handleChangeSection} />
