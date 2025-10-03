@@ -1,6 +1,6 @@
 import Masonry from "@mui/lab/Masonry";
 import { Box, Button, Card, Typography, useMediaQuery, useTheme } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { HERO_DEFINITIONS, SectionDefinition } from "./SectionDefinitions";
 import { useNavigate } from "react-router-dom";
 
@@ -9,9 +9,9 @@ function Home() {
     const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
     const navigate = useNavigate();
-    const handleClick = (date: string) => {
+    const handleClick = useCallback((date: string) => {
         navigate(`/patch-notes?date=${date}`);
-    };
+    }, [navigate]);
 
     const [fileList, setFileList] = useState<string[]>([]);
 
@@ -145,7 +145,10 @@ function Home() {
                                     sx={{
                                         width: "10em",
                                         height: "10em",
-                                        backgroundImage: `url(${HERO_DEFINITIONS[hero].background}.png), url(${HERO_DEFINITIONS[hero].background}.webp)`,
+                                        backgroundImage: `image-set(
+                                            url(${HERO_DEFINITIONS[hero].background}.webp) type("image/webp"),
+                                            url(${HERO_DEFINITIONS[hero].background}.png) type("image/png")
+                                        )`,
                                         backgroundRepeat: "no-repeat",
                                         backgroundSize: '250% 100%',
                                         backgroundPosition: 'right',
