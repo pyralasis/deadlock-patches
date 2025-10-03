@@ -8,7 +8,7 @@ interface MobileHistoryNavigationProps {
 }
 
 export function MobileHistoryNavigation({ sectionData, activeSection, handleChangeSection }: MobileHistoryNavigationProps) {
-    return (<Box width={"100%"} height={"50px"} display={"flex"} flexDirection={"row"}>
+    return (<Box width={"100%"} height={"50px"} display={"flex"} flexDirection={"row"} borderTop={"1px solid #3c3c3c"}>
         {
             (() => {
                 const currentIdx = sectionData.findIndex(section => section.id === activeSection);
@@ -35,6 +35,7 @@ export function MobileHistoryNavigation({ sectionData, activeSection, handleChan
                 return null;
             })()
         }
+        <Box border={".5px solid #3c3c3c"} />
         {
             (() => {
                 const currentIdx = sectionData.findIndex(section => section.id === activeSection);
