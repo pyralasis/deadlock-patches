@@ -1,6 +1,5 @@
 import { Box, Button } from "@mui/material";
 import { SectionData } from "../SectionTypes";
-import { grey } from "@mui/material/colors";
 
 interface MobilePatchNavigationProps {
     sectionData: SectionData[];
