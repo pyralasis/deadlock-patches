@@ -25,12 +25,7 @@ function PatchNotes() {
     const [sectionData, setSectionData] = useState<SectionData[]>([]);
 
     const containerRef = useRef<HTMLDivElement | null>(null);
-    const [activeSectionId, setActiveSectionIdInner] = useState("");
-
-    const setActiveSectionId = useCallback((sectionId: string) => {
-        console.error("Setting active section to:", sectionId);
-        setActiveSectionIdInner(sectionId);
-    }, []);
+    const [activeSectionId, setActiveSectionId] = useState("");
 
     const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
@@ -43,7 +38,6 @@ function PatchNotes() {
     }, [setAnchorEl]);
 
     const handleChangeSection = useCallback((sectionId: string) => {
-        console.log("Changing section to:", sectionId);
         setActiveSectionId(sectionId);
         document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
         handleClose();
@@ -91,11 +85,6 @@ function PatchNotes() {
                     });
                 });
                 setSectionData(tempSectionData);
-
-
-                console.log(" IN PATCH NOTES:")
-                console.log(tempSectionData[0].id);
-                console.log(containerRef.current);
 
             } catch (error) {
                 console.error('Failed to fetch JSON data:', error);

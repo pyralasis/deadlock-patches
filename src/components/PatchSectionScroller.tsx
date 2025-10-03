@@ -17,11 +17,6 @@ export function PatchSectionScroller({ sectionData, containerRef, activeSection,
 
     const activeSectionBackground = sectionData.find((section) => section.id === activeSection)?.definition.background;
 
-    console.log("DEBUGGING ON PATCH SECTION SCROLLER");
-    console.log(activeSection);
-    console.log(sectionData);
-    console.log(activeSectionBackground);
-
     return (
         <>
             <Box
