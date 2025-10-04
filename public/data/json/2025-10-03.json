@@ -56,7 +56,7 @@
             },
             {
                 "description": "Aura of Suffering self damage reduced from 85% to 80%",
-                "change": "nerf",
+                "change": "buff",
                 "type": "ability",
                 "ability": {
                     "slot": 3,
