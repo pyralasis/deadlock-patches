@@ -1,9 +1,46 @@
+import fs from 'fs/promises';
+import path from 'path';
+import glob from 'fast-glob';
 import imagemin from 'imagemin';
 import pngquant from 'imagemin-pngquant';
 import svgo from 'imagemin-svgo';
 import webp from 'imagemin-webp';
+import sharp from 'sharp';
+
+async function resizeImageWithSharp(inputPath, outputPath, width, height) {
+    try {
+        await sharp(inputPath)
+            .resize(width, height)
+            .toFile(outputPath);
+        console.log(`Resized: ${inputPath}`);
+    } catch (error) {
+        console.error('Error resizing image with Sharp:', error);
+    }
+}
+
+async function resizeBackgroundImages() {
+    const files = await glob('dist/backgrounds/*.{jpg,jpeg,png}');
+
+    const resizePromises = files.map(async (file) => {
+        const ext = path.extname(file);
+        const base = path.basename(file, ext);
+        const dir = path.dirname(file);
+
+        // Create new filename with _sm
+        const resizedPath = path.join(dir, `${base}_sm${ext}`);
+
+        await resizeImageWithSharp(file, resizedPath, 1024, 1024);
+    });
+
+    await Promise.all(resizePromises);
+}
+
 
 async function optimizeImages() {
+    // First, resize background images
+    await resizeBackgroundImages();
+
+    // Now do the optimizations as before
     const files = await imagemin(['dist/backgrounds/*.{jpg,jpeg,png,svg}'], {
         destination: 'dist/backgrounds',
         plugins: [
@@ -123,9 +160,11 @@ async function optimizeImages() {
     console.log(`Optimized ${files5.length} images in weapon`);
     console.log(`Converted ${files5Webp.length} PNGs to WebP in weapon`);
 
+    console.log(`Optimized ${files6.length} images in spirit`);
+    console.log(`Converted ${files6Webp.length} PNGs to WebP in spirit`);
+
     console.log(`Optimized ${files7.length} images in vitality`);
     console.log(`Converted ${files7Webp.length} PNGs to WebP in vitality`);
-
 }
 
 optimizeImages();

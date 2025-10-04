@@ -163,24 +163,24 @@ function Home() {
                                         }}
                                     >
                                         <source
-                                            srcSet={`${HERO_DEFINITIONS[hero].background}.webp`}
+                                            srcSet={`${HERO_DEFINITIONS[hero].background}_sm.webp`}
                                             type="image/webp"
                                         />
                                         <source
-                                            srcSet={`${HERO_DEFINITIONS[hero].background}.png`}
+                                            srcSet={`${HERO_DEFINITIONS[hero].background}_sm.png`}
                                             type="image/png"
                                         />
                                         <Box
                                             component="img"
                                             loading="lazy"
-                                            src={`${HERO_DEFINITIONS[hero].background}.png`}
+                                            src={`${HERO_DEFINITIONS[hero].background}_sm.png`}
                                             alt={`${HERO_DEFINITIONS[hero].name} background`}
                                             sx={{
                                                 width: "100%",
                                                 height: "100%",
                                                 objectFit: "cover",
-                                                objectPosition: 'right',
-                                                transform: "scaleX(2.5)", // mimics backgroundSize: '250% 100%'
+                                                objectPosition: "-50px",
+                                                transform: "scaleX(2.5) scaleY(1.5)", // mimics backgroundSize: '250% 100%'
                                             }}
                                         />
                                     </Box>
