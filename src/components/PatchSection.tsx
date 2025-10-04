@@ -69,7 +69,7 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                     '&::-webkit-scrollbar': {
                         display: 'none',
                     },
-                    backgroundColor: '#12121233',
+                    backgroundColor: '#12121299',
                 }}
             >
 
