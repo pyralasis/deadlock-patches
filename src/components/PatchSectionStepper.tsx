@@ -105,7 +105,7 @@ export function PatchSectionStepper({ sectionData, activeSection, date, onSteppe
                                                     />
                                                 }
                                                 onClick={() => {
-                                                    document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth' });
+                                                    document.getElementById(section.id)?.scrollIntoView({ behavior: 'instant' });
                                                 }}
                                                 sx={{
                                                     '& .MuiStepLabel-iconContainer': {

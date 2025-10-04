@@ -1,5 +1,8 @@
 import { Box, Button } from "@mui/material";
 import { SectionData } from "../SectionTypes";
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+
 
 interface MobileHistoryNavigationProps {
     sectionData: SectionData[];
@@ -22,11 +25,13 @@ export function MobileHistoryNavigation({ sectionData, activeSection, handleChan
                             onClick={() => handleChangeSection(s.id)}
                             sx={{ width: "100%" }}
                         >
-                            <Box
+                            {/* <Box
                                 component={"img"}
                                 src={`${s.definition.icon}.webp`}
                                 height={"50px"}
-                            />
+                            /> */}
+                            <ArrowUpwardIcon fontSize="large" />
+
                         </Button>
                     );
 
@@ -48,11 +53,13 @@ export function MobileHistoryNavigation({ sectionData, activeSection, handleChan
                             onClick={() => handleChangeSection(s.id)}
                             sx={{ width: "100%" }}
                         >
-                            <Box
+                            {/* <Box
                                 component={"img"}
                                 src={`${s.definition.icon}.webp`}
                                 height={"50px"}
-                            />
+                            /> */}
+                            <ArrowDownwardIcon fontSize="large" />
+
                         </Button>
                     );
                     nextIdx++;

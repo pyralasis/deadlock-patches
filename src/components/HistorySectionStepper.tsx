@@ -103,7 +103,7 @@ export function HistorySectionStepper({ sectionData, activeSection, onStepperCli
                                                 />
                                             }
                                             onClick={() => {
-                                                document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth' });
+                                                document.getElementById(section.id)?.scrollIntoView({ behavior: 'instant' });
                                             }}
                                             sx={{
                                                 '& .MuiStepLabel-iconContainer': {

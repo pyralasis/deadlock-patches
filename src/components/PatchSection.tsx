@@ -61,8 +61,9 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                     height: '100%',
                     maxHeight: '100%',
                     overflowY: 'auto',
-                    paddingLeft: !isMobile ? '2em' : ".5em",
-                    paddingRight: !isMobile ? '2em' : ".5em",
+                    padding: !isMobile ? '2em' : ".5em",
+                    paddingTop: !isMobile ? '5dvh' : ".5em",
+                    paddingBottom: !isMobile ? '5dvh' : ".5em",
                     boxSizing: 'border-box',
                     outline: 'none',
                     scrollbarWidth: 'none',
@@ -99,13 +100,13 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
 
                 {
                     sortedHeroPatchnotes.general.map((item: Patchnote, index: number) => (
-                        <List key={index}>
+                        <List key={index} disablePadding>
                             <ListItem key={index}>
                                 <ListItemIcon>
                                     {
                                         item.change === "buff" ?
                                             <AddIcon fontSize='large' sx={{ color: "green" }} /> : item.change === "nerf" ?
-                                                <RemoveIcon fontSize='large' sx={{ color: "red" }} /> : <CircleIcon fontSize='small' />
+                                                <RemoveIcon fontSize='large' sx={{ color: "red" }} /> : <CircleIcon fontSize='small' sx={{ ml: 0.9 }} />
                                     }
                                 </ListItemIcon>
                                 <ListItemText sx={{ wordWrap: "break-word" }} slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: !isMobile ? '.6em' : '.4em', color: "white" } } }} primary={item.description} />
@@ -126,14 +127,14 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                         return (
 
                             <>
-                                <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'} key={item}>
+                                <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'} key={item} pt={"1em"}>
                                     <Box component="picture" borderRadius={10}>
                                         <source srcSet={`${iconBase}.webp`} type="image/webp" />
                                         <Box
                                             component="img"
                                             src={`${iconBase}.png`}
                                             alt={item}
-                                            width="100px"
+                                            width={!isMobile ? "70px" : "50px"}
                                             loading="lazy"
                                             borderRadius={2}
                                         />
@@ -147,21 +148,26 @@ export function PatchSection({ id, type, heroDefinition, heroData }: SectionProp
                                     </Typography>
                                 </Box >
                                 {
-                                    sortedItemPatchnotes[item].map((item: Patchnote, index: number) => (
-                                        <List key={index}>
-                                            <ListItem key={index}>
-                                                <ListItemIcon>
-                                                    {
-                                                        item.change === "buff" ?
-                                                            <AddIcon fontSize='large' sx={{ color: "green" }} /> : item.change === "nerf" ?
-                                                                <RemoveIcon fontSize='large' sx={{ color: "red" }} /> : <CircleIcon fontSize='small' />
-                                                    }
-                                                </ListItemIcon>
-                                                <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: !isMobile ? '.6em' : '.4em', color: "white" } } }} primary={item.description} />
-                                            </ListItem>
-                                        </List>
-                                    ))
+                                    sortedItemPatchnotes[item].length > 0 &&
+                                    <List disablePadding>
+                                        {
+                                            sortedItemPatchnotes[item].map((item: Patchnote, index: number) => (
+
+                                                <ListItem key={index}>
+                                                    <ListItemIcon>
+                                                        {
+                                                            item.change === "buff" ?
+                                                                <AddIcon fontSize='large' sx={{ color: "green" }} /> : item.change === "nerf" ?
+                                                                    <RemoveIcon fontSize='large' sx={{ color: "red" }} /> : <CircleIcon fontSize='small' sx={{ ml: 0.9 }} />
+                                                        }
+                                                    </ListItemIcon>
+                                                    <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: !isMobile ? '.6em' : '.4em', color: "white" } } }} primary={item.description} />
+                                                </ListItem>
+                                            ))
+                                        }
+                                    </List>
                                 }
+
                             </>
                         )
                     }
@@ -197,43 +203,47 @@ export function AbilitySection({ ability, ability_icon }: { ability: Patchnote[]
     return (
         <Box>
             {ability.length != 0 &&
-                <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'}>
-                    <Box component="picture">
-                        <source srcSet={`${ability_icon}.webp`} type="image/webp" />
-                        <Box
-                            component="img"
-                            src={`${ability_icon}.png`}
-                            alt={ability[0].ability.name}
-                            width="100px"
-                            loading="lazy"
-                        />
+                <>
+                    <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'} pt={"1em"}>
+                        <Box component="picture" display={'flex'} alignItems={'center'}>
+                            <source srcSet={`${ability_icon}.webp`} type="image/webp" />
+                            <Box
+                                component="img"
+                                src={`${ability_icon}.png`}
+                                alt={ability[0].ability.name}
+                                width={!isMobile ? "70px" : "50px"}
+                                loading="lazy"
+                            />
+                        </Box>
+                        <Typography
+                            fontFamily={"DecoturaICG"}
+                            fontSize={"1em"}
+                            sx={{ paddingLeft: "0.5em" }}
+                        >
+                            {ability[0].ability.name}
+                        </Typography>
                     </Box>
-                    <Typography
-                        fontFamily={"DecoturaICG"}
-                        fontSize={"1em"}
-                        sx={{ paddingLeft: "1em" }}
-                    >
-                        {ability[0].ability.name}
-                    </Typography>
-                </Box>
+                    <List disablePadding>
+                        {
+                            ability.map((item: Patchnote, index: number) => (
+                                <ListItem key={index}>
+                                    <ListItemIcon>
+                                        {
+                                            item.change === "buff" ?
+                                                <AddIcon fontSize='large' sx={{ color: "green" }} /> : item.change === "nerf" ?
+                                                    <RemoveIcon fontSize='large' sx={{ color: "red" }} /> : <CircleIcon fontSize='small' sx={{ ml: 0.9 }} />
+                                        }
+                                    </ListItemIcon>
+                                    <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: !isMobile ? '.6em' : '.4em', color: "white" } } }} primary={item.description} />
+                                </ListItem>
+
+                            ))
+                        }
+                    </List>
+                </>
 
             }
-            {
-                ability.map((item: Patchnote, index: number) => (
-                    <List key={index}>
-                        <ListItem key={index}>
-                            <ListItemIcon>
-                                {
-                                    item.change === "buff" ?
-                                        <AddIcon fontSize='large' sx={{ color: "green" }} /> : item.change === "nerf" ?
-                                            <RemoveIcon fontSize='large' sx={{ color: "red" }} /> : <CircleIcon fontSize='small' />
-                                }
-                            </ListItemIcon>
-                            <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: !isMobile ? '.6em' : '.4em', color: "white" } } }} primary={item.description} />
-                        </ListItem>
-                    </List>
-                ))
-            }
+
         </Box>
     )
 }

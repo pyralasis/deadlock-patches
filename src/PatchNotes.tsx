@@ -39,7 +39,7 @@ function PatchNotes() {
 
     const handleChangeSection = useCallback((sectionId: string) => {
         setActiveSectionId(sectionId);
-        document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: "instant" });
         handleClose();
     }, [handleClose, setActiveSectionId]);
 
@@ -142,7 +142,7 @@ function PatchNotes() {
     let nameElement;
     if (activeSectionType === "hero") {
         nameElement = (
-            <Box component={"img"} src={activeSectionNameplate} height={"90%"} width={"calc(100% - 100px)"}></Box>
+            <Box component={"img"} src={activeSectionNameplate} maxHeight={"70%"} maxWidth={"75%"}></Box>
         );
     } else {
         nameElement = (
@@ -153,10 +153,10 @@ function PatchNotes() {
     return (
         <>
             {isMobile &&
-                <Box id="mobile-header" display={"flex"} flexDirection={"row"} borderBottom={"1px solid #3c3c3c"} sx={{ height: "100px" }}>
-                    <Button sx={{ width: "100px" }} onClick={handleClick} >
-                        <Box component={"img"} src={`${activeSectionIcon}.webp`} height={"100%"}></Box>
-                    </Button>
+                <Box id="mobile-header" display={"flex"} flexDirection={"row"} alignItems={'center'} borderBottom={"1px solid #3c3c3c"} p={1} sx={{ height: "100px" }}>
+                    <Button sx={{ flexGrow: 0, flexShrink: 0, width: 100, height: "100%" }} onClick={handleClick}>
+                        <Box component={"img"} src={`${activeSectionIcon}.webp`} height={"100%"} />
+                    </Button >
                     <Popover
                         id={id}
                         open={open}
@@ -168,7 +168,7 @@ function PatchNotes() {
                         }}
 
                     >
-                        <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between", flexWrap: "wrap" }}>
+                        <Box height={"80dvh"} sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between", flexWrap: "wrap" }}>
                             {sectionData.map((section, _index) => (
 
                                 section.patches[date] && section.patches[date].length !== 0 ? (
@@ -179,9 +179,12 @@ function PatchNotes() {
                             ))}
                         </Box>
                     </Popover>
-                    {nameElement}
+                    <Box flexGrow={1} display={'flex'} justifyContent={'center'} alignItems={'center'} height={"100%"}>
+                        {nameElement}
+                    </Box>
+                    {/* {nameElement} */}
 
-                </Box>
+                </Box >
             }
 
             <Grid container>
@@ -210,7 +213,7 @@ function PatchNotes() {
                             activeSection={activeSectionId}
                             date={date}
                             onStepperClick={(sectionId: string) => {
-                                document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+                                document.getElementById(sectionId)?.scrollIntoView({ behavior: 'instant' });
                             }}
                         />
                     </Grid>

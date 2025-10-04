@@ -63,17 +63,40 @@ export function HistorySection({ id, type, sectionData, hero }: SectionProps) {
                     height: '100%',
                     maxHeight: '100%',
                     overflowY: 'auto',
-                    paddingLeft: !isMobile ? '2em' : ".5em",
-                    paddingRight: !isMobile ? '2em' : ".5em",
+                    padding: !isMobile ? '2em' : ".5em",
+                    paddingTop: !isMobile ? '5dvh' : ".5em",
+                    paddingBottom: !isMobile ? '5dvh' : ".5em",
                     boxSizing: 'border-box',
                     outline: 'none',
                     scrollbarWidth: 'none',
                     '&::-webkit-scrollbar': {
                         display: 'none',
                     },
-                    backgroundColor: '#12121233',
+                    backgroundColor: '#12121299',
                 }}
             >
+                {!isMobile &&
+                    <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'} paddingBottom={"1em"}>
+                        <Box component="picture">
+                            <source srcSet={`${heroDefinition.icon}.webp`} type="image/webp" />
+                            <Box
+                                component="img"
+                                src={`${heroDefinition.icon}.png`}
+                                alt={heroDefinition.name}
+                                width="100px"
+                                loading="lazy"
+                                borderRadius={20}
+                            />
+                        </Box>
+                        <Typography
+                            fontFamily={"DecoturaICG"}
+                            fontSize={"2em"}
+                            sx={{ paddingLeft: "1em" }}
+                        >
+                            {heroDefinition.name}
+                        </Typography>
+                    </Box>
+                }
                 {
                     sectionData.map((section) => {
                         if (section.id == hero) {
@@ -82,26 +105,29 @@ export function HistorySection({ id, type, sectionData, hero }: SectionProps) {
                                 if (section.patches[date].length != 0)
                                     return (
                                         <>
-                                            <Button size='large' onClick={() => navigate(`/patch-notes?date=${date}&section=${hero}`)}>
-                                                <Typography
-                                                    fontFamily={"DecoturaICG"}
-                                                    fontSize={"5em"}
+                                            <Box width={"100%"} display={'flex'} justifyContent={'start'}>
+                                                <Button size='large' onClick={() => navigate(`/patch-notes?date=${date}&section=${hero}`)}>
+                                                    <Typography
+                                                        fontFamily={"DecoturaICG"}
+                                                        fontSize={"5em"}
 
-                                                >
-                                                    {date}
-                                                </Typography>
-                                            </Button>
+                                                    >
+                                                        {date}
+                                                    </Typography>
+                                                </Button>
+                                            </Box>
+
 
                                             {
 
                                                 sortedPatches.general.map((item: Patchnote, index: number) => (
-                                                    <List key={index}>
+                                                    <List key={index} disablePadding>
                                                         <ListItem key={index}>
                                                             <ListItemIcon>
                                                                 {
                                                                     item.change === "buff" ?
                                                                         <AddIcon fontSize='large' sx={{ color: "green" }} /> : item.change === "nerf" ?
-                                                                            <RemoveIcon fontSize='large' sx={{ color: "red" }} /> : <CircleIcon fontSize='small' />
+                                                                            <RemoveIcon fontSize='large' sx={{ color: "red" }} /> : <CircleIcon fontSize='small' sx={{ ml: 0.9 }} />
                                                                 }
                                                             </ListItemIcon>
                                                             <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: !isMobile ? '.6em' : '.4em', color: "white" } } }} primary={item.description} />
@@ -152,14 +178,14 @@ export function AbilitySection({ ability, ability_icon }: { ability: Patchnote[]
     return (
         <Box>
             {ability.length != 0 &&
-                <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'}>
+                <Box width={"100%"} display={'flex'} flexDirection={'row'} alignItems={'center'} pt={"1em"}>
                     <Box component="picture">
                         <source srcSet={`${ability_icon}.webp`} type="image/webp" />
                         <Box
                             component="img"
                             src={`${ability_icon}.png`}
                             alt={ability[0].ability.name}
-                            width="100px"
+                            width={!isMobile ? "70px" : "50px"}
                             loading="lazy"
                         />
                     </Box>
@@ -175,13 +201,13 @@ export function AbilitySection({ ability, ability_icon }: { ability: Patchnote[]
             }
             {
                 ability.map((item: Patchnote, index: number) => (
-                    <List key={index}>
+                    <List key={index} disablePadding>
                         <ListItem key={index}>
                             <ListItemIcon>
                                 {
                                     item.change === "buff" ?
                                         <AddIcon fontSize='large' sx={{ color: "green" }} /> : item.change === "nerf" ?
-                                            <RemoveIcon fontSize='large' sx={{ color: "red" }} /> : <CircleIcon fontSize='small' />
+                                            <RemoveIcon fontSize='large' sx={{ color: "red" }} /> : <CircleIcon fontSize='small' sx={{ ml: 0.9 }} />
                                 }
                             </ListItemIcon>
                             <ListItemText slotProps={{ primary: { style: { fontFamily: 'RetailDemo', fontSize: !isMobile ? '.6em' : '.4em', color: "white" } } }} primary={item.description} />
