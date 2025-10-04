@@ -24,7 +24,7 @@ export function PatchSectionScroller({ sectionData, containerRef, activeSection,
                 ref={containerRef}
 
                 sx={{
-                    backgroundImage: !isMobile ? `url(${activeSectionBackground}.png), url(${activeSectionBackground}.webp)` : "none",
+                    backgroundImage: !isMobile ? `image-set(url(${activeSectionBackground}.webp), url(${activeSectionBackground}.png))` : "none",
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: '100% 100%',
                     height: "100%",

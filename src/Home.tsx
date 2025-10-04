@@ -87,7 +87,7 @@ function Home() {
                                     sx={{
                                         width: "10em",
                                         height: "10em",
-                                        backgroundImage: `url(${a[index % 32].background}.png), url(${a[index % 32].background}.webp)`,
+                                        backgroundImage: `image-set(url(${a[index % 32].background}_sm.webp), url(${a[index % 32].background}_sm.png))`,
                                         backgroundRepeat: "no-repeat",
                                         backgroundSize: '250% 100%',
                                         backgroundPosition: 'right',

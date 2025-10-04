@@ -29,7 +29,7 @@ async function resizeBackgroundImages() {
         // Create new filename with _sm
         const resizedPath = path.join(dir, `${base}_sm${ext}`);
 
-        await resizeImageWithSharp(file, resizedPath, 1024, 1024);
+        await resizeImageWithSharp(file, resizedPath, 512, 512);
     });
 
     await Promise.all(resizePromises);
