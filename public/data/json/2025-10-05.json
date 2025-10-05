@@ -1,0 +1,93 @@
+{
+    "date": "2025-10-05",
+    "characters": {
+        "Abrams": [],
+        "Bebop": [],
+        "Billy": [],
+        "Calico": [],
+        "Doorman": [],
+        "Drifter": [],
+        "Dynamo": [],
+        "Grey Talon": [],
+        "Haze": [],
+        "Holliday": [],
+        "Infernus": [],
+        "Ivy": [],
+        "Kelvin": [],
+        "Lady Geist": [],
+        "Lash": [],
+        "McGinnis": [],
+        "Mina": [],
+        "Mirage": [],
+        "Mo & Krill": [],
+        "Paige": [],
+        "Paradox": [],
+        "Pocket": [],
+        "Seven": [],
+        "Shiv": [],
+        "Sinclair": [],
+        "Victor": [
+            {
+                "description": "Jumpstart duration increased from 4s to 4.5s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Jumpstart"
+                }
+            },
+            {
+                "description": "Aura of Suffering self damage reduced from 80% to 70%",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Aura of Suffering"
+                }
+            },
+            {
+                "description": "Aura of Suffering radius reduced from 8m to 7.7m",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Aura of Suffering"
+                }
+            },
+            {
+                "description": "Aura of Suffering MinDPS, MaxDPS and spirit scaling increased by ~5-6%",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Aura of Suffering"
+                }
+            },
+            {
+                "description": "Shocking Reanimation radius increased from 12m to 13m",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Shocking Reanimation"
+                }
+            }
+        ],
+        "Vindicta": [],
+        "Viscous": [],
+        "Vyper": [],
+        "Warden": [],
+        "Wraith": [],
+        "Yamato": []
+    },
+    "items": {
+        "Weapon": [],
+        "Vitality": [],
+        "Spirit": []
+    },
+    "general": {
+        "Map": [],
+        "Gameplay": [],
+        "Bugfixes": []
+    }
+}
