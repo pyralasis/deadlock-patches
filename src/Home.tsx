@@ -188,7 +188,7 @@ function Home() {
                                     {/* Foreground content */}
                                     <Box sx={{ position: "relative", zIndex: 1, width: "100%", height: "100%" }}>
                                         <Button
-                                            onClick={() => navigate(`/hero-history?hero=${hero}`)}
+                                            onClick={() => navigate(`/hero-history?hero=${encodeURIComponent(hero)}`)}
                                             sx={{ width: "100%", height: "100%", padding: "0" }}
                                         >
                                             <Box
