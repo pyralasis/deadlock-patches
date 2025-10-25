@@ -46,7 +46,7 @@
                 "change": "nerf",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 3,
                     "name": "Ava"
                 }
             }
