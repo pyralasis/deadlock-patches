@@ -1,0 +1,446 @@
+{
+    "date": "2025-10-24",
+    "characters": {
+        "Abrams": [],
+        "Bebop": [],
+        "Billy": [],
+        "Calico": [
+            {
+                "description": "Gloom Bombs cooldown increased from 10s to 12s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Gloom Bombs"
+                }
+            },
+            {
+                "description": "Gloom Bombs base damage reduced from 55 to 45",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Gloom Bombs"
+                }
+            },
+            {
+                "description": "Gloom Bombs spirit scaling reduced from 0.74 to 0.64",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Gloom Bombs"
+                }
+            },
+            {
+                "description": "Gloom Bombs multi bomb damage ratio increased from 50% to 65%",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Gloom Bombs"
+                }
+            },
+            {
+                "description": "Ava no longer replenishes stamina on usage",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Ava"
+                }
+            }
+        ],
+        "Doorman": [
+            {
+                "description": "Bullet damage growth per boon reduced from 1.15 to 1.0",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Outgoing headshot damage multiplier reduced by 25%",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Call Bell explosion damage spirit scaling increased from 1.5 to 1.7",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Call Bell"
+                }
+            }
+        ],
+        "Drifter": [
+            {
+                "description": "Bloodscent isolated kill bonus reduced from 5% to 4%",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Bloodscent"
+                }
+            },
+            {
+                "description": "Base bullet damage increased from 20.9 to 21.3",
+                "change": "buff",
+                "type": "general"
+            },
+            {
+                "description": "Bullet damage growth increased from 0.52 to 0.56",
+                "change": "buff",
+                "type": "general"
+            }
+        ],
+        "Dynamo": [
+            {
+                "description": "Quantum Entanglement Fire Rate increased from +25% to +30%",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Quantum Entanglement"
+                }
+            },
+            {
+                "description": "Rejuvenating Aurora cooldown reduced from 48s to 45s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Rejuvenating Aurora"
+                }
+            }
+        ],
+        "Grey Talon": [],
+        "Haze": [],
+        "Holliday": [],
+        "Infernus": [
+            {
+                "description": "Bullet damage growth per boon reduced from 0.12 to 0.08",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Flame Dash T2 reduced from +35 to +30",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Flame Dash"
+                }
+            },
+            {
+                "description": "Afterburn T1 reduced from -25% Spirit Damage to -20%",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Afterburn"
+                }
+            },
+            {
+                "description": "Afterburn T3 reduced from +28 DPS to +26",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Afterburn"
+                }
+            }
+        ],
+        "Ivy": [],
+        "Kelvin": [
+            {
+                "description": "Base regen reduced from 2 to 1",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Headshot reduction reduced from -20% to -25%",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Frozen Shelter cooldown increased from 150s to 170s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Frozen Shelter"
+                }
+            }
+        ],
+        "Lady Geist": [],
+        "Lash": [],
+        "McGinnis": [
+            {
+                "description": "Medicinal Specter now has a 1s linger time",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Medicinal Specter"
+                }
+            }
+        ],
+        "Mina": [],
+        "Mirage": [],
+        "Mo & Krill": [],
+        "Paige": [],
+        "Paradox": [
+            {
+                "description": "Base bullet damage reduced from 6.48 to 6.15",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Paradoxical Swap cooldown increased from 70s to 75s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Paradoxical Swap"
+                }
+            }
+        ],
+        "Pocket": [],
+        "Seven": [
+            {
+                "description": "Lightning Ball spirit scaling increased from 0.43 to 0.55",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Lightning Ball"
+                }
+            }
+        ],
+        "Shiv": [
+            {
+                "description": "Alt fire knockback reduced by 10%",
+                "change": "nerf",
+                "type": "general"
+            }
+        ],
+        "Sinclair": [],
+        "Victor": [
+            {
+                "description": "Pain Battery T1 and T2 swapped",
+                "change": "neutral",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Pain Battery"
+                }
+            },
+            {
+                "description": "Aura of Suffering max damage reduced from 80 to 70",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Aura of Suffering"
+                }
+            },
+            {
+                "description": "Aura of Suffering T2 reduced from +10/50 to +8/40",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Aura of Suffering"
+                }
+            }
+        ],
+        "Vindicta": [],
+        "Viscous": [],
+        "Vyper": [
+            {
+                "description": "Screwjab Dagger spirit scaling increased from 0.65/0.33 to 0.8/0.4",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Screwjab Dagger"
+                }
+            }
+        ],
+        "Warden": [
+            {
+                "description": "Base bullet damage increased from 15 to 16.2",
+                "change": "buff",
+                "type": "general"
+            },
+            {
+                "description": "Binding Word range increased from 19m to 20m",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Binding Word"
+                }
+            }
+        ],
+        "Wraith": [],
+        "Yamato": []
+    },
+    "items": {
+        "Weapon": [
+            {
+                "item_name": "Mystic Shot",
+                "description": "Base damage reduced from 55 to 45",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Mystic Shot",
+                "description": "Spirit scaling increased from 0.65 to 0.75",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Warp Stone",
+                "description": "Bullet Resist reduced from 40% to 35%",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Capacitor",
+                "description": "Fire Rate reduced from 8% to 5%",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Capacitor",
+                "description": "Cooldown increased from 40s to 60s",
+                "change": "nerf",
+                "type": "item"
+            }
+        ],
+        "Vitality": [
+            {
+                "item_name": "Guardian Ward",
+                "description": "Cooldown increased from 40s to 45s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Reactive Barrier",
+                "description": "Cooldown increased from 24s to 26s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Spirit Shielding",
+                "description": "Barrier reduced from 325 to 300",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Spirit Shielding",
+                "description": "Barrier boon scaling increased from 4 to 5",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Weapon Shielding",
+                "description": "Barrier reduced from 325 to 300",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Weapon Shielding",
+                "description": "Barrier boon scaling increased from 4 to 5",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Fortitude",
+                "description": "Damage taken duration to regen reduced from 14s to 13s",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Trophy Collector",
+                "description": "Souls per Minute increased from 25 to 30",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Majestic Leap",
+                "description": "Cooldown increased from 28s to 32s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Divine Barrier",
+                "description": "Cooldown increased from 40s to 45s",
+                "change": "nerf",
+                "type": "item"
+            }
+        ],
+        "Spirit": [
+            {
+                "item_name": "Rusted Barrel",
+                "description": "Bonus health increased from 60 to 70",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Silence Wave",
+                "description": "Cooldown increased from 30s to 35s (affects component)",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Spirit Snatch",
+                "description": "Duration reduced from 14s to 10s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Spirit Snatch",
+                "description": "Bonus damage reduced from 75 to 50",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Ethereal Shift",
+                "description": "Cooldown increased from 20s to 45s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Ethereal Shift",
+                "description": "Movespeed during phase reduced from 4m to 3m",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Ethereal Shift",
+                "description": "Can no longer target an ethereal shifted ally with things like Rescue Beam, Viscous Cube, etc.",
+                "change": "adjust",
+                "type": "item"
+            },
+            {
+                "item_name": "Curse",
+                "description": "Cooldown reduced from 50s to 45s",
+                "change": "buff",
+                "type": "item"
+            }
+        ]
+    },
+    "general": {
+        "Map": [],
+        "Gameplay": [
+            {
+                "description": "Getting damaged during the initial launch window (0.6s) after using a Jump Pad will cause you to be stunned (similar to ziplines having an initial knockoff period). When you are stunned, you will lose control and continue towards the landing destination. The stun will wear off 0.2s after landing, and then a 30% slow for 2s will apply. Damage over time does not trigger this (same damage rules as ziplines).",
+                "change": "neutral",
+                "type": "general"
+            }
+        ],
+        "Bugfixes": []
+    }
+}
