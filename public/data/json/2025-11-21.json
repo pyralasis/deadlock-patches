@@ -1,0 +1,1693 @@
+{
+    "date": "2025-11-21",
+    "characters": {
+        "Abrams": [
+            {
+                "description": "Shoulder Charge cooldown reduced from 37s to 33s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Shoulder Charge"
+                }
+            },
+            {
+                "description": "Shoulder Charge T3 reduced from -22s Cooldown to -18s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Shoulder Charge"
+                }
+            },
+            {
+                "description": "Seismic Impact T3 duration increased from 3s to 4s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Seismic Impact"
+                }
+            }
+        ],
+        "Bebop": [
+            {
+                "description": "Health growth reduced from 54 to 46",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Exploding Uppercut cooldown increased from 19s to 22s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Exploding Uppercut"
+                }
+            },
+            {
+                "description": "Exploding Uppercut spirit scaling increased from 0.49 to 0.6",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Exploding Uppercut"
+                }
+            },
+            {
+                "description": "Sticky Bomb T3 changed effect",
+                "change": "rework",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Sticky Bomb"
+                }
+            },
+            {
+                "description": "Hyperbeam DPS reduced from 190 to 160",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Hyperbeam"
+                }
+            },
+            {
+                "description": "Hyperbeam T2 increased from +90 to +120",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Hyperbeam"
+                }
+            }
+        ],
+        "Billy": [
+            {
+                "description": "Rising Ram T2 increased from +25% Weapon Damage to +35%",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Rising Ram"
+                }
+            },
+            {
+                "description": "Rising Ram T3 increased from 6% Max Health spirit damage to 6.5%",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Rising Ram"
+                }
+            }
+        ],
+        "Calico": [
+            {
+                "description": "Clip size increased from 10 to 12",
+                "change": "buff",
+                "type": "general"
+            },
+            {
+                "description": "Reload time increased from 2.5s to 2.6s",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Gloom Bombs cooldown increased from 12s to 14s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Gloom Bombs"
+                }
+            },
+            {
+                "description": "Return To Shadows T3 Damage Amp reduced from +24% to +18%",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Return to Shadows"
+                }
+            },
+            {
+                "description": "Return To Shadows T3 duration increased from 5s to 6s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Return to Shadows"
+                }
+            }
+        ],
+        "Doorman": [
+            {
+                "description": "Base regen from 2 to 1",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Bullet falloff now uses true travel distance",
+                "change": "fix",
+                "type": "general"
+            },
+            {
+                "description": "Call Bell explosion damage reduced from 60 to 55",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Call Bell"
+                }
+            },
+            {
+                "description": "Call Bell T2 explosion damage reduced from +50 to +45",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Call Bell"
+                }
+            },
+            {
+                "description": "Call Bell impact damage spirit scaling increased from 0.7 to 1.0",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Call Bell"
+                }
+            }
+        ],
+        "Drifter": [
+            {
+                "description": "Rend cooldown reduced from 15s to 13s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Rend"
+                }
+            },
+            {
+                "description": "Base regen increased from 2.5 to 3.5",
+                "change": "buff",
+                "type": "general"
+            }
+        ],
+        "Dynamo": [
+            {
+                "description": "Base regen increased from 2 to 2.5",
+                "change": "buff",
+                "type": "general"
+            },
+            {
+                "description": "Kinetic Pulse range increased from 15m to 20m",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Kinetic Pulse"
+                }
+            },
+            {
+                "description": "Kinetic Pulse cooldown reduced from 26s to 22s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Kinetic Pulse"
+                }
+            }
+        ],
+        "Grey Talon": [],
+        "Haze": [],
+        "Holliday": [
+            {
+                "description": "Base regen reduced from 2.0 to 1.0",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Base bullet growth reduced from 1.23 to 1.04",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Base damage reduced from 22 to 18",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Bounce Pad damage reduced from 80 to 60",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Bounce Pad"
+                }
+            },
+            {
+                "description": "Fixed a bug allowing extra speed with jump timing",
+                "change": "fix",
+                "type": "general"
+            }
+        ],
+        "Infernus": [
+            {
+                "description": "Afterburn buildup now 10% slower on body shots",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Afterburn"
+                }
+            },
+            {
+                "description": "Napalm T3 damage amp reduced from +20% to +17%",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Napalm"
+                }
+            }
+        ],
+        "Ivy": [
+            {
+                "description": "Kudzu Bomb damage reduced from 50 to 40",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Kudzu Bomb"
+                }
+            },
+            {
+                "description": "Kudzu Bomb spirit scaling increased from 0.56 to 0.65",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Kudzu Bomb"
+                }
+            },
+            {
+                "description": "Stone Form cooldown reduced from 42s to 37s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Stone Form"
+                }
+            },
+            {
+                "description": "Watcher's Covenant lifesteal increased from 10% to 15%",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Watcher's Covenant"
+                }
+            },
+            {
+                "description": "Air Drop damage penalty reduced from -50% to -30%",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Air Drop"
+                }
+            },
+            {
+                "description": "Air Drop cast range increased from 12m to 14m",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 4,
+                    "name": "Air Drop"
+                }
+            }
+        ],
+        "Kelvin": [
+            {
+                "description": "Bullet Velocity reduced from 254 to 160",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Frost Grenade base damage reduced from 74 to 60",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Frost Grenade"
+                }
+            },
+            {
+                "description": "Frozen Shelter T2 changed from -45s CD to +1s duration",
+                "change": "rework",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Frozen Shelter"
+                }
+            },
+            {
+                "description": "Frozen Shelter duration reduced from 5.5s to 5s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Frozen Shelter"
+                }
+            }
+        ],
+        "Lady Geist": [
+            {
+                "description": "Soul Exchange T3 radius increased from 15m to 25m",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Soul Exchange"
+                }
+            }
+        ],
+        "Lash": [
+            {
+                "description": "Grapple cooldown reduced from 42s to 35s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Grapple"
+                }
+            },
+            {
+                "description": "Flog heal vs heroes increased from 50% to 60%",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Flog"
+                }
+            },
+            {
+                "description": "Flog damage increased from 60 to 65",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Flog"
+                }
+            },
+            {
+                "description": "Flog cooldown reduced from 26s to 24s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Flog"
+                }
+            },
+            {
+                "description": "Flog T2 increased from -14s to -12s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Flog"
+                }
+            },
+            {
+                "description": "Death Slam cooldown reduced from 155s to 145s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Death Slam"
+                }
+            }
+        ],
+        "McGinnis": [
+            {
+                "description": "Mini Turrets health per boon increased from 10 to 13",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Mini Turrets"
+                }
+            },
+            {
+                "description": "Spectral Wall speed increased by 10%",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Spectral Wall"
+                }
+            }
+        ],
+        "Mina": [
+            {
+                "description": "Sanguine Retreat cooldown increased from 30s to 32s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Sanguine Retreat"
+                }
+            },
+            {
+                "description": "Sanguine Retreat no longer resets air jumps & dashes",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Sanguine Retreat"
+                }
+            },
+            {
+                "description": "Love Bites cooldown increased from 7s to 8s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Love Bites"
+                }
+            },
+            {
+                "description": "Love Bites T3 stamina cost increased",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Love Bites"
+                }
+            }
+        ],
+        "Mirage": [
+            {
+                "description": "Fire Scarabs max health steal increased from 37 to 45",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Fire Scarabs"
+                }
+            },
+            {
+                "description": "Traveler can now target friendly objectives",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Traveler"
+                }
+            },
+            {
+                "description": "Traveler cooldown reduced from 160s to 145s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Traveler"
+                }
+            },
+            {
+                "description": "Traveler T1 now also reduces cooldown by 25s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Traveler"
+                }
+            }
+        ],
+        "Mo & Krill": [
+            {
+                "description": "Health regen reduced from 3 to 1",
+                "change": "nerf",
+                "type": "general"
+            }
+        ],
+        "Paige": [
+            {
+                "description": "Bullet damage growth reduced from 0.66 to 0.52",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Defend and Fight! barrier reduced from 200 to 150",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Defend and Fight!"
+                }
+            },
+            {
+                "description": "Defend and Fight! duration reduced from 7s to 5s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Defend and Fight!"
+                }
+            },
+            {
+                "description": "Defend and Fight! T1 changed to +16% fire rate",
+                "change": "rework",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Defend and Fight!"
+                }
+            },
+            {
+                "description": "Defend and Fight! T2 changed to +100 barrier",
+                "change": "rework",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Defend and Fight!"
+                }
+            },
+            {
+                "description": "Defend and Fight! T2 now grants +2s duration",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Defend and Fight!"
+                }
+            }
+        ],
+        "Paradox": [
+            {
+                "description": "Base regen reduced from 2.0 to 1.0",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Bullet damage growth reduced from 0.27 to 0.22",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Base health reduced from 700 to 650",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Health per boon reduced from 47 to 45",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Pulse Grenade damage reduced from 40 to 35",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Pulse Grenade"
+                }
+            },
+            {
+                "description": "Pulse Grenade spirit scaling increased from 0.43 to 0.55",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Pulse Grenade"
+                }
+            },
+            {
+                "description": "Fixed a bug enabling unintended airdash distance",
+                "change": "fix",
+                "type": "general"
+            }
+        ],
+        "Pocket": [
+            {
+                "description": "Base regen reduced from 2 to 1",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Flying Cloak damage reduced from 85 to 70",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Flying Cloak"
+                }
+            },
+            {
+                "description": "Flying Cloak T2 increased from +75 to +85",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Flying Cloak"
+                }
+            }
+        ],
+        "Seven": [
+            {
+                "description": "Lightning Ball radius increased from 3.5m to 4.25m",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Lightning Ball"
+                }
+            },
+            {
+                "description": "Crit reduction increased from 25% to 35%",
+                "change": "buff",
+                "type": "general"
+            }
+        ],
+        "Shiv": [
+            {
+                "description": "Alt fire knockback reduced by 10%",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "general"
+                }
+            },
+            {
+                "description": "Alt fire ammo cost increased from 2 to 3",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "general"
+                }
+            },
+            {
+                "description": "Killing Blow Rage damage bonus reduced from 17% to 15%",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Killing Blow"
+                }
+            },
+            {
+                "description": "Killing Blow T2 Rage bonus reduced from 8% to 6%",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Killing Blow"
+                }
+            },
+            {
+                "description": "Rage generale now increases your self-knockback on alt fire",
+                "change": "neutral",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Killing Blow"
+                }
+            },
+            {
+                "description": "Fixed bugs with Barriers and Spirit Damage Scaling",
+                "change": "fix",
+                "type": "general"
+            }
+        ],
+        "Sinclair": [
+            {
+                "description": "Health reduced from 700 to 650",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Regen reduced from 3 to 2",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Spectral Assistant swaps increased from 1 to 2",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Spectral Assistant"
+                }
+            },
+            {
+                "description": "Audience Participation cooldown reduced from 50% to 40%",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Audience Participation"
+                }
+            }
+        ],
+        "Victor": [],
+        "Vindicta": [],
+        "Viscous": [
+            {
+                "description": "Splatter cooldown increased from 21s to 30s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Splatter"
+                }
+            },
+            {
+                "description": "Splatter T1 changed to +40 damage and +1m radius",
+                "change": "rework",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Splatter"
+                }
+            },
+            {
+                "description": "Splatter T2 changed to -12s cooldown",
+                "change": "rework",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Splatter"
+                }
+            },
+            {
+                "description": "Splatter T3 now increases spirit scaling by 0.4",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Splatter"
+                }
+            },
+            {
+                "description": "The Cube duration reduced from 4s to 3s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "The Cube"
+                }
+            },
+            {
+                "description": "The Cube regen increased from 30 to 40",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "The Cube"
+                }
+            },
+            {
+                "description": "The Cube T2 now grants +1s duration",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "The Cube"
+                }
+            }
+        ],
+        "Vyper": [
+            {
+                "description": "Health per boon increased from 33 to 35",
+                "change": "buff",
+                "type": "general"
+            }
+        ],
+        "Warden": [
+            {
+                "description": "Bullet damage increased from 16.2 to 16.6",
+                "change": "buff",
+                "type": "general"
+            },
+            {
+                "description": "Bullet damage growth increased from 0.44 to 0.48",
+                "change": "buff",
+                "type": "general"
+            },
+            {
+                "description": "Health regen reduced from 3 to 2",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Alchemical Flask radius reduced from 6.5m to 5.5m",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Alchemical Flask"
+                }
+            },
+            {
+                "description": "Alchemical Flask T2 now also grants +1m radius",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Alchemical Flask"
+                }
+            }
+        ],
+        "Wraith": [
+            {
+                "description": "Card Trick base damage increased from 55 to 60",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Card Trick"
+                }
+            },
+            {
+                "description": "Project Mind cooldown reduced from 48s to 42s",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Project Mind"
+                }
+            }
+        ],
+        "Yamato": [
+            {
+                "description": "Base regen reduced from 2.0 to 1.0",
+                "change": "nerf",
+                "type": "general"
+            },
+            {
+                "description": "Power Slash low charge damage reduced from 40% to 30%",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Power Slash"
+                }
+            },
+            {
+                "description": "Power Slash medium charge damage reduced from 60% to 50%",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 1,
+                    "name": "Power Slash"
+                }
+            },
+            {
+                "description": "Crimson Slash cooldown increased from 11.5s to 15s",
+                "change": "nerf",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Crimson Slash"
+                }
+            },
+            {
+                "description": "Crimson Slash T3 reduced from -5.75s to -9s cooldown",
+                "change": "buff",
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Crimson Slash"
+                }
+            }
+        ]
+    },
+    "items": {
+        "Weapon": [
+            {
+                "item_name": "Headshot Booster",
+                "description": "Cooldown increased from 8 to 9",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "High Velocity Rounds",
+                "description": "Bullet Velocity increased from +45% to +50% (affects upgrades)",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Split Shot",
+                "description": "Cooldown increased from 14s to 32s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Mystic Shot",
+                "description": "Proc damage reduced from 45 to 40",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Mystic Shot",
+                "description": "Spirit power scaling increased from 0.75 to 0.8",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Opening Rounds",
+                "description": "Spirit Power increased from +7 to +8",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Blood Tribute",
+                "description": "Debuff Resistance reduced from +50% to +40%",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Cultist Sacrifice",
+                "description": "Now provides Weapon Damage instead of Fire Rate",
+                "change": "rework",
+                "type": "item"
+            },
+            {
+                "item_name": "Toxic Bullets",
+                "description": "Duration increased from 3s to 4s",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Express Shot",
+                "description": "Weapon Damage now scales with boons (+2)",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Express Shot",
+                "description": "Weapon Damage reduced from 185% to 170%",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Express Shot",
+                "description": "Secondary Fire Weapon Damage now scales with boons (+1)",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Express Shot",
+                "description": "Secondary Fire Weapon Damage reduced from 75% to 45%",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Express Shot",
+                "description": "Ammo consumed increased from 30% to 40%",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Weighted Shots",
+                "description": "Weapon Damage increased from +30% to +35%",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Warp Stone",
+                "description": "Bullet Resist reduced from 35% to 30%",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Escalating Resilience",
+                "description": "Bonus Health reduced from 125 to 100",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Tesla Bullets",
+                "description": "Shock damage reduced from 40 to 33",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Tesla Bullets",
+                "description": "Shock damage spirit power growth increased from 0.14 to 0.19",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Capacitor",
+                "description": "Shock damage reduced from 50 to 43",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Capacitor",
+                "description": "Shock damage spirit power growth increased from 0.14 to 0.19",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Capacitor",
+                "description": "No longer dispels buffs (moved to Curse)",
+                "change": "rework",
+                "type": "item"
+            },
+            {
+                "item_name": "Capacitor",
+                "description": "Cooldown reduced from 60s to 50s",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Capacitor",
+                "description": "Slow duration reduced from 5s to 4s (75%->0%)",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Capacitor",
+                "description": "Slow debuff now prevents stamina usage and silences movement abilities",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Shadow Weave",
+                "description": "Reveal distance reduced from 20m to 18m",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Shadow Weave",
+                "description": "Full invisibility distance reduced from 50m to 30m",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Lucky Shot",
+                "description": "Damage reduced from 125% to 110%",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Glass Cannon",
+                "description": "Max Health reduced from -10% to -13%",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Crippling Headshot",
+                "description": "Healing Reduction increased from -30% to -35%",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Spiritual Overflow",
+                "description": "Fire Rate increased from +30% to +35%",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Spellslinger",
+                "description": "Fire Rate per stack increased from 10% to 12%",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Silencer",
+                "description": "Spirit Resist increased from 14% to 15%",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Spellslinger",
+                "description": "Cooldown Reduction reduced from +12% to +6%",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Spiritual Overflow",
+                "description": "Cooldown Reduction reduced from +20% to +12%",
+                "change": "nerf",
+                "type": "item"
+            }
+        ],
+        "Vitality": [
+            {
+                "item_name": "Reactive Barrier",
+                "description": "Cooldown increased from 26s to 40s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Reactive Barrier",
+                "description": "Duration reduced from 12s to 10s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Spirit Shielding",
+                "description": "Cooldown increased from 35s to 45s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Spirit Shielding",
+                "description": "Damage threshold increased from 175 to 225",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Spirit Shielding",
+                "description": "Duration reduced from 8s to 7s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Weapon Shielding",
+                "description": "Cooldown increased from 35s to 45s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Weapon Shielding",
+                "description": "Duration reduced from 8s to 7s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Majestic Leap",
+                "description": "Cooldown increased from 32s to 34s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Cheat Death",
+                "description": "Removes all non-stun debuffs on proc",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Inhibitor",
+                "description": "Healing Reduction increased from -35% to -40%",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Spellbreaker",
+                "description": "Cooldown reduced from 10s to 9s",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Enchanter's Emblem",
+                "description": "Cooldown Reduction reduced from +7% to +5%",
+                "change": "nerf",
+                "type": "item"
+            }
+        ],
+        "Spirit": [
+            {
+                "item_name": "Bullet Resist Shredder",
+                "description": "Bullet Resist Reduction reduced from 13% to 12%",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Mystic Vulnerability",
+                "description": "Duration increased from 6s to 7s",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Spirit Sap",
+                "description": "Cooldown reduced from 35s to 25s (matches Focus Lens)",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Decay",
+                "description": "Healing Reduction increased from -40% to -45%",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Silence Wave",
+                "description": "No longer upgrades from Spirit Sap",
+                "change": "rework",
+                "type": "item"
+            },
+            {
+                "item_name": "Silence Wave",
+                "description": "No longer reduces Spirit Resistance or Spirit Power",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Silence Wave",
+                "description": "Now deals 100 Impact Damage (0.3 spirit power growth)",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Spirit Snatch",
+                "description": "Now reduces Spirit Snatch effects to 70% effectiveness instead of increasing cooldown to 2x on light melee hit",
+                "change": "rework",
+                "type": "item"
+            },
+            {
+                "item_name": "Focus Lens",
+                "description": "Now builds from Spirit Sap",
+                "change": "rework",
+                "type": "item"
+            },
+            {
+                "item_name": "Focus Lens",
+                "description": "Now reduces Spirit Resistance by 12% and reduces Spirit Power by 30 for 12s",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Focus Lens",
+                "description": "Fire Rate reduced from +16 to +13",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Curse",
+                "description": "Now dispels buffs",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Curse",
+                "description": "Cooldown increased from 45s to 55s",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Curse",
+                "description": "Weapon Damage reduced from 20% to 15%",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Echo Shard",
+                "description": "Now grants +5% Ability Range (no longer has the +5% CD Reduction)",
+                "change": "rework",
+                "type": "item"
+            },
+            {
+                "item_name": "Scourge",
+                "description": "Max Health damage per second increased from 3.25% to 3.5%",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Scourge",
+                "description": "Cooldown reduced from 38s to 35s",
+                "change": "buff",
+                "type": "item"
+            },
+            {
+                "item_name": "Compress Cooldown",
+                "description": "Cooldown Reduction reduced from +22% to +18%",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Superior Cooldown",
+                "description": "Cooldown Reduction reduced from +25% to +20%",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Transcendent Cooldown",
+                "description": "Cooldown Reduction reduced from +30% to +25%",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Echo Shard",
+                "description": "No longer grants +5% Cooldown Reduction",
+                "change": "nerf",
+                "type": "item"
+            },
+            {
+                "item_name": "Scourge",
+                "description": "Cooldown Reduction reduced from +6% to +4%",
+                "change": "nerf",
+                "type": "item"
+            }
+        ]
+    },
+    "general": {
+        "Map": [],
+        "Gameplay": [
+            {
+                "description": "Trooper bounty mechanics have been reworked. The first half of the souls still fly out as deniable orb, however rather than the other half being instantly given to nearby players it will fall to the ground as an orb that you need to get near to pick up. It has a 18m capture radius where it'll travel to you once you get within. Only one player needs to claim it, share rules remain the same as before.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Ground orbs last for 18 seconds, with duration increasing by 2 seconds per minute up to 40 seconds after 10 minutes.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Enemy orbs are visible as faint colorless soul orbs to your team but cannot be claimed.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Amount of souls in the flying orb that can be secured or denied reduced from 50% to 40%.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Very small tweaks made to the secure and deny lag calculation to improve it.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Trooper range for soul drop consideration increased from 35m to 45m.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Medic troopers no longer have a passive healing pulse ability.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Medic troopers now drop a medic pack on death. It has the same pickup range and duration mechanics as soul orbs. Heals everyone in a 30m radius for 10% missing health plus 75, plus 2 per minute of game time.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Starting souls count increased from 400 to 600.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Trooper bounty values increased by 10%.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Trooper bounty split ratios updated from 1/0.65/0.28/0.15/0.12/0.08 to 1/0.54/0.36/0.25/0.2/0.16.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Reworked the position of the player camera and various visibility-related details.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Neutrals bounty increased by 10%.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Neutrals HP increased by 15%.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Small neutrals damage increased by 15%.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Small neutral camp respawn time reduced from 180 seconds to 120 seconds.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Medium neutrals spirit resist increased from 30% to 40%.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Medium neutrals damage increased by 25%.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Hard neutrals spirit resist increased from 35% to 50%.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Hard neutrals damage increased by 30%.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Sinner's Sacrifice return damage increased from 60 to 80.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Minimum unsecured gold required to drop increased from 100 to 150.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Sprint and out-of-combat regen timer versus neutrals increased from 0.5s to 2.5s.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "All AP damage upgrades reduced by 10%.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Base gun damage and gun damage growth increased by 10% (excluding Paige).",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Headshot multiplier reduced from 1.8x to 1.65x.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Weapon Investment Bonuses now grant +20% Weapon Damage at 4800 souls spent.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Vitality Investment Bonuses now grant +12% Bonus Health at 4800 souls spent.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Spirit Investment Bonuses now grant +20 Spirit Power at 4800 souls spent.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Added UI highlight to the 4800 reward row of the investment bonuses.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Initial wall jump now costs 0.25 stamina.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Stamina regeneration rate reduced by 5% (from 5 seconds to 5.25 seconds).",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "After 35 minutes, all troopers gain +50% HP.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Guardian HP increased from 3500 to 4250.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Walker HP increased by 40%.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Walkers on side lanes now have the same HP as midlane walkers (previously ~37% less).",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Walker engagement ranges reduced (attack, being attacked, stomps, etc.).",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Walker stomp cooldown reduced from 10s to 6s.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Walker stomp damage increased from 350 + 10% max HP to 350 + 15% max HP.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Walker fireball radius increased from 5m to 6m.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Walker fireball debuff now lingers for 4 seconds.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Walker fireballs now reduce bullet and spirit resistance by 10%.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Walker area in mid lane adjusted.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Bullet damage is no longer reduced by 35% of a hero's base bullet damage against Tier 1 turrets.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Guardians now start with 75% damage resist which decays to -50% over the first 10 minutes.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Walkers now start with 75% damage resist which decays to -50% over the first 20 minutes.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Base slot count increased from 8 to 9; Flex slot count reduced from 4 to 3. One flex slot is granted per Walker kill. Previously slots were granted via Guardians/Walkers milestones.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Rejuv buff no longer grants +10% Max HP, +15% Fire Rate, or +15% Spirit Damage Amp.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Mid Boss base HP increased from 13,000 to 14,000.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Mid Boss HP growth per minute increased from 200 to 230.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Team that kills Mid Boss receives +2 permanent buffs per player.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Dropping or throwing the Urn now causes Parry to go on cooldown.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Soul Urn no longer grants +1 AP to the person depositing it.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Soul Urn now grants 4 permanent buffs to the depositing player.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Two new levels added at 47k and 49k souls to allow all ability upgrades.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Jump Pad stun window increased from 0.6s to 0.9s.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "When meleeing an enemy who is mantling and the mantle slow applies, mantle sliding immediately afterward is no longer allowed.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Subsequent CC reduction increased from 7%/21% to 8%/24%.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Survival Buff HP regen changed from 0.5–1.5% max HP to a flat 4–40 regen.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Gun Buff ammo increased from 20–60% to 35–70%.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Gun Buff now reloads your ammo when picked up.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Casting Buff spirit power increased from 15–40 to 15–65.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Casting Buff cooldown reduction rescaled from 12–25% to 12–20%.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Movement Buff stamina increased from 1–4 to 2–4.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Added new trooper anti-stuck behavior to fix spots where troopers could become stuck.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Fixed a bug where troopers could clip into the world while climbing stairs or navigating obstacles.",
+                "change": "neutral",
+                "type": "general"
+            },
+            {
+                "description": "Golden Statue: Cooldown Reduction reduced from 0.75/1.0/1.5% to 0.5/0.75/1%",
+                "change": "neutral",
+                "type": "general"
+            }
+        ],
+        "generales": []
+    }
+}
