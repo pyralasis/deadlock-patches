@@ -25,7 +25,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 3,
+                    "slot": 4,
                     "name": "Seismic Impact"
                 }
             }
@@ -68,7 +68,7 @@
                 "change": "nerf",
                 "type": "ability",
                 "ability": {
-                    "slot": 3,
+                    "slot": 4,
                     "name": "Hyperbeam"
                 }
             },
@@ -77,7 +77,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 3,
+                    "slot": 4,
                     "name": "Hyperbeam"
                 }
             }
@@ -127,7 +127,7 @@
                 "change": "nerf",
                 "type": "ability",
                 "ability": {
-                    "slot": 3,
+                    "slot": 4,
                     "name": "Return to Shadows"
                 }
             },
@@ -136,7 +136,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 3,
+                    "slot": 4,
                     "name": "Return to Shadows"
                 }
             }
@@ -149,7 +149,7 @@
             },
             {
                 "description": "Bullet falloff now uses true travel distance",
-                "change": "fix",
+                "change": "neutral",
                 "type": "general"
             },
             {
@@ -157,7 +157,7 @@
                 "change": "nerf",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 1,
                     "name": "Call Bell"
                 }
             },
@@ -166,7 +166,7 @@
                 "change": "nerf",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 1,
                     "name": "Call Bell"
                 }
             },
@@ -175,7 +175,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 1,
                     "name": "Call Bell"
                 }
             }
@@ -207,7 +207,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 1,
                     "name": "Kinetic Pulse"
                 }
             },
@@ -216,7 +216,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 1,
                     "name": "Kinetic Pulse"
                 }
             }
@@ -251,7 +251,11 @@
             {
                 "description": "Fixed a bug allowing extra speed with jump timing",
                 "change": "fix",
-                "type": "general"
+                "type": "ability",
+                "ability": {
+                    "slot": 2,
+                    "name": "Bounce Pad"
+                }
             }
         ],
         "Infernus": [
@@ -260,7 +264,7 @@
                 "change": "nerf",
                 "type": "ability",
                 "ability": {
-                    "slot": 1,
+                    "slot": 3,
                     "name": "Afterburn"
                 }
             },
@@ -269,7 +273,7 @@
                 "change": "nerf",
                 "type": "ability",
                 "ability": {
-                    "slot": 3,
+                    "slot": 1,
                     "name": "Napalm"
                 }
             }
@@ -280,7 +284,7 @@
                 "change": "nerf",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 1,
                     "name": "Kudzu Bomb"
                 }
             },
@@ -289,7 +293,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 1,
                     "name": "Kudzu Bomb"
                 }
             },
@@ -307,7 +311,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 1,
+                    "slot": 2,
                     "name": "Watcher's Covenant"
                 }
             },
@@ -341,7 +345,7 @@
                 "change": "nerf",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 1,
                     "name": "Frost Grenade"
                 }
             },
@@ -350,7 +354,7 @@
                 "change": "rework",
                 "type": "ability",
                 "ability": {
-                    "slot": 3,
+                    "slot": 4,
                     "name": "Frozen Shelter"
                 }
             },
@@ -359,7 +363,7 @@
                 "change": "nerf",
                 "type": "ability",
                 "ability": {
-                    "slot": 3,
+                    "slot": 4,
                     "name": "Frozen Shelter"
                 }
             }
@@ -370,7 +374,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 3,
+                    "slot": 4,
                     "name": "Soul Exchange"
                 }
             }
@@ -381,7 +385,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 1,
+                    "slot": 2,
                     "name": "Grapple"
                 }
             },
@@ -390,7 +394,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 3,
                     "name": "Flog"
                 }
             },
@@ -399,7 +403,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 3,
                     "name": "Flog"
                 }
             },
@@ -408,7 +412,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 3,
                     "name": "Flog"
                 }
             },
@@ -417,7 +421,7 @@
                 "change": "nerf",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 3,
                     "name": "Flog"
                 }
             },
@@ -426,7 +430,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 3,
+                    "slot": 4,
                     "name": "Death Slam"
                 }
             }
@@ -437,7 +441,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 1,
                     "name": "Mini Turrets"
                 }
             },
@@ -457,7 +461,7 @@
                 "change": "nerf",
                 "type": "ability",
                 "ability": {
-                    "slot": 1,
+                    "slot": 2,
                     "name": "Sanguine Retreat"
                 }
             },
@@ -466,7 +470,7 @@
                 "change": "nerf",
                 "type": "ability",
                 "ability": {
-                    "slot": 1,
+                    "slot": 2,
                     "name": "Sanguine Retreat"
                 }
             },
@@ -475,7 +479,7 @@
                 "change": "nerf",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 3,
                     "name": "Love Bites"
                 }
             },
@@ -484,7 +488,7 @@
                 "change": "nerf",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 3,
                     "name": "Love Bites"
                 }
             }
@@ -504,7 +508,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 3,
+                    "slot": 4,
                     "name": "Traveler"
                 }
             },
@@ -513,7 +517,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 3,
+                    "slot": 4,
                     "name": "Traveler"
                 }
             },
@@ -522,7 +526,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 3,
+                    "slot": 4,
                     "name": "Traveler"
                 }
             }
@@ -559,7 +563,7 @@
                 }
             },
             {
-                "description": "Defend and Fight! T1 changed to +16% fire rate",
+                "description": "Defend and Fight! T1 changed from +50 Barrier to +16% Fire Rate (with 0.15 Spirit Power scaling)",
                 "change": "rework",
                 "type": "ability",
                 "ability": {
@@ -568,7 +572,7 @@
                 }
             },
             {
-                "description": "Defend and Fight! T2 changed to +100 barrier",
+                "description": "Defend and Fight! T2 changed from +25% Fire Rate to +100 Barrier",
                 "change": "rework",
                 "type": "ability",
                 "ability": {
@@ -612,7 +616,7 @@
                 "change": "nerf",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 1,
                     "name": "Pulse Grenade"
                 }
             },
@@ -621,14 +625,18 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 1,
                     "name": "Pulse Grenade"
                 }
             },
             {
-                "description": "Fixed a bug enabling unintended airdash distance",
+                "description": "Fixed a bug where you could airdash further then expected with Kinetic Carbine",
                 "change": "fix",
-                "type": "general"
+                "type": "ability",
+                "ability": {
+                    "slot": 3,
+                    "name": "Kinetic Carbine"
+                }
             }
         ],
         "Pocket": [
@@ -662,7 +670,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 1,
                     "name": "Lightning Ball"
                 }
             },
@@ -676,27 +684,19 @@
             {
                 "description": "Alt fire knockback reduced by 10%",
                 "change": "nerf",
-                "type": "ability",
-                "ability": {
-                    "slot": 1,
-                    "name": "general"
-                }
+                "type": "general"
             },
             {
                 "description": "Alt fire ammo cost increased from 2 to 3",
                 "change": "nerf",
-                "type": "ability",
-                "ability": {
-                    "slot": 1,
-                    "name": "general"
-                }
+                "type": "general"
             },
             {
                 "description": "Killing Blow Rage damage bonus reduced from 17% to 15%",
                 "change": "nerf",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 4,
                     "name": "Killing Blow"
                 }
             },
@@ -705,7 +705,7 @@
                 "change": "nerf",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 4,
                     "name": "Killing Blow"
                 }
             },
@@ -714,7 +714,7 @@
                 "change": "neutral",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 4,
                     "name": "Killing Blow"
                 }
             },
@@ -749,7 +749,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 3,
+                    "slot": 4,
                     "name": "Audience Participation"
                 }
             }
@@ -767,7 +767,7 @@
                 }
             },
             {
-                "description": "Splatter T1 changed to +40 damage and +1m radius",
+                "description": "Splatter T1 changed from \"-6s Cooldown\" to \"+40 Damage and +1m Radius\"",
                 "change": "rework",
                 "type": "ability",
                 "ability": {
@@ -776,7 +776,7 @@
                 }
             },
             {
-                "description": "Splatter T2 changed to -12s cooldown",
+                "description": "Splatter T2 changed from \"+45 Damage and +1m Radius\" to \"-12s Cooldown\"",
                 "change": "rework",
                 "type": "ability",
                 "ability": {
@@ -849,7 +849,7 @@
                 "change": "nerf",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 1,
                     "name": "Alchemical Flask"
                 }
             },
@@ -858,7 +858,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 1,
                     "name": "Alchemical Flask"
                 }
             }
@@ -912,7 +912,7 @@
                 "change": "nerf",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 3,
                     "name": "Crimson Slash"
                 }
             },
@@ -921,7 +921,7 @@
                 "change": "buff",
                 "type": "ability",
                 "ability": {
-                    "slot": 2,
+                    "slot": 3,
                     "name": "Crimson Slash"
                 }
             }
