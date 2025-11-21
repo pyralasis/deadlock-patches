@@ -196,7 +196,7 @@ export const SPIRIT_ITEM_DEFINITIONS: Record<string, SectionDefinition> = {
     "Arcane Surge": new SectionDefinition("Arcane Surge", "", "", "/item_icons/spirit/arcane_surge", "", "", "", ""),
     "Bullet Resist Shredder": new SectionDefinition("Bullet Resist Shredder", "", "", "/item_icons/spirit/bullet_resist_shredder", "", "", "", ""),
     "Cold Front": new SectionDefinition("Cold Front", "", "", "/item_icons/spirit/cold_front", "", "", "", ""),
-    "Compress Cooldown": new SectionDefinition("Compress Cooldown", "", "", "/item_icons/spirit/compress_cooldown", "", "", "", ""),
+    "Compress Cooldown": new SectionDefinition("Compress Cooldown", "", "", "/item_icons/spirit/improved_cooldown", "", "", "", ""),
     "Duration Extender": new SectionDefinition("Duration Extender", "", "", "/item_icons/spirit/duration_extender", "", "", "", ""),
     "Improved Spirit": new SectionDefinition("Improved Spirit", "", "", "/item_icons/spirit/improved_spirit", "", "", "", ""),
     "Mystic Slow": new SectionDefinition("Mystic Slow", "", "", "/item_icons/spirit/mystic_slow", "", "", "", ""),
